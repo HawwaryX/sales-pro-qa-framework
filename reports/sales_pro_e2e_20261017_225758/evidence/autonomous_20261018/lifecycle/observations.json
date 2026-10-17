@@ -1,0 +1,34 @@
+{
+  "scope": "local_lifecycle_without_account_or_submission",
+  "cold_launch": {
+    "status": "BLOCKED",
+    "reason": "لم يبدأ"
+  },
+  "sleep_wake": {
+    "status": "BLOCKED",
+    "reason": "لم يبدأ"
+  },
+  "network_settings_changed": false,
+  "app_data_cleared": false,
+  "credentials_entered": false,
+  "login_submitted": false,
+  "restoration": {
+    "power_lock": {
+      "keyguard_showing": null,
+      "keyguard_secure": null,
+      "input_restricted": null,
+      "wakefulness": null
+    },
+    "foreground_start_requested": false,
+    "force_stop_used_once": false
+  },
+  "initial_metadata": {
+    "serial": "emulator-5554",
+    "account_free": true,
+    "boot_completed": true
+  },
+  "elapsed_seconds": 23.75,
+  "worker_error_class": "LaunchUiAutomationError",
+  "error_phase": "initial",
+  "system_ui_wait_phases": []
+}

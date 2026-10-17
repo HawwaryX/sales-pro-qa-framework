@@ -1,0 +1,14 @@
+{
+  "reason": "تغير عنوان resolver المحلي المرصود منذ التشخيص السابق؛فحص واحد محدود فقط",
+  "current_nameservers": [
+    "172.31.1.173"
+  ],
+  "worker": {
+    "state": "COMPLETED",
+    "returncode": 0,
+    "elapsed_seconds": 0.02396585599998957,
+    "stdout": "{\"state\": \"DNS_FAILURE\", \"errno\": -3}\n",
+    "stderr": ""
+  },
+  "backend_request_or_login_submitted": false
+}

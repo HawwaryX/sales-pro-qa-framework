@@ -1,0 +1,119 @@
+{
+  "scope": "local_lifecycle_without_account_or_submission",
+  "cold_launch": {
+    "status": "PASS",
+    "reason": "أُوقف التطبيق وتأكد غياب عمليته ثم عاد نموذج الدخول العربي الفارغ دون انهيار ظاهر ضمن النافذة",
+    "previous_process_present": true,
+    "process_absent_after_stop": true,
+    "login_conditions": {
+      "exactly_two_login_fields": true,
+      "both_fields_empty": true,
+      "arabic_login_caption": true,
+      "arabic_branch_label": true,
+      "arabic_year_label": true,
+      "app_nodes_visible": true
+    },
+    "new_process_present": true,
+    "process_id_changed": true,
+    "crash_flags": {
+      "queried": true,
+      "app_fatal_exception": false,
+      "app_fatal_signal": false
+    },
+    "onboarding_not_reshown": true,
+    "evidence_saved": true
+  },
+  "sleep_wake": {
+    "status": "PASS",
+    "reason": "نوم وإيقاظ فعليان ثم عاد نموذج الدخول العربي الفارغ بنفس العملية دون انهيار ظاهر",
+    "before": {
+      "keyguard_showing": false,
+      "keyguard_secure": false,
+      "input_restricted": false,
+      "wakefulness": "Awake"
+    },
+    "asleep": {
+      "keyguard_showing": false,
+      "keyguard_secure": false,
+      "input_restricted": false,
+      "wakefulness": "Asleep"
+    },
+    "after_wake_before_swipe": {
+      "keyguard_showing": false,
+      "keyguard_secure": false,
+      "input_restricted": false,
+      "wakefulness": "Awake"
+    },
+    "normal_nonsecure_swipe": false,
+    "after_normal_resume": {
+      "keyguard_showing": false,
+      "keyguard_secure": false,
+      "input_restricted": false,
+      "wakefulness": "Awake"
+    },
+    "login_conditions": {
+      "exactly_two_login_fields": true,
+      "both_fields_empty": true,
+      "arabic_login_caption": true,
+      "arabic_branch_label": true,
+      "arabic_year_label": true,
+      "app_nodes_visible": true
+    },
+    "same_app_process": true,
+    "crash_flags": {
+      "queried": true,
+      "app_fatal_exception": false,
+      "app_fatal_signal": false
+    },
+    "evidence_saved": true
+  },
+  "network_settings_changed": false,
+  "app_data_cleared": false,
+  "credentials_entered": false,
+  "login_submitted": false,
+  "restoration": {
+    "power_lock": {
+      "keyguard_showing": false,
+      "keyguard_secure": false,
+      "input_restricted": false,
+      "wakefulness": "Awake"
+    },
+    "foreground_start_requested": true,
+    "force_stop_used_once": true
+  },
+  "initial_metadata": {
+    "serial": "emulator-5554",
+    "account_free": true,
+    "no_unlock_action": true,
+    "display_width": 480,
+    "display_height": 854
+  },
+  "elapsed_seconds": 122.56,
+  "android_readiness": {
+    "boot_completed": true,
+    "user_id": 0,
+    "user_state": "RUNNING_UNLOCKED",
+    "activity_resolved": true
+  },
+  "initial_power_lock": {
+    "keyguard_showing": false,
+    "keyguard_secure": false,
+    "input_restricted": false,
+    "wakefulness": "Awake"
+  },
+  "prelaunch": {
+    "activity_error_type_3": false,
+    "activity_launch_accepted": true
+  },
+  "initial_login_conditions": {
+    "exactly_two_login_fields": true,
+    "both_fields_empty": true,
+    "arabic_login_caption": true,
+    "arabic_branch_label": true,
+    "arabic_year_label": true,
+    "app_nodes_visible": true
+  },
+  "system_ui_wait_phases": [
+    "initial"
+  ]
+}

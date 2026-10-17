@@ -1,6 +1,6 @@
 # حالات الاختبار الوظيفي العربية
 
-التراكمي الوظيفي: PASS: 26؛ FAIL: 4؛ BLOCKED: 55؛ NOT RUN: 2؛ 87 حالة. تشخيص الشبكة مستقل تراكميًا: 4 PASS و4 FAIL بيئية و2 BLOCKED؛ نتائج NET01–09 تتضمن أدلة تاريخية، وNET10 بعد تغير السياسة. اختبارات pytest: 75 لكل نسخة Python منفصلة عن أعمال التطبيق.
+التراكمي الوظيفي: PASS: 28؛ FAIL: 4؛ BLOCKED: 55؛ NOT RUN: 2؛ 89 حالة. سجلات القواعد المحاسبية منفصلة:8 NEEDS BUSINESS RULE CONFIRMATION وتنفيذها BLOCKED؛ لا تضاف كإخفاقات أو نجاحات تطبيق. pytest93 لكل نسخة Python مستقل عن أعمال التطبيق.
 
 ## RT-01 — التثبيت
 
@@ -491,6 +491,34 @@
 - الفعلي: قُرئ 1024 حرفًا مطابقًا في كل حقل؛ password=true؛ form_submitted=false؛ synthetic_fields_cleared=true. لم تُختبر قواعد الخادم أو تخزين الأسرار، ولا تُعد بيانات مصادقة بديلة.
 
 - الدليل: [followup_observations.json](evidence/followup_20261018/ui_additional_ready/followup_observations.json)، [long_input.xml](evidence/followup_20261018/ui_additional_ready/long_input.xml)، [final_empty_fields.xml](evidence/followup_20261018/ui_additional_ready/final_empty_fields.xml)
+
+## RT-36 — إيقاف العملية ثم التشغيل البارد دون مسح البيانات
+
+- الحالة: **PASS**
+
+- الشروط: المستخدم0 جاهز، ونموذج الدخول العربي بحقلين فارغين؛ لا جلسة مصادق عليها؛ الشبكة مفعلة
+
+- الخطوات: التحقق من النموذج الفارغ؛ force-stop مرة واحدة؛ التحقق من غياب PID؛ تشغيل MainActivity؛ انتظار النموذج وقراءة سجل crash للعملية الجديدة
+
+- المتوقع: تنتهي العملية القديمة وتبدأ أخرى، وتبقى العربية وحالة الترحيب، دون انهيار مرصود أو إرسال حساب
+
+- الفعلي: غابت العملية بعد الإيقاف، ثم ظهر PID جديد مختلف وظل حاضرًا؛ عاد نموذج عربي بحقلين فارغين دون إعادة الترحيب أو FATAL مرصود للعملية الجديدة. لا ادعاء مصادقة أو استمرار بيانات أعمال.
+
+- الدليل: [observations.json](evidence/autonomous_20261018/lifecycle_ready/observations.json)، [after_cold_launch.xml](evidence/autonomous_20261018/lifecycle_ready/after_cold_launch.xml)، [after_cold_launch_lower_crop.png](evidence/autonomous_20261018/lifecycle_ready/after_cold_launch_lower_crop.png)
+
+## RT-37 — نوم الشاشة وإيقاظها والعودة إلى النموذج
+
+- الحالة: **PASS**
+
+- الشروط: المستخدم0 جاهز، ونموذج الدخول العربي بحقلين فارغين؛ لا جلسة مصادق عليها؛ الشبكة مفعلة
+
+- الخطوات: التحقق من أن الجهاز غير مقفل بقفل مؤمن؛ KEYCODE_SLEEP؛ إثبات Asleep؛ KEYCODE_WAKEUP؛ إثبات Awake وعودة النموذج
+
+- المتوقع: نوم وإيقاظ فعليان وعودة النموذج بنفس العملية دون انهيار أو تغيير المدخلات أو أمن القفل
+
+- الفعلي: رُصد Awake ثم Asleep ثم Awake؛ عاد نموذج عربي فارغ بنفس PID دون FATAL مرصود. لم تظهر شاشة قفل ولم يلزم سحب لفتحها؛ لا اختبار PIN أو قفل مؤمن أو بقاء جلسة مصادق عليها.
+
+- الدليل: [observations.json](evidence/autonomous_20261018/lifecycle_ready/observations.json)، [after_wake.xml](evidence/autonomous_20261018/lifecycle_ready/after_wake.xml)، [after_wake_lower_crop.png](evidence/autonomous_20261018/lifecycle_ready/after_wake_lower_crop.png)
 
 ## BUS-HOME — المنزل والمؤشرات
 

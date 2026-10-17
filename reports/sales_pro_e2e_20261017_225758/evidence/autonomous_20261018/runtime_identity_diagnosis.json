@@ -1,0 +1,8 @@
+{
+  "current_user": "0",
+  "users": "Users:\n\tUserInfo{0:Owner:4c13} running",
+  "package_path_user0": "package:/data/app/~~ICPMnqHQaKw_rt3nI0BGyw==/com.infinity.sales.app-FvrZAZBHsiVDRYoMGY_vbQ==/base.apk",
+  "package_path_current": "package:/data/app/~~ICPMnqHQaKw_rt3nI0BGyw==/com.infinity.sales.app-FvrZAZBHsiVDRYoMGY_vbQ==/base.apk",
+  "user0_state": "RUNNING_UNLOCKING",
+  "resolved_activity": "priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false\ncom.infinity.sales.app/.MainActivity"
+}

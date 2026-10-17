@@ -1,0 +1,34 @@
+{
+  "scope": "تحقق تسليم محلي؛ لا ادعاء دخول أو أعمال مصادق عليها أو دفع Git وقت إنشاء هذا الملف",
+  "functional_cases": 89,
+  "functional_status_counts": {
+    "PASS": 28,
+    "BLOCKED": 55,
+    "FAIL": 4,
+    "NOT RUN": 2
+  },
+  "accounting_rule_counts": {
+    "NEEDS BUSINESS RULE CONFIRMATION": 8
+  },
+  "accounting_execution_counts": {
+    "BLOCKED": 8
+  },
+  "case_and_rule_evidence_references_valid": true,
+  "unique_test_ids": true,
+  "json_xml_utf8_and_markdown_links_valid": true,
+  "verified_png_count": 45,
+  "secret_scan_matches": 0,
+  "report_actual_line_breaks": true,
+  "framework_tests": {
+    "python312": 93,
+    "python313": 93
+  },
+  "python311_syntax_parsed": true,
+  "python311_suite_executed": false,
+  "original_apk_hash_matches_baseline": true,
+  "authenticated": false,
+  "business_workflows_executed": 0,
+  "new_account_input_or_login_submission": false,
+  "background_retry_registered": false,
+  "git_push_status": "NOT PERFORMED AT VALIDATION TIME"
+}

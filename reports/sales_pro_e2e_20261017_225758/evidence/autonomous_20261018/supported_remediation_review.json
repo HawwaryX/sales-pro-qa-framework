@@ -1,0 +1,22 @@
+{
+  "review_scope": "مراجعة قدرات مدعومة؛ لا تنفيذ إصلاح غير متاح",
+  "backend_allowed_currently": true,
+  "proxy_target_connectivity_previously_verified": true,
+  "last_target_proxy_result": "CONNECT200 TLSverify0 HTTP404 on root",
+  "dns_native_retest": "DNS_FAILURE errno=-3 after resolver address changed",
+  "installed_emulator_options": {
+    "-dns-server": "يتطلب خادم DNS عاملًا ومعتمدًا؛ لا يوفر خادمًا أو مسارًا",
+    "-http-proxy": "يحول TCP للوكيل الموروث؛ ليس DNS عبر HTTP تلقائيًا"
+  },
+  "working_approved_alternate_resolver_available": false,
+  "vpn_configured": false,
+  "tcp_grants": {
+    "domains": [],
+    "ip_ranges": []
+  },
+  "available_config_action": "حفظ مسودة الإعداد فقط؛ لا قاعدة سماح مفقودة لتكرارها",
+  "local_supported_fix_available": false,
+  "external_prerequisite": "مسار Android مدعوم لحل DNS واستخدام HTTPS موثوق إلى الخادم، أو جهاز اختبار مصرح بشبكة صالحة",
+  "no_alternate_dns_or_tls_bypass_attempted": true,
+  "no_login_retry": true
+}

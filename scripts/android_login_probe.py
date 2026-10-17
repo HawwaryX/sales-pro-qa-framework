@@ -25,6 +25,7 @@ def worker(out: Path, serial: str, account: dict) -> int:
     import adbutils
     import uiautomator2 as u2
     from PIL import Image
+    from sales_pro_qa.android_readiness import AndroidReadinessTimeout, wait_for_android_ready
 
     secrets = [account["username"], account["password"]]
     result = {"login_submitted": False, "authenticated": None,
@@ -70,8 +71,13 @@ def worker(out: Path, serial: str, account: dict) -> int:
         stage("connect")
         client = adbutils.AdbClient(host="127.0.0.1", port=5037, socket_timeout=8)
         dev = client.device(serial)
-        if dev.shell("getprop sys.boot_completed", timeout=10).strip() != "1":
-            raise RuntimeError("Android boot is not ready")
+        stage("wait_android_readiness")
+        try:
+            readiness = wait_for_android_ready(dev.shell, timeout=60)
+        except AndroidReadinessTimeout as exc:
+            result["android_readiness"] = asdict(exc.observation)
+            raise
+        result["android_readiness"] = asdict(readiness)
         # TCG exceeded the library's 30-second startup window. This change is
         # local to this worker; the supervising process still caps total time.
         def wait_ready(server, launch_timeout=90):

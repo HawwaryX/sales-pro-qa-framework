@@ -14,6 +14,11 @@
 
 متطلبات هذا الفحص الاختياري: ADB محلي على127.0.0.1:5037 وجهاز اختبار مصرح به
 أكمل boot، والتطبيق مثبت مسبقًا. لا يبدأ السكربت محاكيًا أو ADB عامًا.
+قبل UIAutomator ينتظر العامل حتى60 ثانية ضمن المهلة الإجمالية: اكتمال boot،
+معرّف المستخدم الحالي الصالح وحالته `RUNNING_UNLOCKED`، وحل `MainActivity`
+المحدد لذلك المستخدم. `sys.boot_completed=1` وحده لا يكفي أثناء
+`RUNNING_UNLOCKING`. تسجل خلاصة الجاهزية فقط دون مخرجات الأوامر؛ لا يحاول
+فتح المستخدم أو تغيير القفل. لكل أمر مهلة محدودة بالوقت المتبقي.
 يلزم توفر adbutils وuiautomator2 وPillow في بيئة أدوات معزولة، بالإضافة إلى
 تثبيت المشروع editable أو ضبط PYTHONPATH إلى src. الإصدارات التي نُفذت هنا:
 adbutils2.12.0 وuiautomator2 3.7.0 وPillow13.0.0؛ ليست dependencies للمشروع أو CI.
@@ -72,7 +77,7 @@ subprocess.run(
 اختبارات المشرف والمطابقة تعمل دون Android SDK:
 
 ```bash
-python -m pytest tests/test_runtime_probe.py
+python -m pytest tests/test_runtime_probe.py tests/test_android_readiness.py
 ```
 
 فحص DNS وTLS/HTTP داخل Android عند غياب curl موثق في

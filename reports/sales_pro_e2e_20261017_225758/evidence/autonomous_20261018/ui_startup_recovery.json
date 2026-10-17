@@ -1,0 +1,14 @@
+{
+  "am_start": "Starting: Intent { cmp=com.infinity.sales.app/.MainActivity }\nError type 3\nError: Activity class {com.infinity.sales.app/com.infinity.sales.app.MainActivity} does not exist.",
+  "activity": [],
+  "window_policy": [
+    "KeyguardServiceDelegate",
+    "showing=true",
+    "inputRestricted=false",
+    "secure=true",
+    "screenState=SCREEN_STATE_ON"
+  ],
+  "power": [
+    "mWakefulness=Awake"
+  ]
+}

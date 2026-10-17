@@ -20,3 +20,9 @@
 المراجعة 3 تسمح بالمضيف؛ CONNECT200 وTLS موثق ثم HTTP404 للجذر من Linux. DNS في Android ما زال يفشل بـUnknownHostException؛ القوائم لم تُحمّل ولا دخول مصادق. نجحت RT-33–35 (تكبير الخط وTab ونص 1024 حرفًا دون تقديم)، وحالة تخطي الترحيب BLOCKED في مستخدم مؤقت حُذف بعد العودة للأصلي. الدفتر: PASS: 26؛ FAIL: 4؛ BLOCKED: 55؛ NOT RUN: 2؛ 87 حالة. لا معاملات أو مزامنة أعمال. لا إعادة للطلب المحجوب أو الفحص الثابت.
 
 [محاولة القوائم](evidence/followup_20261018/login_once/observations.json)؛[فحوص UI](evidence/followup_20261018/ui_additional_ready/followup_observations.json)؛[اختبار التخطي](evidence/followup_20261018/skip_isolated_user/result.json).
+
+## متابعة دورة الحياة وجاهزية Android
+
+الدفتر الوظيفي: **PASS: 28؛ FAIL: 4؛ BLOCKED: 55؛ NOT RUN: 2**؛ 89 حالة. نجحت RT-36 وRT-37 محليًا، ولا دخول أو عمليات أعمال أو مزامنة مالية منفذة. سُجلت8 قواعد NEEDS BUSINESS RULE CONFIRMATION منفصلة عن العدّ الوظيفي. أُصلح حارس جاهزية Android؛ **93 passed** على Python3.12 و93 على3.13. لم يُكرر طلب HTTP أو إدخال الحساب مع بقاء عائق DNS.
+
+رُصد boot_completed=1 قبل اكتمال RUNNING_UNLOCKED؛ لم تُعد تثبيت الحزمة لأنها كانت موجودة. انتهت الحالة طبيعيًا دون فتح مستخدم أو تغيير قفل. فحص النوم والإيقاظ لم يعرض قفلًا؛ لا نجاح مختلق لاختبار PIN. [النتيجة الفعلية](evidence/autonomous_20261018/lifecycle_ready/observations.json).

@@ -38,8 +38,22 @@
 
 - [ملفات دفعة الاستئناف والتحقق النهائي](resume_delivery_manifest_ar.md).
 
-## أحدث متابعة بعد تطبيق revision3
+## متابعة دفعة70bb59d بعد تطبيق revision3
 
 المراجعة 3 تسمح بالمضيف؛ CONNECT200 وTLS موثق ثم HTTP404 للجذر من Linux. DNS في Android ما زال يفشل بـUnknownHostException؛ القوائم لم تُحمّل ولا دخول مصادق. نجحت RT-33–35 (تكبير الخط وTab ونص 1024 حرفًا دون تقديم)، وحالة تخطي الترحيب BLOCKED في مستخدم مؤقت حُذف بعد العودة للأصلي. الدفتر: PASS: 26؛ FAIL: 4؛ BLOCKED: 55؛ NOT RUN: 2؛ 87 حالة. لا معاملات أو مزامنة أعمال. لا إعادة للطلب المحجوب أو الفحص الثابت.
 
 أدلة الجلسة الجديدة تحت evidence/followup_20261018/؛ التقارير الأقدم محفوظة كسجل تاريخي. [التحقق: 75 على 3.12](evidence/followup_20261018/pytest_python312.txt)؛[75 على 3.13](evidence/followup_20261018/pytest_python313.txt)؛[التبعيات](evidence/followup_20261018/dependency_check.txt).
+
+## الجاهزية المحاسبية والمتابعة الذاتية
+
+- [القواعد المحاسبية والأسئلة والأثر وحدود التنفيذ](accounting_findings_ar.md):8 NEEDS BUSINESS RULE CONFIRMATION، مستقلة عن الاختبارات الوظيفية.
+- [طابور المتابعة المحفوظ](evidence/autonomous_20261018/queue.json).
+- [مراجعة المسار المدعوم دون إعادة الطلبات](evidence/autonomous_20261018/supported_remediation_review.json).
+
+## أحدث نتيجة ذاتية
+
+الدفتر الوظيفي: **PASS: 28؛ FAIL: 4؛ BLOCKED: 55؛ NOT RUN: 2**؛ 89 حالة. نجحت RT-36 وRT-37 محليًا، ولا دخول أو عمليات أعمال أو مزامنة مالية منفذة. سُجلت8 قواعد NEEDS BUSINESS RULE CONFIRMATION منفصلة عن العدّ الوظيفي. أُصلح حارس جاهزية Android؛ **93 passed** على Python3.12 و93 على3.13. لم يُكرر طلب HTTP أو إدخال الحساب مع بقاء عائق DNS.
+
+- [إيقاف العملية والتشغيل والنوم والإيقاظ](evidence/autonomous_20261018/lifecycle_ready/observations.json).
+- [الإطار على3.12](evidence/autonomous_20261018/pytest_python312.txt) و[3.13](evidence/autonomous_20261018/pytest_python313.txt) و[التبعيات](evidence/autonomous_20261018/dependency_check.txt).
+- [جاهزية الإقلاع](evidence/autonomous_20261018/runtime_identity_diagnosis.json) و[تحقق الانتقال الطبيعي](evidence/autonomous_20261018/user_unlock_readiness.json).

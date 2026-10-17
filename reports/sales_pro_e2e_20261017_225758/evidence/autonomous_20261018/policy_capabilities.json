@@ -1,0 +1,17 @@
+{
+  "observations_current": true,
+  "revision": "3",
+  "observed_revision": "3",
+  "mode": "restricted",
+  "state": "enforced",
+  "backend_allowed": true,
+  "capabilities": [],
+  "policy_changed_since_last_delivery": false,
+  "vpn_configured": false,
+  "tcp_grants": {
+    "domains": [],
+    "ip_ranges": []
+  },
+  "config_modified_this_run": false,
+  "backend_http_or_login_request_repeated": false
+}

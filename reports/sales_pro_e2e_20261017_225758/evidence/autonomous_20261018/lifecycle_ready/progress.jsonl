@@ -1,0 +1,5 @@
+{"stage": "connect_existing_runtime", "elapsed_seconds": 0.0}
+{"stage": "prelaunch_existing_app_after_user_readiness", "elapsed_seconds": 3.93}
+{"stage": "force_stop_once_then_cold_launch", "elapsed_seconds": 52.07}
+{"stage": "explicit_sleep_then_wake", "elapsed_seconds": 103.82}
+{"stage": "complete", "elapsed_seconds": 120.36}

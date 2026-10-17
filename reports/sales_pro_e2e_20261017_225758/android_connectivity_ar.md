@@ -95,3 +95,9 @@
 [محاولة القوائم](evidence/followup_20261018/login_once/observations.json)؛[فحوص UI](evidence/followup_20261018/ui_additional_ready/followup_observations.json)؛[اختبار التخطي](evidence/followup_20261018/skip_isolated_user/result.json).
 
 الدفتر الشبكي التراكمي: **4 PASS و4 FAIL بيئية و2 BLOCKED** في10 حالات؛ NET-10 يثبت وصول Linux بعد تغير السياسة. تبقى NET-04 ونتائج التحكم السابقة موصوفة بتاريخها، ولا تعني استمرار403 حاليًا. [الدفتر](test_ledger.json).
+
+## المراجعة الذاتية اللاحقة دون تكرار الطلبات
+
+بقيت السياسة enforced في المراجعة3 والمضيف مسموحًا. تغير عنوان resolver المحلي المرصود إلى172.31.1.173؛ أُجري فحص getaddrinfo واحد في عامل بمهلة8ثوانٍ، فعاد DNS_FAILURE errno=-3. اكتمال العامل ليس نجاح DNS. لم يُكرر HEAD أو تسجيل الدخول. [القياس المحدود](evidence/autonomous_20261018/dns_resolver_change_check.json).
+
+راجعت خيارات المحاكي المثبت: dns-server يستلزم خادم DNS قابلًا للوصول ومعتمدًا؛ لا يوفره بنفسه. http-proxy يوجه TCP وهو مستخدم بالفعل. لا DNS بديل عامل مهيأ ولا VPN أو منح TCP، وأداة الإعداد تحفظ مسودة دون توفير هذا المسار للتطبيق. لم تُغير DNS أو سياسة أو ثقة TLS تجريبيًا. المتطلب الخارجي المحدد: مسار Android DNS/HTTPS مدعوم من المنصة، أو جهاز اختبار مصرح بشبكة عاملة. [مراجعة القدرات](evidence/autonomous_20261018/supported_remediation_review.json) و[السياسة](evidence/autonomous_20261018/policy_capabilities.json).

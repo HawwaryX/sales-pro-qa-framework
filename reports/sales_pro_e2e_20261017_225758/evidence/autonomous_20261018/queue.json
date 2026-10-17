@@ -1,0 +1,48 @@
+{
+  "scope": "متابعة ذاتية؛لا تكرار تسجيل الدخول مع بقاء الحاجز",
+  "items": [
+    {
+      "id": "ENV-ANDROID-DNS",
+      "priority": 1,
+      "status": "BLOCKED",
+      "last_action": "فحص واحد بعد تغير resolver؛بقيDNS_FAILURE errno=-3",
+      "next_action": "توفر مسار Android DNS/HTTPS معتمد من المنصة أو جهاز اختبار متصل؛لا إعادة السماح أو الحساب"
+    },
+    {
+      "id": "RT-36",
+      "priority": 2,
+      "status": "PASS",
+      "action": "إيقاف عملية التطبيق وتشغيله دون مسح البيانات؛فحص النموذج العربي الفارغ والانهيار",
+      "evidence": "lifecycle_ready/observations.json"
+    },
+    {
+      "id": "RT-37",
+      "priority": 3,
+      "status": "PASS",
+      "action": "نوم وإيقاظ الجهاز والعودة العادية دون تجاوز قفل مؤمن",
+      "evidence": "lifecycle_ready/observations.json"
+    },
+    {
+      "id": "BUS-AUTHENTICATED",
+      "priority": 4,
+      "status": "BLOCKED",
+      "action": "المركز الرئيسي و2026 ثم مصادقة وTEST وهوية الفرع قبل التغييرات"
+    },
+    {
+      "id": "ACC-R01..08",
+      "priority": 5,
+      "status": "NEEDS BUSINESS RULE CONFIRMATION",
+      "execution_status": "BLOCKED",
+      "action": "توثيق القواعد وإصدارها وبيانات مرجعية ثم اختبارات مالية فعلية"
+    },
+    {
+      "id": "BUS-OFFLINE-SYNC",
+      "priority": 6,
+      "status": "BLOCKED",
+      "action": "تنفيذ online أولًا؛ثم انقطاع مضبوط ومطابقة وعدم تكرار وتنظيف سجلاتنا فقط"
+    }
+  ],
+  "ready_items_remaining": [],
+  "stop_condition": "الفحوص المستقلة المخططة أُنجزت؛ بقية الأعمال تتطلب مسار Android معتمدًا والمصادقة وTEST وقواعد موثقة",
+  "no_background_retry_loop": true
+}
