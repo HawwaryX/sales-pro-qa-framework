@@ -1,0 +1,28 @@
+{
+  "app_pid": 1987,
+  "diagnostics": {
+    "SocketException": 6,
+    "DioException": 0,
+    "HandshakeException": 0,
+    "CONNECT": 0,
+    "403": 0,
+    "FATAL EXCEPTION": 0
+  },
+  "public_url_observations": [
+    {
+      "hostname": "fonts.gstatic.com",
+      "known_static_api_path": null
+    },
+    {
+      "hostname": "docs.flutter.dev",
+      "known_static_api_path": null
+    },
+    {
+      "hostname": "github.com",
+      "known_static_api_path": null
+    }
+  ],
+  "sales_package_in_crash_buffer": false,
+  "raw_logs_saved": false,
+  "network_mode_changed": false
+}

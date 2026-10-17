@@ -1,6 +1,6 @@
 # حالات الاختبار الوظيفي العربية
 
-الإحصاء: PASS: 23؛ FAIL: 4؛ BLOCKED: 54؛ NOT RUN: 3. هذه حالات UI/تغطية أعمال، مستقلة عن 58 اختبار pytest. الخطوات للحالات BLOCKED وNOT RUN خطط لم تُنفذ، والنتيجة الفعلية تحدد ذلك صراحة.
+التراكمي الوظيفي: PASS: 23؛ FAIL: 4؛ BLOCKED: 54؛ NOT RUN: 3؛84 حالة. تشخيص الشبكة منفصل: 3 PASS و4 FAIL بيئية و2 BLOCKED. لا تدمج أخطاء البيئة مع عيوب التطبيق الأربعة. اختبارات pytest75 مستقلة عن النطاقين. الخطوات غير المنفذة موضحة في النتائج.
 
 ## RT-01 — التثبيت
 
@@ -232,13 +232,15 @@
 
 - الشروط: التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها
 
-- الخطوات: إزالة قواعد العزل التي أضفناها وإعادة تشغيل المحاكي بالوكيل الموروث ثم تحديث
+- الخطوات: تحديث القوائم والحساب المحدد مُعبّأ، مع بقاء شبكة المحاكي والوكيل كما هما
 
 - المتوقع: تحميل الفروع والسنوات من backend الاختبار
 
-- الفعلي: بقي فشل التحميل؛ DNS يفشل والسياسة لا تتيح المضيف
+- الفعلي: نُفذ التحديث بالحساب المطابق؛ بقيت رسالة تعذر تحميل الفروع أو السنوات. السياسة الحالية لا تتيح المضيف؛ لا نتيجة API ناجحة بعد تجربة الوكيل النظامي المؤقت بقيت النتيجة نفسها؛ لا دخول مصادق.
 
-- الدليل: [online_lookup_unavailable.png](evidence/online_lookup_unavailable.png)، [final_guest_network_rules.txt](evidence/final_guest_network_rules.txt)، [dns_and_proxy_diagnosis_ar.txt](evidence/dns_and_proxy_diagnosis_ar.txt)
+- الدليل: [online_lookup_unavailable.png](evidence/online_lookup_unavailable.png)، [final_guest_network_rules.txt](evidence/final_guest_network_rules.txt)، [dns_and_proxy_diagnosis_ar.txt](evidence/dns_and_proxy_diagnosis_ar.txt)، [resume_20261018/login_with_branch_year/lookup_with_account.xml](evidence/resume_20261018/login_with_branch_year/lookup_with_account.xml)، [resume_20261018/login_with_branch_year/observations.json](evidence/resume_20261018/login_with_branch_year/observations.json)، [resume_20261018/environment_version_comparison.json](evidence/resume_20261018/environment_version_comparison.json)، [resume_20261018/login_after_network_diagnosis/observations.json](evidence/resume_20261018/login_after_network_diagnosis/observations.json)، [resume_20261018/login_after_network_diagnosis/lookup_with_account.xml](evidence/resume_20261018/login_after_network_diagnosis/lookup_with_account.xml)، [resume_20261018/login_after_network_diagnosis/requested_options.xml](evidence/resume_20261018/login_after_network_diagnosis/requested_options.xml)، [resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png](evidence/resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png)، [resume_20261018/connectivity/15_restore_and_app_logs.json](evidence/resume_20261018/connectivity/15_restore_and_app_logs.json)
+
+- أُعيد التحقق في18أكتوبر2026؛ ملاحظات المحاولات محفوظة في attempts داخل الدفتر.
 
 ## RT-18 — اختيار الفرع الاختباري
 
@@ -246,13 +248,15 @@
 
 - الشروط: التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها
 
-- الخطوات: فتح قائمة الفروع
+- الخطوات: فتح قائمة الفروع ومحاولة اختيار المركز الرئيسي حرفيًا
 
 - المتوقع: ظهور الفرع الاختباري المصرح به من بيانات الخادم
 
-- الفعلي: الخيار الوحيد الفرع الافتراضي؛ لم يُخترع فرع أو معرّف
+- الفعلي: لم يظهر المركز الرئيسي؛ الخيار الوحيد الفرع الافتراضي. لم يُستبدل الفرع المطلوب بعد تجربة الوكيل النظامي المؤقت بقيت النتيجة نفسها؛ لا دخول مصادق.
 
-- الدليل: [branch_available_options.png](evidence/branch_available_options.png)، [branch_available_options.xml](evidence/branch_available_options.xml)
+- الدليل: [branch_available_options.png](evidence/branch_available_options.png)، [branch_available_options.xml](evidence/branch_available_options.xml)، [resume_20261018/login_with_branch_year/branch_options.xml](evidence/resume_20261018/login_with_branch_year/branch_options.xml)، [resume_20261018/login_with_branch_year/requested_options.xml](evidence/resume_20261018/login_with_branch_year/requested_options.xml)، [resume_20261018/login_with_branch_year/observations.json](evidence/resume_20261018/login_with_branch_year/observations.json)، [resume_20261018/login_after_network_diagnosis/observations.json](evidence/resume_20261018/login_after_network_diagnosis/observations.json)، [resume_20261018/login_after_network_diagnosis/lookup_with_account.xml](evidence/resume_20261018/login_after_network_diagnosis/lookup_with_account.xml)، [resume_20261018/login_after_network_diagnosis/requested_options.xml](evidence/resume_20261018/login_after_network_diagnosis/requested_options.xml)، [resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png](evidence/resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png)، [resume_20261018/connectivity/15_restore_and_app_logs.json](evidence/resume_20261018/connectivity/15_restore_and_app_logs.json)
+
+- أُعيد التحقق في18أكتوبر2026؛ ملاحظات المحاولات محفوظة في attempts داخل الدفتر.
 
 ## RT-19 — السنة المالية
 
@@ -260,13 +264,15 @@
 
 - الشروط: التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها
 
-- الخطوات: محاولة فتح قائمة السنة بعد فشل القوائم
+- الخطوات: محاولة اختيار السنة المالية2026 من القائمة الفعلية
 
 - المتوقع: ظهور السنوات الفعلية من الخادم
 
-- الفعلي: القائمة فارغة وغير قابلة للاختيار في هذه الحالة
+- الفعلي: السنة2026 غير متاحة؛ الحقل فارغ وغير قابل للاختيار. لا حقن لقيمة أو معرّف بعد تجربة الوكيل النظامي المؤقت بقيت النتيجة نفسها؛ لا دخول مصادق.
 
-- الدليل: [year_options_unavailable.png](evidence/year_options_unavailable.png)، [year_options_unavailable.xml](evidence/year_options_unavailable.xml)
+- الدليل: [year_options_unavailable.png](evidence/year_options_unavailable.png)، [year_options_unavailable.xml](evidence/year_options_unavailable.xml)، [resume_20261018/login_with_branch_year/requested_options.xml](evidence/resume_20261018/login_with_branch_year/requested_options.xml)، [resume_20261018/login_with_branch_year/login_result_lower_crop.png](evidence/resume_20261018/login_with_branch_year/login_result_lower_crop.png)، [resume_20261018/login_after_network_diagnosis/observations.json](evidence/resume_20261018/login_after_network_diagnosis/observations.json)، [resume_20261018/login_after_network_diagnosis/lookup_with_account.xml](evidence/resume_20261018/login_after_network_diagnosis/lookup_with_account.xml)، [resume_20261018/login_after_network_diagnosis/requested_options.xml](evidence/resume_20261018/login_after_network_diagnosis/requested_options.xml)، [resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png](evidence/resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png)، [resume_20261018/connectivity/15_restore_and_app_logs.json](evidence/resume_20261018/connectivity/15_restore_and_app_logs.json)
+
+- أُعيد التحقق في18أكتوبر2026؛ ملاحظات المحاولات محفوظة في attempts داخل الدفتر.
 
 ## RT-20 — الدخول بالحساب المحدد
 
@@ -274,13 +280,15 @@
 
 - الشروط: التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها
 
-- الخطوات: إدخال الحساب النهائي حرفيًا عبر UI ثم تقديم تسجيل الدخول مرة واحدة
+- الخطوات: إدخال الحساب حرفيًا ثم محاولة اختيار الفرع المركز الرئيسي والسنة2026؛ التقديم بالقيم المطابقة فقط
 
 - المتوقع: ظهور المنزل المصادق عليه وهوية الحساب
 
-- الفعلي: تحقق محلي: اختر الفرع والسنة المالية؛ لم يظهر منزل مصادق عليه. لم يُثبت طلب مصادقة أو رفض كلمة المرور
+- الفعلي: سابقًا: قُدم النموذج وأوقفه تحقق الفرع والسنة. في استئناف18أكتوبر: تحقق إدخال الحساب، لكن الفرع والسنة المطلوبين لم يتاحا؛ login_submitted=false. لم يُرسل نموذج بفرع بديل ولم تظهر شاشة مصادق عليها بعد تجربة الوكيل النظامي المؤقت بقيت النتيجة نفسها؛ لا دخول مصادق.
 
-- الدليل: [exact_login_result.txt](evidence/exact_login_result.txt)، [exact_login_sanitized.xml](evidence/exact_login_sanitized.xml)
+- الدليل: [exact_login_result.txt](evidence/exact_login_result.txt)، [exact_login_sanitized.xml](evidence/exact_login_sanitized.xml)، [resume_20261018/login_with_branch_year/observations.json](evidence/resume_20261018/login_with_branch_year/observations.json)، [resume_20261018/login_with_branch_year/after_form_action.xml](evidence/resume_20261018/login_with_branch_year/after_form_action.xml)، [resume_20261018/login_with_branch_year/login_result_lower_crop.png](evidence/resume_20261018/login_with_branch_year/login_result_lower_crop.png)، [resume_20261018/login_after_network_diagnosis/observations.json](evidence/resume_20261018/login_after_network_diagnosis/observations.json)، [resume_20261018/login_after_network_diagnosis/lookup_with_account.xml](evidence/resume_20261018/login_after_network_diagnosis/lookup_with_account.xml)، [resume_20261018/login_after_network_diagnosis/requested_options.xml](evidence/resume_20261018/login_after_network_diagnosis/requested_options.xml)، [resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png](evidence/resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png)، [resume_20261018/connectivity/15_restore_and_app_logs.json](evidence/resume_20261018/connectivity/15_restore_and_app_logs.json)
+
+- أُعيد التحقق في18أكتوبر2026؛ ملاحظات المحاولات محفوظة في attempts داخل الدفتر.
 
 ## RT-21 — استعادة كلمة المرور
 
@@ -358,13 +366,15 @@
 
 - الشروط: خادم القوائم غير متاح؛ السلوك يحتاج إعادة تحقق بعد إزالة عائق الاتصال
 
-- الخطوات: التمرير إلى بطاقة الشركة والضغط على تغيير
+- الخطوات: ضغط تغيير بعد محاولة القوائم والاختيارات المحددة
 
 - المتوقع: تظهر نتيجة قابلة للملاحظة أو اختيار البيئة
 
-- الفعلي: لم يُرصد حوار أو تغيير؛ لا يُثبت ذلك أي عنوان API أو تهيئة ناجحة
+- الفعلي: أُعيد الضغط فعلًا؛ لم يُرصد حوار أو عنوان API في UI. السلوك ما زال يحتاج تحققًا بعد إتاحة backend
 
-- الدليل: [environment_change_observed.png](evidence/environment_change_observed.png)، [environment_change_observed.xml](evidence/environment_change_observed.xml)، [environment_tap_repeat.png](evidence/environment_tap_repeat.png)
+- الدليل: [environment_change_observed.png](evidence/environment_change_observed.png)، [environment_change_observed.xml](evidence/environment_change_observed.xml)، [environment_tap_repeat.png](evidence/environment_tap_repeat.png)، [resume_20261018/login_with_branch_year/environment_control.xml](evidence/resume_20261018/login_with_branch_year/environment_control.xml)، [resume_20261018/login_with_branch_year/observations.json](evidence/resume_20261018/login_with_branch_year/observations.json)
+
+- أُعيد التحقق في18أكتوبر2026؛ ملاحظات المحاولات محفوظة في attempts داخل الدفتر.
 
 ## RT-27 — زر الدعم
 
@@ -554,13 +564,15 @@
 
 - الشروط: خادم TEST مطابق ومتاح وقوائم فرع/سنة صحيحة وجلسة مصادق عليها
 
-- الخطوات: تسجيل الخروج والتحقق من منع شاشة محمية بعده
+- الخطوات: التحقق من حالة الجلسة قبل تنفيذ تسجيل الخروج المطلوب
 
 - المتوقع: بيانات ونتيجة صحيحة محفوظة في backend الاختبار
 
-- الفعلي: لم ينفذ؛ تعذر اجتياز شرط الفرع والسنة والمصادقة
+- الفعلي: الشاشة الحالية نموذج دخول، وauthenticated=false؛ لم توجد جلسة مصادق عليها مرصودة أو زر خروج يمكن تنفيذه. لم ينفذ logout أو إبطال جلسة backend
 
-- الدليل: [exact_login_result.txt](evidence/exact_login_result.txt)
+- الدليل: [exact_login_result.txt](evidence/exact_login_result.txt)، [resume_20261018/current_session_lower_screen.png](evidence/resume_20261018/current_session_lower_screen.png)، [resume_20261018/login_with_branch_year/observations.json](evidence/resume_20261018/login_with_branch_year/observations.json)
+
+- أُعيد التحقق في18أكتوبر2026؛ ملاحظات المحاولات محفوظة في attempts داخل الدفتر.
 
 ## BUS-CUS-CREATE — العملاء — إنشاء
 
@@ -1148,7 +1160,7 @@
 
 - الفعلي: اكتمل الترحيب قبل هذا الفحص؛ لم تمسح بيانات التطبيق لإعادته
 
-- الدليل: لا يوجد تنفيذ أو دليل فعلي لهذه الحالة
+- الدليل: لا تنفيذ أو دليل فعلي لهذه الحالة
 
 ## NR-02 — قارئ TalkBack فعلي
 
@@ -1162,7 +1174,7 @@
 
 - الفعلي: لا خدمة TalkBack مهيأة؛ ملاحظات semantics لا تثبت تجربة قارئ الشاشة
 
-- الدليل: لا يوجد تنفيذ أو دليل فعلي لهذه الحالة
+- الدليل: لا تنفيذ أو دليل فعلي لهذه الحالة
 
 ## NR-03 — بيومتري بمستشعر حقيقي
 
@@ -1176,4 +1188,4 @@
 
 - الفعلي: زر التطبيق يعرض قريبًا؛ لم تجر مصادقة بمستشعر فعلي
 
-- الدليل: لا يوجد تنفيذ أو دليل فعلي لهذه الحالة
+- الدليل: لا تنفيذ أو دليل فعلي لهذه الحالة

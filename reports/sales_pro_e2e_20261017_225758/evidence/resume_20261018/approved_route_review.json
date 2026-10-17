@@ -1,0 +1,21 @@
+{
+  "observations_current": true,
+  "source_version": "1cf3769a-7224-4a0a-a89c-9551c4aa143f~cecfgver_6ad38fda5c4c8191a2787157d62e7be8",
+  "http_policy_mode": "restricted",
+  "http_policy_state": "enforced",
+  "backend_in_effective_allowlist": false,
+  "capabilities": [],
+  "outbound_identities": [],
+  "network_diagnostics": null,
+  "vpn_configured": false,
+  "tcp_network_access": {
+    "domains": [],
+    "ip_ranges": []
+  },
+  "policy_file": "/etc/codex/network-policy.json",
+  "supported_configuration_tool": "cloud_environment_onboarding.update_environment_config_draft",
+  "configuration_tool_scope": "Saves a draft; does not apply, publish, restart or migrate this task",
+  "target_request_repeated": false,
+  "general_direct_internet_route_supported": false,
+  "destination_denial_requires_supported_configuration": true
+}

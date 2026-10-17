@@ -1,0 +1,21 @@
+{
+  "functional_counts": {
+    "PASS": 23,
+    "BLOCKED": 54,
+    "FAIL": 4,
+    "NOT RUN": 3
+  },
+  "network_diagnostic_counts": {
+    "PASS": 3,
+    "FAIL": 4,
+    "BLOCKED": 2
+  },
+  "referenced_evidence_files_verified": 154,
+  "python312_pytest": "75 passed in 0.92s",
+  "python313_pytest": "75 passed in 0.95s",
+  "syntax_compatible_with": "Python 3.11 (not executed)",
+  "network_probe_source_matches_executed_build": true,
+  "live_authentication_verified": false,
+  "business_mutations_performed": false,
+  "git_delivery": "Pending commit and remote verification; consult Git history"
+}

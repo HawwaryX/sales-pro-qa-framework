@@ -1,0 +1,13 @@
+{
+  "runtime_source_version": "1cf3769a-7224-4a0a-a89c-9551c4aa143f~cecfgver_6ad38fda5c4c8191a2787157d62e7be8",
+  "settings_base_version": "1cf3769a-7224-4a0a-a89c-9551c4aa143f~cecfgver_6ad3e3785ad48191b8d23d0d57830fd3",
+  "runtime_revision": "2",
+  "runtime_observations_current": true,
+  "runtime_policy_enforced": true,
+  "runtime_sales_allowed": false,
+  "settings_sales_rule_present": true,
+  "same_version": false,
+  "settings_draft_id": null,
+  "settings_revision": null,
+  "network_configuration_modified_during_resume": false
+}

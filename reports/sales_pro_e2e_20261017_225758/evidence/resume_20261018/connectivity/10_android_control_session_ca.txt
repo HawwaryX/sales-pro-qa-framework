@@ -1,0 +1,1 @@
+{"hostname":"dl.google.com","trust":"android_default_plus_session_CA","explicit_managed_proxy":true,"proxy_connect_status":200,"tls_negotiated":true,"tls_protocol":"TLSv1.3","cipher":"TLS_AES_128_GCM_SHA256","origin_http_status":200,"category":"HTTPS_OK","last_stage":"HTTP"}

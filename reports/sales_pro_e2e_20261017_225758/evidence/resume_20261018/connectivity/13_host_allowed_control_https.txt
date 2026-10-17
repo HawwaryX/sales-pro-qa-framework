@@ -1,0 +1,3 @@
+HEAD https://dl.google.com/android/repository/repository2-3.xml
+proxy_connect=200 origin_http=200 tls_verify=0
+لم ترسل بيانات حساب ولم تتبع redirects.

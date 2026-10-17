@@ -1,0 +1,1 @@
+{"hostname":"dl.google.com","trust":"android_default","explicit_managed_proxy":true,"proxy_connect_status":200,"error_class":"SSLHandshakeException","category":"TLS_FAILURE","cause_classes":"SSLHandshakeException,CertificateException,CertPathValidatorException","last_stage":"TLS"}

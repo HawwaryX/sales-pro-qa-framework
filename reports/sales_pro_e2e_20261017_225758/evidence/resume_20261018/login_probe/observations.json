@@ -1,0 +1,6 @@
+{
+  "login_submitted": false,
+  "authenticated": null,
+  "ui_url_candidates": [],
+  "worker_error_class": "LaunchUiAutomationError"
+}

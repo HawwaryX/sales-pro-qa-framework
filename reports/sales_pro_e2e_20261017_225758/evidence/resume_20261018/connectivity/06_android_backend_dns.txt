@@ -1,0 +1,1 @@
+{"hostname":"sales.infinity-tech.sa","error_class":"UnknownHostException","category":"DNS_RESOLUTION_FAILURE","cause_classes":"UnknownHostException,GaiException","last_stage":"DNS"}

@@ -227,58 +227,192 @@
       "id": "RT-17",
       "feature": "تحميل القوائم بعد إعادة الشبكة",
       "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
-      "steps": "إزالة قواعد العزل التي أضفناها وإعادة تشغيل المحاكي بالوكيل الموروث ثم تحديث",
+      "steps": "تحديث القوائم والحساب المحدد مُعبّأ، مع بقاء شبكة المحاكي والوكيل كما هما",
       "expected": "تحميل الفروع والسنوات من backend الاختبار",
-      "actual": "بقي فشل التحميل؛ DNS يفشل والسياسة لا تتيح المضيف",
+      "actual": "نُفذ التحديث بالحساب المطابق؛ بقيت رسالة تعذر تحميل الفروع أو السنوات. السياسة الحالية لا تتيح المضيف؛ لا نتيجة API ناجحة بعد تجربة الوكيل النظامي المؤقت بقيت النتيجة نفسها؛ لا دخول مصادق.",
       "status": "BLOCKED",
       "evidence": [
         "online_lookup_unavailable.png",
         "final_guest_network_rules.txt",
-        "dns_and_proxy_diagnosis_ar.txt"
+        "dns_and_proxy_diagnosis_ar.txt",
+        "resume_20261018/login_with_branch_year/lookup_with_account.xml",
+        "resume_20261018/login_with_branch_year/observations.json",
+        "resume_20261018/environment_version_comparison.json",
+        "resume_20261018/login_after_network_diagnosis/observations.json",
+        "resume_20261018/login_after_network_diagnosis/lookup_with_account.xml",
+        "resume_20261018/login_after_network_diagnosis/requested_options.xml",
+        "resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png",
+        "resume_20261018/connectivity/15_restore_and_app_logs.json"
       ],
-      "defect": null
+      "defect": null,
+      "attempts": [
+        {
+          "client_date": "2026-10-18",
+          "steps": "تحديث القوائم والحساب المحدد مُعبّأ، مع بقاء شبكة المحاكي والوكيل كما هما",
+          "actual": "نُفذ التحديث بالحساب المطابق؛ بقيت رسالة تعذر تحميل الفروع أو السنوات. السياسة الحالية لا تتيح المضيف؛ لا نتيجة API ناجحة",
+          "status": "BLOCKED",
+          "evidence": [
+            "resume_20261018/login_with_branch_year/lookup_with_account.xml",
+            "resume_20261018/login_with_branch_year/observations.json",
+            "resume_20261018/environment_version_comparison.json"
+          ]
+        },
+        {
+          "client_date": "2026-10-18",
+          "steps": "إعادة القوائم بعد اختبار إصلاح إعداد الوكيل النظامي على الوكيل المعتمد",
+          "actual": "بعد تشخيص الشبكة وتجربة وكيل النظام نفسه مؤقتًا، أُعيد إدخال الحساب المطابق وتحديث القوائم؛ بقي الفرع المطلوب والسنة2026 غير متاحين، دون تقديم بفرع بديل. أعيد إعداد الوكيل الأصلي.",
+          "status": "BLOCKED",
+          "evidence": [
+            "resume_20261018/login_after_network_diagnosis/observations.json",
+            "resume_20261018/login_after_network_diagnosis/lookup_with_account.xml",
+            "resume_20261018/login_after_network_diagnosis/requested_options.xml",
+            "resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png",
+            "resume_20261018/connectivity/15_restore_and_app_logs.json"
+          ]
+        }
+      ]
     },
     {
       "id": "RT-18",
       "feature": "اختيار الفرع الاختباري",
       "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
-      "steps": "فتح قائمة الفروع",
+      "steps": "فتح قائمة الفروع ومحاولة اختيار المركز الرئيسي حرفيًا",
       "expected": "ظهور الفرع الاختباري المصرح به من بيانات الخادم",
-      "actual": "الخيار الوحيد الفرع الافتراضي؛ لم يُخترع فرع أو معرّف",
+      "actual": "لم يظهر المركز الرئيسي؛ الخيار الوحيد الفرع الافتراضي. لم يُستبدل الفرع المطلوب بعد تجربة الوكيل النظامي المؤقت بقيت النتيجة نفسها؛ لا دخول مصادق.",
       "status": "BLOCKED",
       "evidence": [
         "branch_available_options.png",
-        "branch_available_options.xml"
+        "branch_available_options.xml",
+        "resume_20261018/login_with_branch_year/branch_options.xml",
+        "resume_20261018/login_with_branch_year/requested_options.xml",
+        "resume_20261018/login_with_branch_year/observations.json",
+        "resume_20261018/login_after_network_diagnosis/observations.json",
+        "resume_20261018/login_after_network_diagnosis/lookup_with_account.xml",
+        "resume_20261018/login_after_network_diagnosis/requested_options.xml",
+        "resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png",
+        "resume_20261018/connectivity/15_restore_and_app_logs.json"
       ],
-      "defect": null
+      "defect": null,
+      "attempts": [
+        {
+          "client_date": "2026-10-18",
+          "steps": "فتح قائمة الفروع ومحاولة اختيار المركز الرئيسي حرفيًا",
+          "actual": "لم يظهر المركز الرئيسي؛ الخيار الوحيد الفرع الافتراضي. لم يُستبدل الفرع المطلوب",
+          "status": "BLOCKED",
+          "evidence": [
+            "resume_20261018/login_with_branch_year/branch_options.xml",
+            "resume_20261018/login_with_branch_year/requested_options.xml",
+            "resume_20261018/login_with_branch_year/observations.json"
+          ]
+        },
+        {
+          "client_date": "2026-10-18",
+          "steps": "إعادة القوائم بعد اختبار إصلاح إعداد الوكيل النظامي على الوكيل المعتمد",
+          "actual": "بعد تشخيص الشبكة وتجربة وكيل النظام نفسه مؤقتًا، أُعيد إدخال الحساب المطابق وتحديث القوائم؛ بقي الفرع المطلوب والسنة2026 غير متاحين، دون تقديم بفرع بديل. أعيد إعداد الوكيل الأصلي.",
+          "status": "BLOCKED",
+          "evidence": [
+            "resume_20261018/login_after_network_diagnosis/observations.json",
+            "resume_20261018/login_after_network_diagnosis/lookup_with_account.xml",
+            "resume_20261018/login_after_network_diagnosis/requested_options.xml",
+            "resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png",
+            "resume_20261018/connectivity/15_restore_and_app_logs.json"
+          ]
+        }
+      ]
     },
     {
       "id": "RT-19",
       "feature": "السنة المالية",
       "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
-      "steps": "محاولة فتح قائمة السنة بعد فشل القوائم",
+      "steps": "محاولة اختيار السنة المالية2026 من القائمة الفعلية",
       "expected": "ظهور السنوات الفعلية من الخادم",
-      "actual": "القائمة فارغة وغير قابلة للاختيار في هذه الحالة",
+      "actual": "السنة2026 غير متاحة؛ الحقل فارغ وغير قابل للاختيار. لا حقن لقيمة أو معرّف بعد تجربة الوكيل النظامي المؤقت بقيت النتيجة نفسها؛ لا دخول مصادق.",
       "status": "BLOCKED",
       "evidence": [
         "year_options_unavailable.png",
-        "year_options_unavailable.xml"
+        "year_options_unavailable.xml",
+        "resume_20261018/login_with_branch_year/requested_options.xml",
+        "resume_20261018/login_with_branch_year/login_result_lower_crop.png",
+        "resume_20261018/login_after_network_diagnosis/observations.json",
+        "resume_20261018/login_after_network_diagnosis/lookup_with_account.xml",
+        "resume_20261018/login_after_network_diagnosis/requested_options.xml",
+        "resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png",
+        "resume_20261018/connectivity/15_restore_and_app_logs.json"
       ],
-      "defect": null
+      "defect": null,
+      "attempts": [
+        {
+          "client_date": "2026-10-18",
+          "steps": "محاولة اختيار السنة المالية2026 من القائمة الفعلية",
+          "actual": "السنة2026 غير متاحة؛ الحقل فارغ وغير قابل للاختيار. لا حقن لقيمة أو معرّف",
+          "status": "BLOCKED",
+          "evidence": [
+            "resume_20261018/login_with_branch_year/requested_options.xml",
+            "resume_20261018/login_with_branch_year/login_result_lower_crop.png"
+          ]
+        },
+        {
+          "client_date": "2026-10-18",
+          "steps": "إعادة القوائم بعد اختبار إصلاح إعداد الوكيل النظامي على الوكيل المعتمد",
+          "actual": "بعد تشخيص الشبكة وتجربة وكيل النظام نفسه مؤقتًا، أُعيد إدخال الحساب المطابق وتحديث القوائم؛ بقي الفرع المطلوب والسنة2026 غير متاحين، دون تقديم بفرع بديل. أعيد إعداد الوكيل الأصلي.",
+          "status": "BLOCKED",
+          "evidence": [
+            "resume_20261018/login_after_network_diagnosis/observations.json",
+            "resume_20261018/login_after_network_diagnosis/lookup_with_account.xml",
+            "resume_20261018/login_after_network_diagnosis/requested_options.xml",
+            "resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png",
+            "resume_20261018/connectivity/15_restore_and_app_logs.json"
+          ]
+        }
+      ]
     },
     {
       "id": "RT-20",
       "feature": "الدخول بالحساب المحدد",
       "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
-      "steps": "إدخال الحساب النهائي حرفيًا عبر UI ثم تقديم تسجيل الدخول مرة واحدة",
+      "steps": "إدخال الحساب حرفيًا ثم محاولة اختيار الفرع المركز الرئيسي والسنة2026؛ التقديم بالقيم المطابقة فقط",
       "expected": "ظهور المنزل المصادق عليه وهوية الحساب",
-      "actual": "تحقق محلي: اختر الفرع والسنة المالية؛ لم يظهر منزل مصادق عليه. لم يُثبت طلب مصادقة أو رفض كلمة المرور",
+      "actual": "سابقًا: قُدم النموذج وأوقفه تحقق الفرع والسنة. في استئناف18أكتوبر: تحقق إدخال الحساب، لكن الفرع والسنة المطلوبين لم يتاحا؛ login_submitted=false. لم يُرسل نموذج بفرع بديل ولم تظهر شاشة مصادق عليها بعد تجربة الوكيل النظامي المؤقت بقيت النتيجة نفسها؛ لا دخول مصادق.",
       "status": "BLOCKED",
       "evidence": [
         "exact_login_result.txt",
-        "exact_login_sanitized.xml"
+        "exact_login_sanitized.xml",
+        "resume_20261018/login_with_branch_year/observations.json",
+        "resume_20261018/login_with_branch_year/after_form_action.xml",
+        "resume_20261018/login_with_branch_year/login_result_lower_crop.png",
+        "resume_20261018/login_after_network_diagnosis/observations.json",
+        "resume_20261018/login_after_network_diagnosis/lookup_with_account.xml",
+        "resume_20261018/login_after_network_diagnosis/requested_options.xml",
+        "resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png",
+        "resume_20261018/connectivity/15_restore_and_app_logs.json"
       ],
-      "defect": null
+      "defect": null,
+      "attempts": [
+        {
+          "client_date": "2026-10-18",
+          "steps": "إدخال الحساب حرفيًا ثم محاولة اختيار الفرع المركز الرئيسي والسنة2026؛ التقديم بالقيم المطابقة فقط",
+          "actual": "سابقًا: قُدم النموذج وأوقفه تحقق الفرع والسنة. في استئناف18أكتوبر: تحقق إدخال الحساب، لكن الفرع والسنة المطلوبين لم يتاحا؛ login_submitted=false. لم يُرسل نموذج بفرع بديل ولم تظهر شاشة مصادق عليها",
+          "status": "BLOCKED",
+          "evidence": [
+            "resume_20261018/login_with_branch_year/observations.json",
+            "resume_20261018/login_with_branch_year/after_form_action.xml",
+            "resume_20261018/login_with_branch_year/login_result_lower_crop.png"
+          ]
+        },
+        {
+          "client_date": "2026-10-18",
+          "steps": "إعادة القوائم بعد اختبار إصلاح إعداد الوكيل النظامي على الوكيل المعتمد",
+          "actual": "بعد تشخيص الشبكة وتجربة وكيل النظام نفسه مؤقتًا، أُعيد إدخال الحساب المطابق وتحديث القوائم؛ بقي الفرع المطلوب والسنة2026 غير متاحين، دون تقديم بفرع بديل. أعيد إعداد الوكيل الأصلي.",
+          "status": "BLOCKED",
+          "evidence": [
+            "resume_20261018/login_after_network_diagnosis/observations.json",
+            "resume_20261018/login_after_network_diagnosis/lookup_with_account.xml",
+            "resume_20261018/login_after_network_diagnosis/requested_options.xml",
+            "resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png",
+            "resume_20261018/connectivity/15_restore_and_app_logs.json"
+          ]
+        }
+      ]
     },
     {
       "id": "RT-21",
@@ -353,16 +487,30 @@
       "id": "RT-26",
       "feature": "زر تغيير البيئة",
       "preconditions": "خادم القوائم غير متاح؛ السلوك يحتاج إعادة تحقق بعد إزالة عائق الاتصال",
-      "steps": "التمرير إلى بطاقة الشركة والضغط على تغيير",
+      "steps": "ضغط تغيير بعد محاولة القوائم والاختيارات المحددة",
       "expected": "تظهر نتيجة قابلة للملاحظة أو اختيار البيئة",
-      "actual": "لم يُرصد حوار أو تغيير؛ لا يُثبت ذلك أي عنوان API أو تهيئة ناجحة",
+      "actual": "أُعيد الضغط فعلًا؛ لم يُرصد حوار أو عنوان API في UI. السلوك ما زال يحتاج تحققًا بعد إتاحة backend",
       "status": "BLOCKED",
       "evidence": [
         "environment_change_observed.png",
         "environment_change_observed.xml",
-        "environment_tap_repeat.png"
+        "environment_tap_repeat.png",
+        "resume_20261018/login_with_branch_year/environment_control.xml",
+        "resume_20261018/login_with_branch_year/observations.json"
       ],
-      "defect": null
+      "defect": null,
+      "attempts": [
+        {
+          "client_date": "2026-10-18",
+          "steps": "ضغط تغيير بعد محاولة القوائم والاختيارات المحددة",
+          "actual": "أُعيد الضغط فعلًا؛ لم يُرصد حوار أو عنوان API في UI. السلوك ما زال يحتاج تحققًا بعد إتاحة backend",
+          "status": "BLOCKED",
+          "evidence": [
+            "resume_20261018/login_with_branch_year/environment_control.xml",
+            "resume_20261018/login_with_branch_year/observations.json"
+          ]
+        }
+      ]
     },
     {
       "id": "RT-27",
@@ -544,14 +692,28 @@
       "id": "BUS-LOGOUT",
       "feature": "الخروج وانتهاء الجلسة",
       "preconditions": "خادم TEST مطابق ومتاح وقوائم فرع/سنة صحيحة وجلسة مصادق عليها",
-      "steps": "تسجيل الخروج والتحقق من منع شاشة محمية بعده",
+      "steps": "التحقق من حالة الجلسة قبل تنفيذ تسجيل الخروج المطلوب",
       "expected": "بيانات ونتيجة صحيحة محفوظة في backend الاختبار",
-      "actual": "لم ينفذ؛ تعذر اجتياز شرط الفرع والسنة والمصادقة",
+      "actual": "الشاشة الحالية نموذج دخول، وauthenticated=false؛ لم توجد جلسة مصادق عليها مرصودة أو زر خروج يمكن تنفيذه. لم ينفذ logout أو إبطال جلسة backend",
       "status": "BLOCKED",
       "evidence": [
-        "exact_login_result.txt"
+        "exact_login_result.txt",
+        "resume_20261018/current_session_lower_screen.png",
+        "resume_20261018/login_with_branch_year/observations.json"
       ],
-      "defect": null
+      "defect": null,
+      "attempts": [
+        {
+          "client_date": "2026-10-18",
+          "steps": "التحقق من حالة الجلسة قبل تنفيذ تسجيل الخروج المطلوب",
+          "actual": "الشاشة الحالية نموذج دخول، وauthenticated=false؛ لم توجد جلسة مصادق عليها مرصودة أو زر خروج يمكن تنفيذه. لم ينفذ logout أو إبطال جلسة backend",
+          "status": "BLOCKED",
+          "evidence": [
+            "resume_20261018/current_session_lower_screen.png",
+            "resume_20261018/login_with_branch_year/observations.json"
+          ]
+        }
+      ]
     },
     {
       "id": "BUS-CUS-CREATE",
@@ -1119,5 +1281,145 @@
       "evidence": [],
       "defect": null
     }
-  ]
+  ],
+  "last_updated_client_date": "2026-10-18",
+  "resume_summary": {
+    "exact_account_input_verified": true,
+    "requested_branch": "المركز الرئيسي",
+    "requested_financial_year": "2026",
+    "requested_branch_selected": false,
+    "requested_year_selected": false,
+    "current_probe_login_submitted": false,
+    "prior_form_submission_verified": true,
+    "authenticated_home_verified": false,
+    "logout_executed": false,
+    "business_records_created_edited_deleted": 0,
+    "offline_retested": false,
+    "worker_outcome": "COMPLETED does not mean application PASS",
+    "framework_pytest_passed": 75,
+    "android_managed_https_control_verified": true,
+    "android_native_dns_verified_failed": true,
+    "backend_proxy_connect_status": 403,
+    "backend_origin_reached_in_checks": false,
+    "global_proxy_restored": true,
+    "system_or_app_trust_modified": false
+  },
+  "connectivity_diagnostics": [
+    {
+      "id": "NET-01",
+      "feature": "واجهة واتصال Android",
+      "status": "PASS",
+      "scope": "تشخيص بيئة الشبكة؛ منفصل عن عيوب التطبيق",
+      "expected": "عنوان ومسار افتراضي واتصال شبكة قائم",
+      "actual": "eth0 UP؛10.0.2.15/24؛default10.0.2.2؛MOBILE CONNECTED؛Wi-Fi غير متصل؛لا VALIDATED",
+      "evidence": [
+        "resume_20261018/connectivity/01_interfaces.txt",
+        "resume_20261018/connectivity/02_routes.txt",
+        "resume_20261018/connectivity/03_connectivity.txt",
+        "resume_20261018/connectivity/04_wifi.txt"
+      ]
+    },
+    {
+      "id": "NET-02",
+      "feature": "DNS داخل Android لمضيف التطبيق",
+      "status": "FAIL",
+      "scope": "تشخيص بيئة الشبكة؛ منفصل عن عيوب التطبيق",
+      "expected": "حل الاسم عبر resolver الافتراضي",
+      "actual": "UnknownHostException مع GaiException؛لا إجابة DNS ناجحة",
+      "evidence": [
+        "resume_20261018/connectivity/06_android_backend_dns.txt"
+      ]
+    },
+    {
+      "id": "NET-03",
+      "feature": "HTTPS الافتراضي داخل Android لمضيف التطبيق",
+      "status": "BLOCKED",
+      "scope": "تشخيص بيئة الشبكة؛ منفصل عن عيوب التطبيق",
+      "expected": "إتمام DNS وTLS ثم قراءة HTTP",
+      "actual": "توقف عند DNS_OR_TCP بسبب UnknownHostException؛لا TLS أو HTTP أصل",
+      "evidence": [
+        "resume_20261018/connectivity/07_android_backend_default_https.txt"
+      ]
+    },
+    {
+      "id": "NET-04",
+      "feature": "مضيف التطبيق عبر وكيل الجلسة من Android",
+      "status": "BLOCKED",
+      "scope": "تشخيص بيئة الشبكة؛ منفصل عن عيوب التطبيق",
+      "expected": "سماح CONNECT قبل فحص TLS والأصل",
+      "actual": "proxy CONNECT403؛tls_negotiated=false؛ليست HTTP403 من backend",
+      "evidence": [
+        "resume_20261018/connectivity/08_android_backend_managed_proxy.txt"
+      ]
+    },
+    {
+      "id": "NET-05",
+      "feature": "HTTPS وجهة مسموحة بثقة Android الافتراضية",
+      "status": "FAIL",
+      "scope": "تشخيص بيئة الشبكة؛ منفصل عن عيوب التطبيق",
+      "expected": "TLS موثوق إلى الوجهة المسموحة",
+      "actual": "CONNECT200 ثم SSLHandshakeException/CertificateException/CertPathValidatorException",
+      "evidence": [
+        "resume_20261018/connectivity/09_android_control_managed_proxy.txt"
+      ]
+    },
+    {
+      "id": "NET-06",
+      "feature": "HTTPS وجهة مسموحة بثقة الجلسة الصحيحة في المسبار",
+      "status": "PASS",
+      "scope": "تشخيص بيئة الشبكة؛ منفصل عن عيوب التطبيق",
+      "expected": "TLS مع تحقق اسم المضيف ثم HTTP من الأصل",
+      "actual": "TLSv1.3؛TLS_AES_128_GCM_SHA256؛origin HTTP200؛لا تعطيل تحقق أو تعديل ثقة النظام",
+      "evidence": [
+        "resume_20261018/connectivity/10_android_control_session_ca.txt"
+      ]
+    },
+    {
+      "id": "NET-07",
+      "feature": "DNS وجهة التحكم المسموحة داخل Android",
+      "status": "FAIL",
+      "scope": "تشخيص بيئة الشبكة؛ منفصل عن عيوب التطبيق",
+      "expected": "حل dl.google.com بالمسار الافتراضي",
+      "actual": "UnknownHostException/GaiException أيضًا؛فشل المسار لا يقتصر على اسم backend",
+      "evidence": [
+        "resume_20261018/connectivity/11_android_control_dns.txt"
+      ]
+    },
+    {
+      "id": "NET-08",
+      "feature": "DNS في Linux لمضيف التطبيق",
+      "status": "FAIL",
+      "scope": "تشخيص بيئة الشبكة؛ منفصل عن عيوب التطبيق",
+      "expected": "نجاح getaddrinfo",
+      "actual": "gaierror errno=-3؛العامل اكتمل ولم تنجح عملية الحل",
+      "evidence": [
+        "resume_20261018/connectivity/12_host_backend_dns.txt"
+      ]
+    },
+    {
+      "id": "NET-09",
+      "feature": "HTTPS وجهة التحكم من Linux",
+      "status": "PASS",
+      "scope": "تشخيص بيئة الشبكة؛ منفصل عن عيوب التطبيق",
+      "expected": "وصول مسموح مع تحقق TLS",
+      "actual": "proxy CONNECT200؛origin HTTP200؛ssl_verify_result0",
+      "evidence": [
+        "resume_20261018/connectivity/13_host_allowed_control_https.txt"
+      ]
+    }
+  ],
+  "connectivity_diagnostic_counts": {
+    "PASS": 3,
+    "FAIL": 4,
+    "BLOCKED": 2
+  },
+  "approved_route_review": {
+    "evidence": [
+      "resume_20261018/approved_route_review.json"
+    ],
+    "result": "لا VPN مهيأ أو منح TCP أو أداة تطبيق/ترحيل للسياسة؛ المضيف غائب عن السياسة الفعلية. الإعداد المقروء يتضمنه؛ يلزم إصلاح ربط النسخة من المنصة. لم يكرر الطلب المحجوب.",
+    "new_functional_tests_executed": 0,
+    "authenticated": false,
+    "business_mutations_performed": false
+  }
 }

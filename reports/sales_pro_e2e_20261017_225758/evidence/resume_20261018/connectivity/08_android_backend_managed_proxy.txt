@@ -1,0 +1,1 @@
+{"hostname":"sales.infinity-tech.sa","trust":"android_default","explicit_managed_proxy":true,"proxy_connect_status":403,"category":"PROXY_CONNECT_DENIED","tls_negotiated":false,"last_stage":"PROXY_CONNECT"}

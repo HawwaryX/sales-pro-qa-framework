@@ -1,0 +1,1 @@
+{"hostname":"sales.infinity-tech.sa","trust":"android_default","explicit_managed_proxy":false,"error_class":"UnknownHostException","category":"DNS_RESOLUTION_FAILURE","cause_classes":"UnknownHostException","last_stage":"DNS_OR_TCP"}

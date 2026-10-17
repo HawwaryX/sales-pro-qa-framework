@@ -1,0 +1,2 @@
+{"resolved": false, "errno": -3, "error_class": "gaierror"}
+worker_state=COMPLETED

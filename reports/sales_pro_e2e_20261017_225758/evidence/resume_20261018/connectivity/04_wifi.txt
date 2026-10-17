@@ -1,0 +1,1436 @@
+Verbose logging is off
+mVerboseLoggingLevel 0
+Stay-awake conditions: 1
+mInIdleMode false
+mScanPending false
+SupportedFeatures:199d81ccb8000019
+SettingsStore:
+WifiState 1
+AirplaneModeOn false
+ScanAlwaysAvailable false
+WifiScoringState true
+WifiPasspointState true
+WifiMultiInternetMode 0
+WifiStateApm false
+WifiStateBt false
+WifiStateUser 0
+AirplaneModeEnhancementEnabled true
+SatelliteModeOn false
+Dump of WifiActiveModeWarden
+Current wifi mode: EnabledState
+Wi-Fi is enabled
+NumActiveModeManagers: 1
+mIsMultiplePrimaryBugreportTaken: false
+WifiController:
+ total records=3
+ rec[0]: time=10-17 21:17:27.955 processed=DefaultState org=EnabledState dest=<null> what=CMD_UPDATE_AP_CAPABILITY 1 0 num ClientModeManagers:1 num SoftApManagers:0 SupportedFeatures=42 MaximumSupportedClientNumber=16 SupportedChannelListIn24g[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] SupportedChannelListIn5g[] SupportedChannelListIn6g[] SupportedChannelListIn60g[] mCountryCodeFromDriverUS
+ rec[1]: time=10-17 21:17:27.955 processed=DefaultState org=EnabledState dest=<null> what=CMD_UPDATE_AP_CAPABILITY 2 0 num ClientModeManagers:1 num SoftApManagers:0 SupportedFeatures=42 MaximumSupportedClientNumber=16 SupportedChannelListIn24g[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] SupportedChannelListIn5g[] SupportedChannelListIn6g[] SupportedChannelListIn60g[] mCountryCodeFromDriverUS
+ rec[2]: time=10-17 21:18:21.505 processed=DefaultState org=EnabledState dest=<null> what=CMD_UPDATE_AP_CAPABILITY 1 0 num ClientModeManagers:1 num SoftApManagers:0 SupportedFeatures=42 MaximumSupportedClientNumber=16 SupportedChannelListIn24g[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] SupportedChannelListIn5g[] SupportedChannelListIn6g[] SupportedChannelListIn60g[] mCountryCodeFromDriverUS
+curState=EnabledState
+Dump of ClientModeManager id=164151
+current StateMachine mode: ConnectModeState
+mRole: ROLE_CLIENT_PRIMARY
+mPreviousRole: null
+mTargetRoleChangeInfo: Role: ROLE_CLIENT_PRIMARY, RequestorWs: WorkSource{1000 com.android.settings}, ModeListener: com.android.server.wifi.ActiveModeWarden$ClientListener@214d8c3
+mClientInterfaceName: wlan0
+mIfaceIsUp: true
+mSecondaryInternet: false
+mIsDbs: false
+WifiClientModeManager:
+ total records=2
+ rec[0]: time=10-17 21:13:11.158 processed=IdleState org=IdleState dest=StartedState what=CMD_START 0 0 Role: ROLE_CLIENT_PRIMARY, RequestorWs: WorkSource{1000 com.android.settings}, ModeListener: com.android.server.wifi.ActiveModeWarden$ClientListener@214d8c3
+ rec[1]: time=10-17 21:13:13.569 processed=StartedState org=StartedState dest=ConnectModeState what=CMD_SWITCH_TO_CONNECT_MODE 0 0 Role: ROLE_CLIENT_PRIMARY, RequestorWs: WorkSource{1000 com.android.settings}, ModeListener: com.android.server.wifi.ActiveModeWarden$ClientListener@214d8c3
+curState=ConnectModeState
+
+Dump of ClientModeImpl id=167759
+WifiClientModeImpl:
+ total records=8
+ rec[0]: time=10-17 21:13:59.220 processed=ConnectableState org=DisconnectedState dest=<null> what=CMD_IPCLIENT_CREATED screen=on 1 0
+ rec[1]: time=10-17 21:13:59.230 processed=ConnectableState org=DisconnectedState dest=<null> what=CMD_ENABLE_RSSI_POLL screen=on 1 0
+ rec[2]: time=10-17 21:13:59.231 processed=ConnectableState org=DisconnectedState dest=<null> what=CMD_SET_SUSPEND_OPT_ENABLED screen=on 0 0
+ rec[3]: time=10-17 21:14:10.265 processed=ConnectableState org=DisconnectedState dest=<null> what=CMD_RESET_SIM_NETWORKS screen=on 2 0
+ rec[4]: time=10-17 21:14:27.099 processed=ConnectableState org=DisconnectedState dest=<null> what=CMD_SCREEN_STATE_CHANGED screen=on 1 0
+ rec[5]: time=10-17 21:14:31.207 processed=ConnectableState org=DisconnectedState dest=<null> what=CMD_ENABLE_RSSI_POLL screen=on 1 0
+ rec[6]: time=10-17 21:14:31.213 processed=ConnectableState org=DisconnectedState dest=<null> what=CMD_SET_SUSPEND_OPT_ENABLED screen=on 0 0
+ rec[7]: time=10-17 21:18:18.243 processed=ConnectableState org=DisconnectedState dest=<null> what=CMD_RESET_SIM_NETWORKS screen=on 1 0
+curState=DisconnectedState
+SupplicantStateTracker:
+ total records=0
+curState=UninitializedState
+mAuthFailureInSupplicantBroadcast false
+mAuthFailureReason 0
+
+mLinkProperties {LinkAddresses: [ ] DnsAddresses: [ ] Domains: null MTU: 0 Routes: [ ]}
+mWifiInfo SSID: <unknown ssid>, BSSID: <none>, MAC: 02:15:b2:00:00:00, IP: null, Security type: -1, Supplicant state: DISCONNECTED, Wi-Fi standard: unknown, RSSI: -127, Link speed: -1Mbps, Tx Link speed: -1Mbps, Max Supported Tx Link speed: -1Mbps, Rx Link speed: -1Mbps, Max Supported Rx Link speed: -1Mbps, Frequency: -1MHz, Net ID: -1, Metered hint: false, score: 0, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 0, Trusted: false, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>
+mDhcpResultsParcelable baseConfiguration nullleaseDuration 0mtu 0serverAddress nullserverHostName nullvendorInfo null
+mLastSignalLevel -1
+mLastTxKbps -1
+mLastRxKbps -1
+mLastBssid null
+mLastNetworkId -1
+mLastSubId -1
+mLastSimBasedConnectionCarrierName null
+mSuspendOptimizationsEnabled true
+mSuspendOptNeedsDisabled 4
+mPowerSaveDisableRequests 0
+IpClient logs have moved to dumpsys network_stack
+WifiScoreReport:
+time,session,netid,rssi,filtered_rssi,rssi_threshold,freq,txLinkSpeed,rxLinkSpeed,txTput,rxTput,bcnCnt,tx_good,tx_retry,tx_bad,rx_pps,nudrq,nuds,s1,s2,score,{linkId,linkRssi,linkFreq,txLinkSpeed,rxLinkSpeed,linkBcnCnt,linkTxGood,linkTxRetry,linkTxBad,linkRxGood,linkMloState,linkUsageState}
+externalScorerActive=false
+mShouldReduceNetworkScore=false
+QosPolicyRequestHandler:
+mQosRequestDialogToken: 0
+mNumQosPoliciesInRequest: 0
+mQosResourcesAvailable: false
+mQosPolicyStatusList size: 0
+mQosPolicyRequestQueue size: 0
+
+Dump of ConcreteClientModeManager.Graveyard
+Stopped ClientModeImpls: 0 total
+
+
+Dump of ActiveModeWarden.Graveyard
+Stopped ClientModeManagers: 0 total
+Stopped SoftApManagers: 0 total
+
+STA + STA Concurrency Supported: false
+STA + AP Concurrency Supported: false
+Dump of HalDeviceManager:
+  mManagerStatusListeners: [com.android.server.wifi.HalDeviceManager$ManagerStatusListenerProxy@8962523]
+  mInterfaceInfoCache: {Pair{wlan0 0}={name=wlan0, type=0, destroyedListeners.size()=1, RequestorWs=WorkSource{1000 com.android.settings}, creationTime=164734}}
+  mDebugChipsInfo: [{chipId=0, availableModes=[{id=0, availableCombinations=[{limits=[{maxIfaces=1, types=[0]}, {maxIfaces=1, types=[3]}]}]}, {id=1, availableCombinations=[{limits=[{maxIfaces=1, types=[1]}]}]}], currentModeIdValid=true, currentModeId=0, chipCapabilities=0, radioCombinations=null, bandCombinations=null, ifaces[1].length=0, ifaces[0].length=1, ifaces[2].length=0, ifaces[3].length=0}]
+Wifi handler thread overruns
+2026-10-17T21:13:10.147808 - WifiService#checkAndStartWifi was running for 471
+2026-10-17T21:13:11.143993 - ConcreteClientModeManager.ConcreteClientModeManager$ClientModeStateMachine$IdleState.CMD_START was running for 969 ms
+2026-10-17T21:13:13.562704 - ConcreteClientModeManager.ConcreteClientModeManager$ClientModeStateMachine$StartedState.CMD_SWITCH_TO_CONNECT_MODE was running for 2383 ms
+2026-10-17T21:13:13.942779 - ConcreteClientModeManager.ConcreteClientModeManager$ClientModeStateMachine$ConnectModeState.Enter was running for 373 ms
+2026-10-17T21:13:15.996241 - ClientModeImpl.ClientModeImpl$ConnectableState.Enter was running for 2052 ms
+2026-10-17T21:13:16.055182 - WifiSettingsConfigStore#invokeListeners schedule latency 4876 ms
+2026-10-17T21:13:20.259012 - HandlerExecutor#execute was running for 256
+2026-10-17T21:13:47.972252 - WifiService#registerSoftApCallback was running for 768
+2026-10-17T21:13:48.356378 - WifiService#registerLocalOnlyHotspotSoftApCallback was running for 384
+2026-10-17T21:13:59.217722 - ClientModeImpl.ClientModeImpl$ConnectableState.CMD_IPCLIENT_CREATED was running for 2082 ms
+2026-10-17T21:14:26.751456 - WifiService#handleBootCompleted was running for 7220
+2026-10-17T21:14:26.844092 - WifiService#getPasspointConfigurations schedule latency 6184 ms
+2026-10-17T21:14:32.825188 - HandlerExecutor#execute was running for 1611
+2026-10-17T21:14:32.944675 - HandlerExecutor#execute schedule latency 4084 ms
+2026-10-17T21:14:32.945137 - WifiScannerInternal#onSuccess schedule latency 5619 ms
+2026-10-17T21:14:33.174446 - WifiService#getScanResults schedule latency 5812 ms
+2026-10-17T21:14:33.174737 - WifiScannerInternal#onSuccess schedule latency 4615 ms
+2026-10-17T21:14:35.879901 - WifiScannerInternal#onResults was running for 595
+2026-10-17T21:14:38.648133 - WifiScannerInternal#onResults was running for 2767
+2026-10-17T21:14:45.346738 - WifiService#handleUserUnlock was running for 2512
+2026-10-17T21:14:48.994498 - WifiConnectivityManager#schedulePeriodicScanTimer was running for 404
+2026-10-17T21:14:54.139810 - WifiScannerInternal#onFullResult was running for 148
+2026-10-17T21:14:56.718796 - WifiScannerInternal#onResults was running for 2540
+2026-10-17T21:14:57.139272 - WifiScannerInternal#onResults was running for 420
+2026-10-17T21:15:09.335010 - HandlerExecutor#execute was running for 3794
+2026-10-17T21:15:35.357349 - WifiScannerInternal#onFullResult was running for 142
+2026-10-17T21:15:36.827566 - WifiScannerInternal#onResults was running for 601
+2026-10-17T21:15:38.849985 - WifiScannerInternal#onResults was running for 2021
+2026-10-17T21:16:50.522446 - TelephonyRegistryManager$1#onSubscriptionsChanged was running for 1025
+2026-10-17T21:16:53.560456 - WifiScannerInternal#onResults was running for 258
+2026-10-17T21:17:08.606541 - HandlerExecutor#execute was running for 494
+2026-10-17T21:17:08.826823 - TelephonyRegistryManager$1#onSubscriptionsChanged was running for 216
+2026-10-17T21:17:27.759140 - WifiServiceImpl$CountryCodeTracker#onCountryCodeChangePending was running for 746
+2026-10-17T21:17:45.598424 - HandlerExecutor#execute was running for 249
+2026-10-17T21:17:50.915325 - TelephonyRegistryManager$1#onSubscriptionsChanged was running for 110
+2026-10-17T21:17:52.223632 - TelephonyRegistryManager$1#onSubscriptionsChanged was running for 719
+2026-10-17T21:18:20.271032 - TelephonyRegistryManager$1#onSubscriptionsChanged was running for 305
+2026-10-17T21:18:21.503714 - WifiCarrierInfoManager$2#onReceive was running for 453
+2026-10-17T21:18:23.235369 - WifiScannerInternal#onResults was running for 107
+2026-10-17T21:18:24.966636 - WifiScannerInternal#onResults was running for 1730
+Dump of MakeBeforeBreakManager
+mMakeBeforeBreakInfo=null
+mInternalState MBB_STATE_NONE
+
+dump of InterfaceConflictManager:
+  mUserApprovalNeeded=false
+  mUserApprovalNeededOverride=false
+  mUserApprovalNeededOverrideValue=false
+  mUserApprovalPending=false
+  mUserApprovalPendingTag=null
+  mUserJustApproved=false
+  mUserApprovalNotRequireForDisconnectedP2p=false
+
+mTxPkts 0
+mRxPkts 0
+mLastActivity -1
+mRegisteredCallbacks 1
+
+Locks held:
+Locks acquired: 0 full high perf, 0 full low latency
+Locks released: 0 full high perf, 0 full low latency
+
+Locks held:
+
+mMulticastEnabled 0
+mMulticastDisabled 0
+Multicast Locks held:
+
+WifiScoreCard:
+
+WifiMetrics:
+mConnectionEvents:
+mWifiLogProto.numSavedNetworks=1
+mWifiLogProto.numSavedNetworksWithMacRandomization=0
+mWifiLogProto.numOpenNetworks=1
+mWifiLogProto.numLegacyPersonalNetworks=0
+mWifiLogProto.numLegacyEnterpriseNetworks=0
+mWifiLogProto.numEnhancedOpenNetworks=0
+mWifiLogProto.numWpa3PersonalNetworks=0
+mWifiLogProto.numWpa3EnterpriseNetworks=0
+mWifiLogProto.numWapiPersonalNetworks=0
+mWifiLogProto.numWapiEnterpriseNetworks=0
+mWifiLogProto.numHiddenNetworks=0
+mWifiLogProto.numPasspointNetworks=0
+mWifiLogProto.isLocationEnabled=false
+mWifiLogProto.isScanningAlwaysEnabled=false
+mWifiLogProto.isVerboseLoggingEnabled=false
+mWifiLogProto.isEnhancedMacRandomizationForceEnabled=false
+mWifiLogProto.isWifiWakeEnabled=true
+mWifiLogProto.numNetworksAddedByUser=0
+mWifiLogProto.numNetworksAddedByApps=1
+mWifiLogProto.numNonEmptyScanResults=8
+mWifiLogProto.numEmptyScanResults=0
+mWifiLogProto.numConnecitvityOneshotScans=8
+mWifiLogProto.numOneshotScans=8
+mWifiLogProto.numOneshotHasDfsChannelScans=8
+mWifiLogProto.numBackgroundScans=0
+mWifiLogProto.numExternalAppOneshotScanRequests=0
+mWifiLogProto.numExternalForegroundAppOneshotScanRequestsThrottled=0
+mWifiLogProto.numExternalBackgroundAppOneshotScanRequestsThrottled=0
+mWifiLogProto.meteredNetworkStatsSaved=
+num_metered: 0
+num_override_metered: 0
+num_override_unmetered: 0
+num_unmetered: 0
+
+mWifiLogProto.meteredNetworkStatsSuggestion=
+num_metered: 0
+num_override_metered: 0
+num_override_unmetered: 0
+num_unmetered: 0
+
+mScanReturnEntries:
+  SCAN_UNKNOWN: 0
+  SCAN_SUCCESS: 8
+  SCAN_FAILURE_INTERRUPTED: 0
+  SCAN_FAILURE_INVALID_CONFIGURATION: 0
+  FAILURE_WIFI_DISABLED: 0
+mSystemStateEntries: <state><screenOn> : <scansInitiated>
+  WIFI_UNKNOWN       ON: 0
+  WIFI_DISABLED      ON: 0
+  WIFI_DISCONNECTED  ON: 8
+  WIFI_ASSOCIATED    ON: 0
+  WIFI_UNKNOWN      OFF: 0
+  WIFI_DISABLED     OFF: 0
+  WIFI_DISCONNECTED OFF: 0
+  WIFI_ASSOCIATED   OFF: 0
+mWifiLogProto.numConnectivityWatchdogPnoGood=0
+mWifiLogProto.numConnectivityWatchdogPnoBad=0
+mWifiLogProto.numConnectivityWatchdogBackgroundGood=0
+mWifiLogProto.numConnectivityWatchdogBackgroundBad=0
+mWifiLogProto.numLastResortWatchdogTriggers=0
+mWifiLogProto.numLastResortWatchdogBadAssociationNetworksTotal=0
+mWifiLogProto.numLastResortWatchdogBadAuthenticationNetworksTotal=0
+mWifiLogProto.numLastResortWatchdogBadDhcpNetworksTotal=0
+mWifiLogProto.numLastResortWatchdogBadOtherNetworksTotal=0
+mWifiLogProto.numLastResortWatchdogAvailableNetworksTotal=0
+mWifiLogProto.numLastResortWatchdogTriggersWithBadAssociation=0
+mWifiLogProto.numLastResortWatchdogTriggersWithBadAuthentication=0
+mWifiLogProto.numLastResortWatchdogTriggersWithBadDhcp=0
+mWifiLogProto.numLastResortWatchdogTriggersWithBadOther=0
+mWifiLogProto.numLastResortWatchdogSuccesses=0
+mWifiLogProto.watchdogTotalConnectionFailureCountAfterTrigger=0
+mWifiLogProto.watchdogTriggerToConnectionSuccessDurationMs=-1
+mWifiLogProto.recordDurationSec=840
+mWifiLogProto.rssiPollCount: {}
+mWifiLogProto.rssiPollDeltaCount: Printing counts for [-127, 127]
+  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+mWifiLogProto.linkSpeedCounts:
+mWifiLogProto.alertReasonCounts=()
+mWifiLogProto.numTotalScanResults=8
+mWifiLogProto.numOpenNetworkScanResults=8
+mWifiLogProto.numLegacyPersonalNetworkScanResults=0
+mWifiLogProto.numLegacyEnterpriseNetworkScanResults=0
+mWifiLogProto.numEnhancedOpenNetworkScanResults=0
+mWifiLogProto.numWpa3PersonalNetworkScanResults=0
+mWifiLogProto.numWpa3EnterpriseNetworkScanResults=0
+mWifiLogProto.numWapiPersonalNetworkScanResults=0
+mWifiLogProto.numWapiEnterpriseNetworkScanResults=0
+mWifiLogProto.numHiddenNetworkScanResults=0
+mWifiLogProto.numHotspot2R1NetworkScanResults=0
+mWifiLogProto.numHotspot2R2NetworkScanResults=0
+mWifiLogProto.numHotspot2R3NetworkScanResults=0
+mWifiLogProto.numMboSupportedNetworkScanResults=0
+mWifiLogProto.numMboCellularDataAwareNetworkScanResults=0
+mWifiLogProto.numOceSupportedNetworkScanResults=0
+mWifiLogProto.numFilsSupportedNetworkScanResults=0
+mWifiLogProto.num11AxNetworkScanResults=0
+mWifiLogProto.num6GNetworkScanResults0
+mWifiLogProto.num6GPscNetworkScanResults0
+mWifiLogProto.numBssidFilteredDueToMboAssocDisallowInd=0
+mWifiLogProto.numConnectToNetworkSupportingMbo=0
+mWifiLogProto.numConnectToNetworkSupportingOce=0
+mWifiLogProto.numSteeringRequest=0
+mWifiLogProto.numForceScanDueToSteeringRequest=0
+mWifiLogProto.numMboCellularSwitchRequest=0
+mWifiLogProto.numSteeringRequestIncludingMboAssocRetryDelay=0
+mWifiLogProto.numConnectRequestWithFilsAkm=0
+mWifiLogProto.numL2ConnectionThroughFilsAuthentication=0
+mWifiLogProto.recentFailureAssociationStatus={}
+mWifiLogProto.numScans=8
+mWifiLogProto.WifiScoreCount: [0, 60]
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+mWifiLogProto.WifiUsabilityScoreCount: [0, 100]
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+mWifiLogProto.SoftApManagerReturnCodeCounts:
+  SUCCESS: 0
+  FAILED_GENERAL_ERROR: 0
+  FAILED_NO_CHANNEL: 0
+  FAILED_UNSUPPORTED_CONFIGURATION: 0
+
+mWifiLogProto.numHalCrashes=0
+mWifiLogProto.numWificondCrashes=0
+mWifiLogProto.numSupplicantCrashes=0
+mWifiLogProto.numHostapdCrashes=0
+mWifiLogProto.numSetupClientInterfaceFailureDueToHal=0
+mWifiLogProto.numSetupClientInterfaceFailureDueToWificond=0
+mWifiLogProto.numSetupClientInterfaceFailureDueToSupplicant=0
+mWifiLogProto.numSetupSoftApInterfaceFailureDueToHal=0
+mWifiLogProto.numSetupSoftApInterfaceFailureDueToWificond=0
+mWifiLogProto.numSetupSoftApInterfaceFailureDueToHostapd=0
+StaEventList:
+10-17 21:13:58.547 WIFI_ENABLED screenOn=false cellularData=false adaptiveConnectivity=true totalTxBytes=18364 totalRxBytes=11387 interfaceName=wlan0 interfaceRole=ROLE_CLIENT_PRIMARY
+UserActionEvents:
+mWifiLogProto.numPasspointProviders=0
+mWifiLogProto.numPasspointProviderInstallation=0
+mWifiLogProto.numPasspointProviderInstallSuccess=0
+mWifiLogProto.numPasspointProviderUninstallation=0
+mWifiLogProto.numPasspointProviderUninstallSuccess=0
+mWifiLogProto.numPasspointProvidersSuccessfullyConnected=0
+mWifiLogProto.installedPasspointProfileTypeForR1:{}
+mWifiLogProto.installedPasspointProfileTypeForR2:{}
+mWifiLogProto.passpointProvisionStats.numProvisionSuccess=0
+mWifiLogProto.passpointProvisionStats.provisionFailureCount:{}
+mWifiLogProto.totalNumberOfPasspointConnectionsWithVenueUrl=0
+mWifiLogProto.totalNumberOfPasspointConnectionsWithTermsAndConditionsUrl=0
+mWifiLogProto.totalNumberOfPasspointAcceptanceOfTermsAndConditions=0
+mWifiLogProto.totalNumberOfPasspointProfilesWithDecoratedIdentity=0
+mWifiLogProto.passpointDeauthImminentScope={}
+mWifiLogProto.numRadioModeChangeToMcc=0
+mWifiLogProto.numRadioModeChangeToScc=0
+mWifiLogProto.numRadioModeChangeToSbs=0
+mWifiLogProto.numRadioModeChangeToDbs=0
+mWifiLogProto.numSoftApUserBandPreferenceUnsatisfied=0
+mTotalSsidsInScanHistogram:{1=8}
+mTotalBssidsInScanHistogram:{1=8}
+mAvailableOpenSsidsInScanHistogram:{1=8}
+mAvailableOpenBssidsInScanHistogram:{1=8}
+mAvailableSavedSsidsInScanHistogram:{1=8}
+mAvailableSavedBssidsInScanHistogram:{1=8}
+mAvailableOpenOrSavedSsidsInScanHistogram:{1=8}
+mAvailableOpenOrSavedBssidsInScanHistogram:{1=8}
+mAvailableSavedPasspointProviderProfilesInScanHistogram:{0=8}
+mAvailableSavedPasspointProviderBssidsInScanHistogram:{0=8}
+mWifiLogProto.partialAllSingleScanListenerResults=0
+mWifiLogProto.fullBandAllSingleScanListenerResults=8
+mWifiAwareMetrics:
+mLastEnableUsageMs:0
+mLastEnableUsageInThisSampleWindowMs:0
+mAvailableTimeMs:0
+mHistogramAwareAvailableDurationMs:
+mLastEnableAwareMs:0
+mLastEnableAwareInThisSampleWindowMs:0
+mEnabledTimeMs:0
+mHistogramAwareEnabledDurationMs:
+mAttachDataByUid:
+mAttachStatusData:
+mHistogramAttachDuration:
+mMaxPublishInApp:0
+mMaxSubscribeInApp:0
+mMaxDiscoveryInApp:0
+mMaxPublishInSystem:0
+mMaxSubscribeInSystem:0
+mMaxDiscoveryInSystem:0
+mPublishStatusData:
+mSubscribeStatusData:
+mHistogramPublishDuration:
+mHistogramSubscribeDuration:
+mAppsWithDiscoverySessionResourceFailure:
+mMaxPublishWithRangingInApp:0
+mMaxSubscribeWithRangingInApp:0
+mMaxPublishWithRangingInSystem:0
+mMaxSubscribeWithRangingInSystem:0
+mHistogramSubscribeGeofenceMin:
+mHistogramSubscribeGeofenceMax:
+mNumSubscribesWithRanging:0
+mNumMatchesWithRanging:0
+mNumMatchesWithoutRangingForRangingEnabledSubscribes:0
+mMaxNdiInApp:0
+mMaxNdpInApp:0
+mMaxSecureNdpInApp:0
+mMaxNdiInSystem:0
+mMaxNdpInSystem:0
+mMaxSecureNdpInSystem:0
+mMaxNdpPerNdi:0
+mInBandNdpStatusData:
+mOutOfBandNdpStatusData:
+mNdpCreationTimeDuration:
+mNdpCreationTimeMin:-1
+mNdpCreationTimeMax:0
+mNdpCreationTimeSum:0
+mNdpCreationTimeSumSq:0
+mNdpCreationTimeNumSamples:0
+mHistogramNdpDuration:
+mNdpRequestType:
+mRttMetrics:
+RTT Metrics:
+mNumStartRangingCalls:0
+mOverallStatusHistogram:{}
+mMeasurementDurationApOnlyHistogram{}
+mMeasurementDurationWithAwareHistogram{}
+AP:numCalls=0, numIndividualCalls=0, perUidInfo={}, numRequestsHistogram={}, requestGapHistogram={}, statusHistogram={}, measuredDistanceHistogram={}
+AWARE:numCalls=0, numIndividualCalls=0, perUidInfo={}, numRequestsHistogram={}, requestGapHistogram={}, statusHistogram={}, measuredDistanceHistogram={}
+mPnoScanMetrics.numPnoScanAttempts=0
+mPnoScanMetrics.numPnoScanFailed=0
+mPnoScanMetrics.numPnoScanStartedOverOffload=0
+mPnoScanMetrics.numPnoScanFailedOverOffload=0
+mPnoScanMetrics.numPnoFoundNetworkEvents=0
+mWifiLinkLayerUsageStats.loggingDurationMs=0
+mWifiLinkLayerUsageStats.radioOnTimeMs=0
+mWifiLinkLayerUsageStats.radioTxTimeMs=0
+mWifiLinkLayerUsageStats.radioRxTimeMs=0
+mWifiLinkLayerUsageStats.radioScanTimeMs=0
+mWifiLinkLayerUsageStats.radioNanScanTimeMs=0
+mWifiLinkLayerUsageStats.radioBackgroundScanTimeMs=0
+mWifiLinkLayerUsageStats.radioRoamScanTimeMs=0
+mWifiLinkLayerUsageStats.radioPnoScanTimeMs=0
+mWifiLinkLayerUsageStats.radioHs20ScanTimeMs=0
+mWifiLinkLayerUsageStats per Radio Stats:
+mWifiLogProto.connectToNetworkNotificationCount={}
+mWifiLogProto.connectToNetworkNotificationActionCount={}
+mWifiLogProto.openNetworkRecommenderBlocklistSize=0
+mWifiLogProto.isWifiNetworksAvailableNotificationOn=true
+mWifiLogProto.numOpenNetworkRecommendationUpdates=0
+mWifiLogProto.numOpenNetworkConnectMessageFailedToSend=0
+mWifiLogProto.observedHotspotR1ApInScanHistogram={0=8}
+mWifiLogProto.observedHotspotR2ApInScanHistogram={0=8}
+mWifiLogProto.observedHotspotR3ApInScanHistogram={0=8}
+mWifiLogProto.observedHotspotR1EssInScanHistogram={0=8}
+mWifiLogProto.observedHotspotR2EssInScanHistogram={0=8}
+mWifiLogProto.observedHotspotR3EssInScanHistogram={0=8}
+mWifiLogProto.observedHotspotR1ApsPerEssInScanHistogram={}
+mWifiLogProto.observedHotspotR2ApsPerEssInScanHistogram={}
+mWifiLogProto.observedHotspotR3ApsPerEssInScanHistogram={}
+mWifiLogProto.observed80211mcSupportingApsInScanHistogram{1=8}
+mWifiLogProto.bssidBlocklistStats:
+networkSelectionFilteredBssidCount={0=8}
+mBlockedBssidPerReasonCount={}
+mBlockedConfigurationPerReasonCount={}, highMovementMultipleScansFeatureEnabled=true, numHighMovementConnectionSkipped=0, numHighMovementConnectionStarted=0, mBlockedBssidPerReasonCount={}, mBlockedConfigurationPerReasonCount={}
+mSoftApTetheredEvents:
+mSoftApLocalOnlyEvents:
+Wifi power metrics:
+Logging duration (time on battery): 0
+Energy consumed by wifi (mAh): 0.0
+Amount of time wifi is in idle (ms): 0
+Amount of time wifi is in rx (ms): 0
+Amount of time wifi is in tx (ms): 0
+Amount of time kernel is active because of wifi data (ms): 0
+Amount of time wifi is in sleep (ms): 0
+Amount of time wifi is scanning (ms): 0
+Number of packets sent (tx): 0
+Number of bytes sent (tx): 0
+Number of packets received (rx): 0
+Number of bytes sent (rx): 0
+Energy consumed across measured wifi rails (mAh): 0
+Wifi radio usage metrics:
+Logging duration (time on battery): 0
+Amount of time wifi is in scan mode while on battery (ms): 0
+-------WifiWake metrics-------
+mTotalSessions: 0
+mTotalWakeups: 0
+mIgnoredStarts: 0
+mIsInSession: false
+Stored Sessions: 0
+----end of WifiWake metrics----
+mWifiLogProto.isMacRandomizationOn=false
+mWifiLogProto.scoreExperimentId=
+mExperimentValues.wifiDataStallMinTxBad=1
+mExperimentValues.wifiDataStallMinTxSuccessWithoutRx=50
+mExperimentValues.linkSpeedCountsLoggingEnabled=true
+mExperimentValues.dataStallDurationMs=1500
+mExperimentValues.dataStallTxTputThrKbps=2000
+mExperimentValues.dataStallRxTputThrKbps=2000
+mExperimentValues.dataStallTxPerThr=90
+mExperimentValues.dataStallCcaLevelThr=256
+WifiIsUnusableEventList:
+Hardware Version:
+mWifiUsabilityStatsEntriesList:
+mWifiUsabilityStatsList:
+mMobilityStatePnoStatsMap:
+device_mobility_state=0,num_times_entered_state=1,total_duration_ms=0,pno_duration_ms=0
+WifiP2pMetrics:
+mConnectionEvents:
+mGroupEvents:
+mWifiP2pStatsProto.numPersistentGroup=0
+mWifiP2pStatsProto.numTotalPeerScans=0
+mWifiP2pStatsProto.numTotalServiceScans=0
+mDppMetrics:
+---Easy Connect/DPP metrics---
+mWifiDppLogProto.numDppConfiguratorInitiatorRequests=0
+mWifiDppLogProto.numDppEnrolleeInitiatorRequests=0
+mWifiDppLogProto.numDppEnrolleeResponderRequests=0
+mWifiDppLogProto.numDppEnrolleeResponderSuccess=0
+mWifiDppLogProto.numDppEnrolleeSuccess=0
+mWifiDppLogProto.numDppR1CapableEnrolleeResponderDevices=0
+mWifiDppLogProto.numDppR2CapableEnrolleeResponderDevices=0
+mWifiDppLogProto.numDppR2EnrolleeResponderIncompatibleConfiguration=0
+---End of Easy Connect/DPP metrics---
+mWifiConfigStoreReadDurationHistogram:{2=1, 5=1}
+mWifiConfigStoreWriteDurationHistogram:{0=1, 4=2, 5=2}
+mLinkProbeSuccessRssiCounts:{}
+mLinkProbeFailureRssiCounts:{}
+mLinkProbeSuccessLinkSpeedCounts:{}
+mLinkProbeFailureLinkSpeedCounts:{}
+mLinkProbeSuccessSecondsSinceLastTxSuccessHistogram:{}
+mLinkProbeFailureSecondsSinceLastTxSuccessHistogram:{}
+mLinkProbeSuccessElapsedTimeMsHistogram:{}
+mLinkProbeFailureReasonCounts:{}
+mLinkProbeExperimentProbeCounts:{}
+mNetworkSelectionExperimentPairNumChoicesCounts:{}
+mLinkProbeStaEventCount:0
+mWifiNetworkRequestApiLog:
+num_apps: 0
+num_concurrent_connection: 0
+num_connect_on_primary_iface: 0
+num_connect_on_secondary_iface: 0
+num_connect_success_on_primary_iface: 0
+num_connect_success_on_secondary_iface: 0
+num_request: 0
+num_user_approval_bypass: 0
+num_user_reject: 0
+
+mWifiNetworkRequestApiMatchSizeHistogram:
+{}
+mWifiNetworkRequestApiConnectionDurationSecOnPrimaryIfaceHistogram:
+{}
+mWifiNetworkRequestApiConnectionDurationSecOnSecondaryIfaceHistogram:
+{}
+mWifiNetworkRequestApiConcurrentConnectionDurationSecHistogram:
+{}
+mWifiNetworkSuggestionApiLog:
+num_connect_failure: 0
+num_connect_success: 0
+num_modification: 0
+num_multiple_suggestions: 0
+num_priority_groups: 0
+num_saved_networks_with_configured_suggestion: 0
+user_revoke_app_suggestion_permission: 0
+
+mWifiNetworkSuggestionApiMatchSizeHistogram:
+{}
+mWifiNetworkSuggestionApiAppTypeCounter:
+{}
+mWifiNetworkSuggestionPriorityGroups:
+{}
+mWifiNetworkSuggestionCoexistSavedNetworks:
+{}
+mUserApprovalSuggestionAppUiUserReaction:
+mUserApprovalCarrierUiUserReaction:
+mNetworkIdToNominatorId:
+{}
+mWifiLockStats:
+high_perf_active_time_ms: 0
+low_latency_active_time_ms: 0
+
+mWifiLockHighPerfAcqDurationSecHistogram:
+{}
+mWifiLockLowLatencyAcqDurationSecHistogram:
+{}
+mWifiLockHighPerfActiveSessionDurationSecHistogram:
+{}
+mWifiLockLowLatencyActiveSessionDurationSecHistogram:
+{}
+mWifiToggleStats:
+num_toggle_off_normal: 0
+num_toggle_off_privileged: 0
+num_toggle_on_normal: 0
+num_toggle_on_privileged: 0
+
+mWifiLogProto.numAddOrUpdateNetworkCalls=0
+mWifiLogProto.numEnableNetworkCalls=0
+mWifiLogProto.txLinkSpeedCount2g={}
+mWifiLogProto.txLinkSpeedCount5gLow={}
+mWifiLogProto.txLinkSpeedCount5gMid={}
+mWifiLogProto.txLinkSpeedCount5gHigh={}
+mWifiLogProto.txLinkSpeedCount6gLow={}
+mWifiLogProto.txLinkSpeedCount6gMid={}
+mWifiLogProto.txLinkSpeedCount6gHigh={}
+mWifiLogProto.rxLinkSpeedCount2g={}
+mWifiLogProto.rxLinkSpeedCount5gLow={}
+mWifiLogProto.rxLinkSpeedCount5gMid={}
+mWifiLogProto.rxLinkSpeedCount5gHigh={}
+mWifiLogProto.rxLinkSpeedCount6gLow={}
+mWifiLogProto.rxLinkSpeedCount6gMid={}
+mWifiLogProto.rxLinkSpeedCount6gHigh={}
+mWifiLogProto.numIpRenewalFailure=0
+mWifiLogProto.connectionDurationStats=connectionDurationSufficientThroughputMs=0, connectionDurationInSufficientThroughputMs=0, connectionDurationInSufficientThroughputDefaultWifiMs=0, connectionDurationCellularDataOffMs=0
+mWifiLogProto.isExternalWifiScorerOn=false
+mWifiLogProto.wifiOffMetrics=numWifiOff=0, numWifiOffDeferring=0, numWifiOffDeferringTimeout=0, wifiOffDeferringTimeHistogram={}
+mWifiLogProto.softApConfigLimitationMetrics=numSecurityTypeResetToDefault=0, numMaxClientSettingResetToDefault=0, numClientControlByUserResetToDefault=0, maxClientSettingWhenReachHistogram={}
+mChannelUtilizationHistogram2G:
+{}
+mChannelUtilizationHistogramAbove2G:
+{}
+mTxThroughputMbpsHistogram2G:
+{}
+mRxThroughputMbpsHistogram2G:
+{}
+mTxThroughputMbpsHistogramAbove2G:
+{}
+mRxThroughputMbpsHistogramAbove2G:
+{}
+mCarrierWifiMetrics:
+numConnectionSuccess=0, numConnectionAuthFailure=0, numConnectionNonAuthFailure0
+FirstConnectAfterBootStats{wifiEnabledAtBoot=Attempt{timestampSinceBootMillis=164164,isSuccess=true},firstNetworkSelectionAttempt{timestampSinceBootMillis=252814,isSuccess=false},firstL2ConnectionAttempt=null,firstL3ConnectionAttempt=null}
+WifiToWifiSwitchStats{isMakeBeforeBreakSupported=false,wifiToWifiSwitchTriggerCount=0,makeBeforeBreakTriggerCount=0,makeBeforeBreakNoInternetCount=0,makeBeforeBreakRecoverPrimaryCount=0,makeBeforeBreakInternetValidatedCount=0,makeBeforeBreakSuccessCount=0,makeBeforeBreakLingerCompletedCount=0,makeBeforeBreakLingeringDurationSeconds={}}
+mInitPartialScanTotalCount:
+0
+mInitPartialScanSuccessCount:
+0
+mInitPartialScanFailureCount:
+0
+mInitPartialScanSuccessHistogram:
+{}
+mInitPartialScanFailureHistogram:
+{}
+
+Dump of WifiNetworkSuggestionsManager
+WifiNetworkSuggestionsManager - Networks Begin ----
+WifiNetworkSuggestionsManager - Networks End ----
+
+Dump of WifiBackupRestore
+
+Dump of BackupRestoreController
+mLastBackupDataRetrievedTimestamp: N/A
+mLastBackupDataRestoredTimestamp: N/A
+
+ScoringParams: rssi2=-83:-80:-73:-60,rssi5=-80:-77:-70:-57,rssi6=-80:-77:-70:-57,pps=0:16:100,horizon=15,nud=8,expid=0
+
+
+Dump of WifiSettingsConfigStore
+Settings:
+wifi_native_supported_sta_bands=1
+wifi_available_soft_ap_freqs_mhz=[2412,2417,2422,2427,2432,2437,2442,2447,2452,2457,2462]
+wifi_p2p_pending_factory_reset=false
+wifi_p2p_device_name=null
+wifi_scan_always_enabled=false
+wifi_sta_factory_mac_address=02:15:b2:00:00:00
+wifi_last_country_code=US
+wifi_static_chip_info=[{"chipId":0,"chipCapabilities":0,"availableModes":[{"id":0,"availableCombinations":[{"limits":[{"maxIfaces":1,"types":[0]},{"maxIfaces":1,"types":[3]}]}]},{"id":1,"availableCombinations":[{"limits":[{"maxIfaces":1,"types":[1]}]}]}]}]
+wifi_scan_throttle_enabled=true
+wifi_native_supported_features=116391864461951001
+wifi_verbose_logging_enabled=false
+supplicant_hal_aidl_service_version=3
+
+mRevertCountryCodeOnCellularLoss: false
+DefaultCountryCode(system property): null
+DefaultCountryCode(config store): null
+mTelephonyCountryCode: US
+mTelephonyCountryTimestamp: 10-17 21:17:24.580
+mOverrideCountryCode: null
+mAllCmmReadyTimestamp: 10-17 21:13:13.759
+isAllCmmReady: true
+mAmmToReadyForChangeMap: {ConcreteClientModeManager{id=164151 iface=wlan0 role=ROLE_CLIENT_PRIMARY}=true}
+mDisconnectWifiToForceUpdateCount: 0
+mDriverCountryCode: US
+mDriverCountryCodeUpdatedTimestamp: 10-17 21:17:24.979
+mFrameworkCountryCode: null
+mFrameworkCountryCodeUpdatedTimestamp: N/A
+isDriverSupportedRegChangedEvent: false
+providerId=3, ScoreFilter=Score(Policies : 0), Filter=[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_ROAMING&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=1048576Kbps LinkDnBandwidth>=1048576Kbps Specifier: <android.net.MatchAllNetworkSpecifier@0> SubscriptionIds: {1} UnderlyingNetworks: Null], requests=17
+  {NetworkRequest [ REQUEST id=17, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=19, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1073 RequestorUid: 1073 RequestorPkg: com.android.networkstack UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=28, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10123 RequestorUid: 10123 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=24, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10123 RequestorUid: 10123 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=7, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=15, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10128 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=35, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=40, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10123 RequestorUid: 10123 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=42, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10123 RequestorUid: 10123 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=44, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10077 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=46, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10077 RequestorUid: 10077 RequestorPkg: com.android.statementservice UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=59, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.phone UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=61, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.phone UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=65, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10100 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=67, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10144 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=69, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10144 RequestorUid: 10144 RequestorPkg: com.android.rkpdapp UnderlyingNetworks: Null] ], requested=true}
+WifiNetworkFactory: mGenericConnectionReqCount 17
+WifiNetworkFactory: mActiveSpecificNetworkRequest null
+WifiNetworkFactory: mUserApprovedAccessPointMap {}
+providerId=4, ScoreFilter=Score(Policies : 0), Filter=[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_ROAMING&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=1048576Kbps LinkDnBandwidth>=1048576Kbps Specifier: <android.net.MatchAllNetworkSpecifier@0> SubscriptionIds: {1} UnderlyingNetworks: Null], requests=17
+  {NetworkRequest [ REQUEST id=17, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=19, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1073 RequestorUid: 1073 RequestorPkg: com.android.networkstack UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=28, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10123 RequestorUid: 10123 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=24, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10123 RequestorUid: 10123 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=7, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=15, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10128 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=35, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=40, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10123 RequestorUid: 10123 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=42, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10123 RequestorUid: 10123 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=44, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10077 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=46, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10077 RequestorUid: 10077 RequestorPkg: com.android.statementservice UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=59, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.phone UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=61, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.phone UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=65, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10100 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=67, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10144 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=69, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10144 RequestorUid: 10144 RequestorPkg: com.android.rkpdapp UnderlyingNetworks: Null] ], requested=true}
+UntrustedWifiNetworkFactory: mConnectionReqCount 0
+providerId=6, ScoreFilter=Score(Policies : 0), Filter=[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_ROAMING&NOT_CONGESTED&NOT_SUSPENDED&OEM_PAID&OEM_PRIVATE&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=1048576Kbps LinkDnBandwidth>=1048576Kbps Specifier: <android.net.MatchAllNetworkSpecifier@0> UnderlyingNetworks: Null], requests=17
+  {NetworkRequest [ REQUEST id=17, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=19, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1073 RequestorUid: 1073 RequestorPkg: com.android.networkstack UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=28, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10123 RequestorUid: 10123 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=24, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10123 RequestorUid: 10123 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=7, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=15, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10128 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=35, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=40, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10123 RequestorUid: 10123 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=42, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10123 RequestorUid: 10123 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=44, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10077 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=46, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10077 RequestorUid: 10077 RequestorPkg: com.android.statementservice UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=59, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.phone UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=61, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.phone UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=65, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10100 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=67, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10144 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=true}
+  {NetworkRequest [ REQUEST id=69, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10144 RequestorUid: 10144 RequestorPkg: com.android.rkpdapp UnderlyingNetworks: Null] ], requested=true}
+OemPaidWifiNetworkFactory: mOemPaidConnectionReqCount 0
+OemPaidWifiNetworkFactory: mOemPrivateConnectionReqCount 0
+providerId=5, ScoreFilter=Score(Policies : 0), Filter=[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&TRUSTED&NOT_VPN&NOT_ROAMING&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=1048576Kbps LinkDnBandwidth>=1048576Kbps Specifier: <android.net.MatchAllNetworkSpecifier@0> SubscriptionIds: {1} UnderlyingNetworks: Null], requests=0
+RestrictedWifiNetworkFactory: mConnectionReqCount 0
+providerId=7, ScoreFilter=Score(Policies : 0), Filter=[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_ROAMING&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=1048576Kbps LinkDnBandwidth>=1048576Kbps Specifier: <android.net.MatchAllNetworkSpecifier@0> UnderlyingNetworks: Null], requests=17
+  {NetworkRequest [ REQUEST id=17, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=false}
+  {NetworkRequest [ REQUEST id=19, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1073 RequestorUid: 1073 RequestorPkg: com.android.networkstack UnderlyingNetworks: Null] ], requested=false}
+  {NetworkRequest [ REQUEST id=28, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10123 RequestorUid: 10123 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], requested=false}
+  {NetworkRequest [ REQUEST id=24, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10123 RequestorUid: 10123 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], requested=false}
+  {NetworkRequest [ REQUEST id=7, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=false}
+  {NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=false}
+  {NetworkRequest [ REQUEST id=15, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10128 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=false}
+  {NetworkRequest [ REQUEST id=35, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=false}
+  {NetworkRequest [ REQUEST id=40, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10123 RequestorUid: 10123 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], requested=false}
+  {NetworkRequest [ REQUEST id=42, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10123 RequestorUid: 10123 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ], requested=false}
+  {NetworkRequest [ REQUEST id=44, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10077 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=false}
+  {NetworkRequest [ REQUEST id=46, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10077 RequestorUid: 10077 RequestorPkg: com.android.statementservice UnderlyingNetworks: Null] ], requested=false}
+  {NetworkRequest [ REQUEST id=59, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.phone UnderlyingNetworks: Null] ], requested=false}
+  {NetworkRequest [ REQUEST id=61, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.phone UnderlyingNetworks: Null] ], requested=false}
+  {NetworkRequest [ REQUEST id=65, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10100 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=false}
+  {NetworkRequest [ REQUEST id=67, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10144 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ], requested=false}
+  {NetworkRequest [ REQUEST id=69, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10144 RequestorUid: 10144 RequestorPkg: com.android.rkpdapp UnderlyingNetworks: Null] ], requested=false}
+Dump of MultiInternetWifiNetworkFactory
+Dump of MultiInternetManager
+WifiMultiInternet: mStaConcurrencyMultiInternetMode 0
+Dump of SsidTranslator
+mCurrentLocaleCharset: null
+mCharsetsPerLocaleLanguage Begin ---
+mCharsetsPerLocaleLanguage End ---
+mTranslatedBssids Begin ---
+mTranslatedBssids End ---
+mUntranslatedBssids Begin ---
+mUntranslatedBssids End ---
+Wlan Wake Reasons: totalCmdEventWake 0 totalDriverFwLocalWake 0 totalRxDataWake 0 rxUnicast 0 rxMulticast 0 rxBroadcast 0 icmp 0 icmp6 0 icmp6Ra 0 icmp6Na 0 icmp6Ns 0 ipv4RxMulticast 0 ipv6Multicast 0 otherRxMulticast 0
+
+Dump of WifiConfigManager
+WifiConfigManager - Log Begin ----
+2026-10-17T21:13:09.832828 - clearInternalData: Clearing all internal data
+2026-10-17T21:14:10.075389 - onCellularConnectivityChanged:0
+2026-10-17T21:18:36.817957 - onCellularConnectivityChanged:1
+WifiConfigManager - Log End ----
+WifiConfigManager - Configured networks Begin ----
+- DSBLE ID: 0 SSID: "AndroidWifi" PROVIDER-NAME: null BSSID: null FQDN: null HOME-PROVIDER-NETWORK: false PRIO: 0 HIDDEN: false PMF: false CarrierId: -1 SubscriptionId: -1 SubscriptionGroup: null Currently Connected: false User Selected: false
+ NetworkSelectionStatus NETWORK_SELECTION_PERMANENTLY_DISABLED
+ mNetworkSelectionDisableReason NETWORK_SELECTION_DISABLED_BY_WIFI_MANAGER
+NETWORK_SELECTION_DISABLED_BY_WIFI_MANAGER counter:1
+ hasEverConnected: false
+ hasNeverDetectedCaptivePortal: true
+ hasEverValidatedInternetAccess: false
+ mCandidateSecurityParams: null mLastUsedSecurityParams: null shared trusted
+ macRandomizationSetting: 3
+ mRandomizedMacAddress: ce:ca:60:b4:21:02
+ randomizedMacExpirationTimeMs: <none>
+ randomizedMacLastModifiedTimeMs: <none>
+ mIsSendDhcpHostnameEnabled: true
+ deletionPriority: 0
+ KeyMgmt: NONE Protocols: WPA RSN
+ AuthAlgorithms:
+ PairwiseCiphers:
+ GroupCiphers:
+ GroupMgmtCiphers:
+ SuiteBCiphers:
+ PSK/SAE:
+SecurityParams List:
+Security Parameters:
+ Type: 0
+ Enabled: true
+ KeyMgmt: NONE
+ Protocols: WPA RSN
+ AuthAlgorithms:
+ PairwiseCiphers:
+ GroupCiphers:
+ GroupMgmtCiphers:
+ SuiteBCiphers:
+ RequirePmf: false
+ IsAddedByAutoUpgrade: false
+ IsSaeH2eOnlyMode: false
+ IsSaePkOnlyMode: false
+Security Parameters:
+ Type: 6
+ Enabled: true
+ KeyMgmt: OWE
+ Protocols: RSN
+ AuthAlgorithms:
+ PairwiseCiphers: CCMP GCMP_256 GCMP_128
+ GroupCiphers: CCMP GCMP_256 GCMP_128
+ GroupMgmtCiphers:
+ SuiteBCiphers:
+ RequirePmf: true
+ IsAddedByAutoUpgrade: true
+ IsSaeH2eOnlyMode: false
+ IsSaePkOnlyMode: false
+
+Enterprise config:
+ ocsp: 0
+ trust_on_first_use: false
+ user_approve_no_ca_cert: false
+ selected_rcoi: 0
+ minimum_tls_version: 0
+ enable_conservative_peer_mode: false
+ tofu_dialog_state: 0
+ tofu_connection_state: 0
+IP config:
+IP assignment: DHCP
+Proxy settings: NONE
+ cuid=10115 cname=com.android.sdksetup luid=10115 lname=com.android.sdksetup lcuid=0 allowAutojoin=true noInternetAccessExpected=false mostRecentlyConnected=false
+
+numRebootsSinceLastUse: 2
+recentFailure: Association Rejection code: 0, last update time: 0
+bssidAllowlist unset
+vendorData unset
+IsDppConfigurator: true
+[REDACTED sensitive-field line]
+ setWifi7Enabled=true
+WifiConfigManager - Configured networks End ----
+WifiConfigManager - ConfigurationMap Begin ----
+mPerId={0=- DSBLE ID: 0 SSID: "AndroidWifi" PROVIDER-NAME: null BSSID: null FQDN: null HOME-PROVIDER-NETWORK: false PRIO: 0 HIDDEN: false PMF: false CarrierId: -1 SubscriptionId: -1 SubscriptionGroup: null Currently Connected: false User Selected: false
+ NetworkSelectionStatus NETWORK_SELECTION_PERMANENTLY_DISABLED
+ mNetworkSelectionDisableReason NETWORK_SELECTION_DISABLED_BY_WIFI_MANAGER
+NETWORK_SELECTION_DISABLED_BY_WIFI_MANAGER counter:1
+ hasEverConnected: false
+ hasNeverDetectedCaptivePortal: true
+ hasEverValidatedInternetAccess: false
+ mCandidateSecurityParams: null mLastUsedSecurityParams: null shared trusted
+ macRandomizationSetting: 3
+ mRandomizedMacAddress: ce:ca:60:b4:21:02
+ randomizedMacExpirationTimeMs: <none>
+ randomizedMacLastModifiedTimeMs: <none>
+ mIsSendDhcpHostnameEnabled: true
+ deletionPriority: 0
+ KeyMgmt: NONE Protocols: WPA RSN
+ AuthAlgorithms:
+ PairwiseCiphers:
+ GroupCiphers:
+ GroupMgmtCiphers:
+ SuiteBCiphers:
+ PSK/SAE:
+SecurityParams List:
+Security Parameters:
+ Type: 0
+ Enabled: true
+ KeyMgmt: NONE
+ Protocols: WPA RSN
+ AuthAlgorithms:
+ PairwiseCiphers:
+ GroupCiphers:
+ GroupMgmtCiphers:
+ SuiteBCiphers:
+ RequirePmf: false
+ IsAddedByAutoUpgrade: false
+ IsSaeH2eOnlyMode: false
+ IsSaePkOnlyMode: false
+Security Parameters:
+ Type: 6
+ Enabled: true
+ KeyMgmt: OWE
+ Protocols: RSN
+ AuthAlgorithms:
+ PairwiseCiphers: CCMP GCMP_256 GCMP_128
+ GroupCiphers: CCMP GCMP_256 GCMP_128
+ GroupMgmtCiphers:
+ SuiteBCiphers:
+ RequirePmf: true
+ IsAddedByAutoUpgrade: true
+ IsSaeH2eOnlyMode: false
+ IsSaePkOnlyMode: false
+
+Enterprise config:
+ ocsp: 0
+ trust_on_first_use: false
+ user_approve_no_ca_cert: false
+ selected_rcoi: 0
+ minimum_tls_version: 0
+ enable_conservative_peer_mode: false
+ tofu_dialog_state: 0
+ tofu_connection_state: 0
+IP config:
+IP assignment: DHCP
+Proxy settings: NONE
+ cuid=10115 cname=com.android.sdksetup luid=10115 lname=com.android.sdksetup lcuid=0 allowAutojoin=true noInternetAccessExpected=false mostRecentlyConnected=false
+
+numRebootsSinceLastUse: 2
+recentFailure: Association Rejection code: 0, last update time: 0
+bssidAllowlist unset
+vendorData unset
+IsDppConfigurator: true
+[REDACTED sensitive-field line]
+ setWifi7Enabled=true}
+mPerIDForCurrentUser={0=- DSBLE ID: 0 SSID: "AndroidWifi" PROVIDER-NAME: null BSSID: null FQDN: null HOME-PROVIDER-NETWORK: false PRIO: 0 HIDDEN: false PMF: false CarrierId: -1 SubscriptionId: -1 SubscriptionGroup: null Currently Connected: false User Selected: false
+ NetworkSelectionStatus NETWORK_SELECTION_PERMANENTLY_DISABLED
+ mNetworkSelectionDisableReason NETWORK_SELECTION_DISABLED_BY_WIFI_MANAGER
+NETWORK_SELECTION_DISABLED_BY_WIFI_MANAGER counter:1
+ hasEverConnected: false
+ hasNeverDetectedCaptivePortal: true
+ hasEverValidatedInternetAccess: false
+ mCandidateSecurityParams: null mLastUsedSecurityParams: null shared trusted
+ macRandomizationSetting: 3
+ mRandomizedMacAddress: ce:ca:60:b4:21:02
+ randomizedMacExpirationTimeMs: <none>
+ randomizedMacLastModifiedTimeMs: <none>
+ mIsSendDhcpHostnameEnabled: true
+ deletionPriority: 0
+ KeyMgmt: NONE Protocols: WPA RSN
+ AuthAlgorithms:
+ PairwiseCiphers:
+ GroupCiphers:
+ GroupMgmtCiphers:
+ SuiteBCiphers:
+ PSK/SAE:
+SecurityParams List:
+Security Parameters:
+ Type: 0
+ Enabled: true
+ KeyMgmt: NONE
+ Protocols: WPA RSN
+ AuthAlgorithms:
+ PairwiseCiphers:
+ GroupCiphers:
+ GroupMgmtCiphers:
+ SuiteBCiphers:
+ RequirePmf: false
+ IsAddedByAutoUpgrade: false
+ IsSaeH2eOnlyMode: false
+ IsSaePkOnlyMode: false
+Security Parameters:
+ Type: 6
+ Enabled: true
+ KeyMgmt: OWE
+ Protocols: RSN
+ AuthAlgorithms:
+ PairwiseCiphers: CCMP GCMP_256 GCMP_128
+ GroupCiphers: CCMP GCMP_256 GCMP_128
+ GroupMgmtCiphers:
+ SuiteBCiphers:
+ RequirePmf: true
+ IsAddedByAutoUpgrade: true
+ IsSaeH2eOnlyMode: false
+ IsSaePkOnlyMode: false
+
+Enterprise config:
+ ocsp: 0
+ trust_on_first_use: false
+ user_approve_no_ca_cert: false
+ selected_rcoi: 0
+ minimum_tls_version: 0
+ enable_conservative_peer_mode: false
+ tofu_dialog_state: 0
+ tofu_connection_state: 0
+IP config:
+IP assignment: DHCP
+Proxy settings: NONE
+ cuid=10115 cname=com.android.sdksetup luid=10115 lname=com.android.sdksetup lcuid=0 allowAutojoin=true noInternetAccessExpected=false mostRecentlyConnected=false
+
+numRebootsSinceLastUse: 2
+recentFailure: Association Rejection code: 0, last update time: 0
+bssidAllowlist unset
+vendorData unset
+IsDppConfigurator: true
+[REDACTED sensitive-field line]
+ setWifi7Enabled=true}
+mScanResultMatchInfoMapForCurrentUser={ScanResultMatchInfo: SSID: "AndroidWifi", from scan result: false, SecurityParams List:Security Parameters:
+ Type: 0
+ Enabled: true
+ KeyMgmt: NONE
+ Protocols: WPA RSN
+ AuthAlgorithms:
+ PairwiseCiphers:
+ GroupCiphers:
+ GroupMgmtCiphers:
+ SuiteBCiphers:
+ RequirePmf: false
+ IsAddedByAutoUpgrade: false
+ IsSaeH2eOnlyMode: false
+ IsSaePkOnlyMode: false
+Security Parameters:
+ Type: 6
+ Enabled: true
+ KeyMgmt: OWE
+ Protocols: RSN
+ AuthAlgorithms:
+ PairwiseCiphers: CCMP GCMP_256 GCMP_128
+ GroupCiphers: CCMP GCMP_256 GCMP_128
+ GroupMgmtCiphers:
+ SuiteBCiphers:
+ RequirePmf: true
+ IsAddedByAutoUpgrade: true
+ IsSaeH2eOnlyMode: false
+ IsSaePkOnlyMode: false
+=- DSBLE ID: 0 SSID: "AndroidWifi" PROVIDER-NAME: null BSSID: null FQDN: null HOME-PROVIDER-NETWORK: false PRIO: 0 HIDDEN: false PMF: false CarrierId: -1 SubscriptionId: -1 SubscriptionGroup: null Currently Connected: false User Selected: false
+ NetworkSelectionStatus NETWORK_SELECTION_PERMANENTLY_DISABLED
+ mNetworkSelectionDisableReason NETWORK_SELECTION_DISABLED_BY_WIFI_MANAGER
+NETWORK_SELECTION_DISABLED_BY_WIFI_MANAGER counter:1
+ hasEverConnected: false
+ hasNeverDetectedCaptivePortal: true
+ hasEverValidatedInternetAccess: false
+ mCandidateSecurityParams: null mLastUsedSecurityParams: null shared trusted
+ macRandomizationSetting: 3
+ mRandomizedMacAddress: ce:ca:60:b4:21:02
+ randomizedMacExpirationTimeMs: <none>
+ randomizedMacLastModifiedTimeMs: <none>
+ mIsSendDhcpHostnameEnabled: true
+ deletionPriority: 0
+ KeyMgmt: NONE Protocols: WPA RSN
+ AuthAlgorithms:
+ PairwiseCiphers:
+ GroupCiphers:
+ GroupMgmtCiphers:
+ SuiteBCiphers:
+ PSK/SAE:
+SecurityParams List:
+Security Parameters:
+ Type: 0
+ Enabled: true
+ KeyMgmt: NONE
+ Protocols: WPA RSN
+ AuthAlgorithms:
+ PairwiseCiphers:
+ GroupCiphers:
+ GroupMgmtCiphers:
+ SuiteBCiphers:
+ RequirePmf: false
+ IsAddedByAutoUpgrade: false
+ IsSaeH2eOnlyMode: false
+ IsSaePkOnlyMode: false
+Security Parameters:
+ Type: 6
+ Enabled: true
+ KeyMgmt: OWE
+ Protocols: RSN
+ AuthAlgorithms:
+ PairwiseCiphers: CCMP GCMP_256 GCMP_128
+ GroupCiphers: CCMP GCMP_256 GCMP_128
+ GroupMgmtCiphers:
+ SuiteBCiphers:
+ RequirePmf: true
+ IsAddedByAutoUpgrade: true
+ IsSaeH2eOnlyMode: false
+ IsSaePkOnlyMode: false
+
+Enterprise config:
+ ocsp: 0
+ trust_on_first_use: false
+ user_approve_no_ca_cert: false
+ selected_rcoi: 0
+ minimum_tls_version: 0
+ enable_conservative_peer_mode: false
+ tofu_dialog_state: 0
+ tofu_connection_state: 0
+IP config:
+IP assignment: DHCP
+Proxy settings: NONE
+ cuid=10115 cname=com.android.sdksetup luid=10115 lname=com.android.sdksetup lcuid=0 allowAutojoin=true noInternetAccessExpected=false mostRecentlyConnected=false
+
+numRebootsSinceLastUse: 2
+recentFailure: Association Rejection code: 0, last update time: 0
+bssidAllowlist unset
+vendorData unset
+IsDppConfigurator: true
+[REDACTED sensitive-field line]
+ setWifi7Enabled=true}
+mCurrentUserId=0
+WifiConfigManager - ConfigurationMap End ----
+WifiConfigManager - Next network ID to be allocated 1
+WifiConfigManager - Last selected network ID -1
+WifiConfigManager - PNO scan frequency culling enabled = true
+WifiConfigManager - PNO scan recency sorting enabled = true
+Dump of WifiConfigStore
+WifiConfigStore - Store File Begin ----
+Name: /data/misc/apexdata/com.android.wifi/WifiConfigStore.xml, File Id: 0, Credentials encrypted: false
+Name: /data/misc/apexdata/com.android.wifi/WifiConfigStoreSoftAp.xml, File Id: 1, Credentials encrypted: false
+Name: /data/misc_ce/0/apexdata/com.android.wifi/WifiConfigStore.xml, File Id: 2, Credentials encrypted: false
+Name: /data/misc_ce/0/apexdata/com.android.wifi/WifiConfigStoreNetworkSuggestions.xml, File Id: 3, Credentials encrypted: false
+WifiConfigStore - Store Data Begin ----
+StoreData => Name: WifiCarrierInfoStoreManagerDataStores, File Id: 0, File Name: WifiConfigStore.xml
+StoreData => Name: ImsiPrivacyProtectionExemptionMap, File Id: 2, File Name: WifiConfigStore.xml
+StoreData => Name: NetworkList, File Id: 0, File Name: WifiConfigStore.xml
+StoreData => Name: NetworkList, File Id: 2, File Name: WifiConfigStore.xml
+StoreData => Name: MacAddressMap, File Id: 0, File Name: WifiConfigStore.xml
+StoreData => Name: Settings, File Id: 0, File Name: WifiConfigStore.xml
+StoreData => Name: NetworkSuggestionMap, File Id: 3, File Name: WifiConfigStoreNetworkSuggestions.xml
+StoreData => Name: PasspointConfigData, File Id: 2, File Name: WifiConfigStore.xml
+StoreData => Name: PasspointConfigData, File Id: 0, File Name: WifiConfigStore.xml
+StoreData => Name: OpenNetworkNotifierBlacklistConfigData, File Id: 2, File Name: WifiConfigStore.xml
+StoreData => Name: NetworkRequestMap, File Id: 2, File Name: WifiConfigStore.xml
+StoreData => Name: SoftAp, File Id: 1, File Name: WifiConfigStoreSoftAp.xml
+StoreData => Name: WakeupConfigStoreData, File Id: 2, File Name: WifiConfigStore.xml
+StoreData => Name: RoamingPolicies, File Id: 0, File Name: WifiConfigStore.xml
+WifiConfigStore - Store Data End ----
+WifiCarrierInfoManager:
+mImsiEncryptionInfoAvailable={}
+mImsiPrivacyProtectionExemptionMap={}
+mMergedCarrierNetworkOffloadMap={}
+mSubIdToSimInfoSparseArray={}
+mActiveSubInfos=[[SubscriptionInfo: id=1 iccId=89860318640220133897 simSlotIndex=0 portIndex=0 isEmbedded=false carrierId=1 displayName=T-Mobile carrierName=T-Mobile isOpportunistic=false groupUuid=null groupOwner= isGroupDisabled=false displayNameSource=CARRIER iconTint=-4716942 number=+15551234567 dataRoaming=0 mcc=310 mnc=260 ehplmns=[] hplmns=[] cardString=89860318640220133897 cardId=0 nativeAccessRules=null carrierConfigAccessRules=[cert: 92B5F8117FBD9BD5738FF168A4FA12CBE284BE834EDE1A7BB44DD8455BA15920 pkg: com.tmobile.rsuapp access: 0, cert: 92B5F8117FBD9BD5738FF168A4FA12CBE284BE834EDE1A7BB44DD8455BA15920 pkg: com.tmobile.echolocate access: 0, cert: 92B5F8117FBD9BD5738FF168A4FA12CBE284BE834EDE1A7BB44DD8455BA15920 pkg: com.tmobile.services.nameid access: 0, cert: 92B5F8117FBD9BD5738FF168A4FA12CBE284BE834EDE1A7BB44DD8455BA15920 pkg: com.tmobile.pr.mytmobile access: 0, cert: 92B5F8117FBD9BD5738FF168A4FA12CBE284BE834EDE1A7BB44DD8455BA15920 pkg: com.tmobile.vvm.application access: 0, cert: 3D1A4BEF6EE7AF7D34D120E7B1AAC0DD245585DE6237CF100F68333AFACFF562 pkg: com.tmobile.rsuapp access: 0, cert: 3D1A4BEF6EE7AF7D34D120E7B1AAC0DD245585DE6237CF100F68333AFACFF562 pkg: com.tmobile.echolocate access: 0, cert: 3D1A4BEF6EE7AF7D34D120E7B1AAC0DD245585DE6237CF100F68333AFACFF562 pkg: com.tmobile.services.nameid access: 0, cert: 3D1A4BEF6EE7AF7D34D120E7B1AAC0DD245585DE6237CF100F68333AFACFF562 pkg: com.tmobile.pr.mytmobile access: 0, cert: 3D1A4BEF6EE7AF7D34D120E7B1AAC0DD245585DE6237CF100F68333AFACFF562 pkg: com.tmobile.vvm.application access: 0, cert: 6892793FC413019D2DF609DFED7AF622D0F2D8FCF96EFA7E3FB87EEA34E10B93 pkg: com.tmobile.rsuapp access: 0, cert: 6892793FC413019D2DF609DFED7AF622D0F2D8FCF96EFA7E3FB87EEA34E10B93 pkg: com.tmobile.echolocate access: 0, cert: 6892793FC413019D2DF609DFED7AF622D0F2D8FCF96EFA7E3FB87EEA34E10B93 pkg: com.tmobile.services.nameid access: 0, cert: 6892793FC413019D2DF609DFED7AF622D0F2D8FCF96EFA7E3FB87EEA34E10B93 pkg: com.tmobile.pr.mytmobile access: 0, cert: 6892793FC413019D2DF609DFED7AF622D0F2D8FCF96EFA7E3FB87EEA34E10B93 pkg: com.tmobile.vvm.application access: 0, cert: 7B68FD9D4E7610C9CB35FC0C6CC06EA04C6906E3DFA9F48F9A05460AF36BFFFC pkg: com.tmobile.rsuapp access: 0, cert: 7B68FD9D4E7610C9CB35FC0C6CC06EA04C6906E3DFA9F48F9A05460AF36BFFFC pkg: com.tmobile.echolocate access: 0, cert: 7B68FD9D4E7610C9CB35FC0C6CC06EA04C6906E3DFA9F48F9A05460AF36BFFFC pkg: com.tmobile.services.nameid access: 0, cert: 7B68FD9D4E7610C9CB35FC0C6CC06EA04C6906E3DFA9F48F9A05460AF36BFFFC pkg: com.tmobile.pr.mytmobile access: 0, cert: 7B68FD9D4E7610C9CB35FC0C6CC06EA04C6906E3DFA9F48F9A05460AF36BFFFC pkg: com.tmobile.vvm.application access: 0] countryIso=us profileClass=-1 mType=LOCAL_SIM areUiccApplicationsEnabled=true usageSetting=DEFAULT isOnlyNonTerrestrialNetwork=false serviceCapabilities=[1, 2, 3] transferStatus=0]]
+[REDACTED sensitive-field line]
+mCarrierAutoJoinResetCheckedForOobPseudonym=true
+mCarrierPrivilegedPackagesBySimSlot=[
+[]
+]
+NonCarrierMergedNetworksStatusTracker - Log Begin ----
+mSubscriptionId=-1
+dumpTimeMs=990206
+mDisableStartTimeMs=0
+mMinDisableDurationMs=0
+mMaxDisableDurationMs=0
+mTemporarilyDisabledNonCarrierMergedListAtStart=
+NonCarrierMergedNetworksStatusTracker - Log End ----
+
+WifiApConfigStore config: ssid = "AndroidAP_1875"
+[REDACTED sensitive-field line]
+ HiddenSsid = false
+ Channels = {1=0}
+ SecurityType = 1
+ MaxClient = 0
+ AutoShutdownEnabled = true
+ ShutdownTimeoutMillis = -1
+ ClientControlByUser = false
+ BlockedClientList = []
+ AllowedClientList= []
+ MacRandomizationSetting = 2
+ BridgedModeInstanceOpportunisticEnabled = true
+ BridgedModeOpportunisticShutdownTimeoutMillis = -1
+ Ieee80211axEnabled = true
+ Ieee80211beEnabled = true
+ isUserConfiguration = false
+ vendorElements = []
+ mPersistentRandomizedMacAddress = e2:cd:ea:93:cb:ed
+ mAllowedAcsChannels2g = []
+ mAllowedAcsChannels5g = []
+ mAllowedAcsChannels6g = []
+ mMaxChannelBandwidth = -1
+ mVendorData = []
+
+Dump of PasspointManager
+mEnabled: true
+PasspointManager - Providers Begin ---
+PasspointManager - Providers End ---
+PasspointManager - Next provider ID to be assigned 0
+Last sweep 0:02:03.100 ago.
+ANQPRequestManager - Begin ---
+ANQPRequestManager - End ---
+Dump of PasspointNetworkNominateHelper
+PasspointNetworkNominateHelper --- end ---
+
+Chipset information :-----------------------------------------------
+FW Version is: 1.0
+Driver Version is: 1.0
+Supported Feature set: -1
+--------------------------------------------------------------------
+Bug dump 0
+system time = 10-17 21:26:56.180
+kernel time = 990.347
+reason = 7
+kernel log:
+
+system log:
+
+ring-buffer = ring0
+
+--------------------------------------------------------------------
+Last Flush Time: {}
+--------------------------------------------------------------------
+No fates fetched for "Last failed connection fates"
+HAL provided zero fates for "Latest fates"
+No last mile log for "Last failed last-mile log"
+No last mile log for "Latest last-mile log"
+--------------------------------------------------------------------
+Dump of WifiConnectivityManager
+WifiConnectivityManager - Log Begin ----
+mIsLocationModeEnabled: true
+mPnoScanEnabledByFramework: true
+mEnablePnoScanAfterWifiToggle: true
+mMultiInternetConnectionState 0
+2026-10-17T21:13:13.888767 - Set WiFi enabled
+2026-10-17T21:13:13.888962 - Stopping WifiConnectivityManager
+2026-10-17T21:13:16.018455 - handleConnectionStateChanged: state=disconnected
+2026-10-17T21:13:16.054540 - startConnectivityScan: screenOn=false wifiState=disconnected scanImmediately=true wifiEnabled=true mAutoJoinEnabled=false mAutoJoinEnabledExternal=true mAutoJoinEnabledExternalSetByDeviceAdmin=false mPnoScanEnabledByFramework=true mEnablePnoScanAfterWifiToggle=true mSpecificNetworkRequestInProgress=false mTrustedConnectionAllowed=false isSufficiencyCheckEnabled=true isAssociatedNetworkSelectionEnabled=true noPotentialNetworkAvailable=false
+2026-10-17T21:14:26.175465 - handleScreenStateChanged: screenOn=true
+2026-10-17T21:14:26.621765 - startConnectivityScan: screenOn=true wifiState=disconnected scanImmediately=false wifiEnabled=true mAutoJoinEnabled=false mAutoJoinEnabledExternal=true mAutoJoinEnabledExternalSetByDeviceAdmin=false mPnoScanEnabledByFramework=true mEnablePnoScanAfterWifiToggle=true mSpecificNetworkRequestInProgress=false mTrustedConnectionAllowed=false isSufficiencyCheckEnabled=true isAssociatedNetworkSelectionEnabled=true noPotentialNetworkAvailable=false
+2026-10-17T21:14:27.100653 - setTrustedConnectionAllowed: allowed=true
+2026-10-17T21:14:27.100869 - Starting up WifiConnectivityManager
+2026-10-17T21:14:27.777790 - startConnectivityScan: screenOn=true wifiState=disconnected scanImmediately=true wifiEnabled=true mAutoJoinEnabled=true mAutoJoinEnabledExternal=true mAutoJoinEnabledExternalSetByDeviceAdmin=false mPnoScanEnabledByFramework=true mEnablePnoScanAfterWifiToggle=true mSpecificNetworkRequestInProgress=false mTrustedConnectionAllowed=true isSufficiencyCheckEnabled=true isAssociatedNetworkSelectionEnabled=true noPotentialNetworkAvailable=false
+2026-10-17T21:14:28.554314 - schedulePeriodicScanTimer intervalMs 20000
+2026-10-17T21:14:37.292031 - AllSingleScanListener onResults: start network selection
+2026-10-17T21:14:38.420685 - Disabled configured networks:
+2026-10-17T21:14:38.420798 -   "AndroidWifi":0 reason=NETWORK_SELECTION_DISABLED_BY_WIFI_MANAGER, count=1;
+
+2026-10-17T21:14:38.435173 - About to run SavedNetworkNominator :
+2026-10-17T21:14:38.455010 - Ignoring network selection disabled SSID: "AndroidWifi"
+2026-10-17T21:14:38.455514 - About to run NetworkSuggestionNominator :
+2026-10-17T21:14:38.456443 - did not see any matching auto-join enabled network suggestions.
+2026-10-17T21:14:38.646382 - AllSingleScanListener:  No candidates
+2026-10-17T21:14:48.932800 - schedulePeriodicScanTimer intervalMs 40000
+2026-10-17T21:14:57.129508 - AllSingleScanListener onResults: start network selection
+2026-10-17T21:14:57.132451 - Disabled configured networks:
+2026-10-17T21:14:57.132523 -   "AndroidWifi":0 reason=NETWORK_SELECTION_DISABLED_BY_WIFI_MANAGER, count=1;
+
+2026-10-17T21:14:57.132746 - About to run SavedNetworkNominator :
+2026-10-17T21:14:57.135512 - Ignoring network selection disabled SSID: "AndroidWifi"
+2026-10-17T21:14:57.135595 - About to run NetworkSuggestionNominator :
+2026-10-17T21:14:57.135966 - did not see any matching auto-join enabled network suggestions.
+2026-10-17T21:14:57.136891 - AllSingleScanListener:  No candidates
+2026-10-17T21:15:28.963127 - schedulePeriodicScanTimer intervalMs 80000
+2026-10-17T21:15:38.556360 - AllSingleScanListener onResults: start network selection
+2026-10-17T21:15:38.734559 - Disabled configured networks:
+2026-10-17T21:15:38.734663 -   "AndroidWifi":0 reason=NETWORK_SELECTION_DISABLED_BY_WIFI_MANAGER, count=1;
+
+2026-10-17T21:15:38.735033 - About to run SavedNetworkNominator :
+2026-10-17T21:15:38.736409 - Ignoring network selection disabled SSID: "AndroidWifi"
+2026-10-17T21:15:38.736574 - About to run NetworkSuggestionNominator :
+2026-10-17T21:15:38.737127 - did not see any matching auto-join enabled network suggestions.
+2026-10-17T21:15:38.811202 - AllSingleScanListener:  No candidates
+2026-10-17T21:16:48.995804 - schedulePeriodicScanTimer intervalMs 160000
+2026-10-17T21:16:53.436720 - AllSingleScanListener onResults: start network selection
+2026-10-17T21:16:53.536022 - Disabled configured networks:
+2026-10-17T21:16:53.536098 -   "AndroidWifi":0 reason=NETWORK_SELECTION_DISABLED_BY_WIFI_MANAGER, count=1;
+
+2026-10-17T21:16:53.536255 - About to run SavedNetworkNominator :
+2026-10-17T21:16:53.556673 - Ignoring network selection disabled SSID: "AndroidWifi"
+2026-10-17T21:16:53.556758 - About to run NetworkSuggestionNominator :
+2026-10-17T21:16:53.558472 - did not see any matching auto-join enabled network suggestions.
+2026-10-17T21:16:53.559453 - AllSingleScanListener:  No candidates
+2026-10-17T21:18:18.122505 - forceConnectivityScan in request of WorkSource{1010}
+2026-10-17T21:18:24.024627 - AllSingleScanListener onResults: start network selection
+2026-10-17T21:18:24.566034 - Disabled configured networks:
+2026-10-17T21:18:24.566222 -   "AndroidWifi":0 reason=NETWORK_SELECTION_DISABLED_BY_WIFI_MANAGER, count=1;
+
+2026-10-17T21:18:24.566608 - About to run SavedNetworkNominator :
+2026-10-17T21:18:24.567778 - Ignoring network selection disabled SSID: "AndroidWifi"
+2026-10-17T21:18:24.568103 - About to run NetworkSuggestionNominator :
+2026-10-17T21:18:24.568594 - did not see any matching auto-join enabled network suggestions.
+2026-10-17T21:18:24.938382 - AllSingleScanListener:  No candidates
+2026-10-17T21:19:29.057031 - schedulePeriodicScanTimer intervalMs 160000
+2026-10-17T21:19:33.078346 - AllSingleScanListener onResults: start network selection
+2026-10-17T21:19:33.084517 - Disabled configured networks:
+2026-10-17T21:19:33.084588 -   "AndroidWifi":0 reason=NETWORK_SELECTION_DISABLED_BY_WIFI_MANAGER, count=1;
+
+2026-10-17T21:19:33.085045 - About to run SavedNetworkNominator :
+2026-10-17T21:19:33.086810 - Ignoring network selection disabled SSID: "AndroidWifi"
+2026-10-17T21:19:33.087022 - About to run NetworkSuggestionNominator :
+2026-10-17T21:19:33.087362 - did not see any matching auto-join enabled network suggestions.
+2026-10-17T21:19:33.088560 - AllSingleScanListener:  No candidates
+2026-10-17T21:22:09.135663 - schedulePeriodicScanTimer intervalMs 160000
+2026-10-17T21:22:12.980921 - AllSingleScanListener onResults: start network selection
+2026-10-17T21:22:12.988279 - Disabled configured networks:
+2026-10-17T21:22:12.988433 -   "AndroidWifi":0 reason=NETWORK_SELECTION_DISABLED_BY_WIFI_MANAGER, count=1;
+
+2026-10-17T21:22:12.988670 - About to run SavedNetworkNominator :
+2026-10-17T21:22:12.991377 - Ignoring network selection disabled SSID: "AndroidWifi"
+2026-10-17T21:22:12.991463 - About to run NetworkSuggestionNominator :
+2026-10-17T21:22:12.991802 - did not see any matching auto-join enabled network suggestions.
+2026-10-17T21:22:12.993269 - AllSingleScanListener:  No candidates
+2026-10-17T21:24:49.228741 - schedulePeriodicScanTimer intervalMs 160000
+2026-10-17T21:24:53.075128 - AllSingleScanListener onResults: start network selection
+2026-10-17T21:24:53.080079 - Disabled configured networks:
+2026-10-17T21:24:53.080153 -   "AndroidWifi":0 reason=NETWORK_SELECTION_DISABLED_BY_WIFI_MANAGER, count=1;
+
+2026-10-17T21:24:53.080305 - About to run SavedNetworkNominator :
+2026-10-17T21:24:53.081936 - Ignoring network selection disabled SSID: "AndroidWifi"
+2026-10-17T21:24:53.082048 - About to run NetworkSuggestionNominator :
+2026-10-17T21:24:53.082443 - did not see any matching auto-join enabled network suggestions.
+2026-10-17T21:24:53.083679 - AllSingleScanListener:  No candidates
+WifiConnectivityManager - Log End ----
+WifiOpenNetworkNotifier:
+mSettingEnabled true
+currentTime: 1792272417044
+mNotificationRepeatTime: 0
+mState: 0
+mBlocklistedSsids: {}
+Dump of WifiBlocklistMonitor
+WifiBlocklistMonitor - Bssid blocklist begin ----
+WifiBlocklistMonitor - Bssid blocklist end ----
+Dump of BSSID to Affiliated BSSID mapping
+WifiBlocklistMonitor - Bssid blocklist logs begin ----
+List of SSIDs to never block:
+WifiBlocklistMonitor - Bssid blocklist logs end ----
+Dump of ExternalPnoScanRequestManager
+ExternalPnoScanRequestManager - Log Begin ----
+No external PNO scan request set.
+mCurrentRequestOnPnoNetworkFoundCount: 0
+ExternalPnoScanRequestManager - Log End ----
+Dump of WifiConnectivityHelper
+WifiConnectivityHelper - Log Begin ----
+mFirmwareRoamingSupported: false
+mMaxNumBlocklistBssid: -1
+mMaxNumAllowlistSsid: -1
+WifiConnectivityHelper - Log End ----
+Dump of WifiHealthMonitor
+WifiHealthMonitor - Log Begin ----
+System Info Stats
+current SW build: OS build version: sdk_phone64_x86_64-userdebug 15 AE3A.240806.019 12368160 test-keys Wifi stack version: 0 Wifi driver version: 1.0 Wifi firmware version: 1.0
+currScanStats: last scan time: 1792272293047 APs found at 2G: 1 APs found above 2g: 0
+prevScanStats: last scan time: 1792268909979 APs found at 2G: 1 APs found above 2g: 0
+configured network connection stats
+networks with failure increase:
+
+networks with failure drop:
+
+networks with high failure without previous stats:
+
+WifiHealthMonitor - Log End ----
+Dump of WifiScoreCard
+current SSID(s):
+ BW Estimation Stats
+2G
+ Tx
+ Count
+ 0 0 0 0 0
+ AvgKbps
+ 0 0 0 0 0
+ BwEst error
+ 0 0 0 0 0
+ L2 error
+ 0 0 0 0 0
+ Rx
+ Count
+ 0 0 0 0 0
+ AvgKbps
+ 0 0 0 0 0
+ BwEst error
+ 0 0 0 0 0
+ L2 error
+ 0 0 0 0 0
+5G
+ Tx
+ Count
+ 0 0 0 0 0
+ AvgKbps
+ 0 0 0 0 0
+ BwEst error
+ 0 0 0 0 0
+ L2 error
+ 0 0 0 0 0
+ Rx
+ Count
+ 0 0 0 0 0
+ AvgKbps
+ 0 0 0 0 0
+ BwEst error
+ 0 0 0 0 0
+ L2 error
+ 0 0 0 0 0
+
+Dump of WakeupController
+USE_PLATFORM_WIFI_WAKE: true
+mWifiWakeupEnabled: true
+isOnboarded: false
+configStore hasBeenRead: true
+mIsActive: false
+mNumScansHandled: 0
+WakeupLock:
+mNumScans: 0
+mIsInitialized: true
+Locked networks: 0
+Dump of WifiLastResortWatchdog
+WifiLastResortWatchdog - Log Begin ----
+WifiLastResortWatchdog - Log End ----
+Dump of AdaptiveConnectivityEnabledSettingObserver
+mAdaptiveConnectivityEnabled=true
+Dump of WifiGlobals
+mPollRssiIntervalMillis=3000
+mIpReachabilityDisconnectEnabled=true
+mIsBluetoothConnected=false
+mIsWpa3SaeUpgradeEnabled=true
+mIsWpa3SaeUpgradeOffloadEnabled=false
+mIsOweUpgradeEnabled=true
+mFlushAnqpCacheOnWifiToggleOffEvent=true
+mIsWpa3SaeH2eSupported=false
+mP2pDeviceNamePrefix=Android_
+mP2pDeviceNamePostfixNumDigits=-1
+mClientModeImplNumLogRecs=100
+mSaveFactoryMacToConfigStoreEnabled=true
+mWifiLowConnectedScoreThresholdToTriggerScanForMbb=55
+mWifiLowConnectedScoreScanPeriodSeconds=60
+mIsUsingExternalScorer=false
+mWifiAllowInsecureEnterpriseConfiguration=false
+mIsP2pMacRandomizationSupportedfalse
+mWifiInterfaceAddedSelfRecoveryEnabled=false
+mDisableUnwantedNetworkOnLowRssi=false
+mNetworkNotFoundEventThreshold=3
+mIsSwPnoEnabled=false
+mIsWpaPersonalDeprecated=false
+mIsWepAllowed=true
+mWepAllowedControlSupported=true
+mDisableFirmwareRoamingInIdleMode=false
+mRepeatedNudFailuresThreshold=5
+mRepeatedNudFailuresWindowMs=60000
+mCarrierSpecificEapFailureConfigMapPerCarrierId mapping below:
+mWifiConfigMaxDisableDurationMs=64800000
+mD2dAllowedControlSupportedWhenInfraStaDisabled=false
+IsD2dSupportedWhenInfraStaDisabled=false
+carrierId=1839, eapFailureCode=0, displayNotification=false, threshold=1, durationMs=14400000
+carrierId=1839, eapFailureCode=1026, displayNotification=false, threshold=1, durationMs=14400000
+carrierId=1839, eapFailureCode=1031, displayNotification=true, threshold=1, durationMs=86400000
+carrierId=1839, eapFailureCode=16384, displayNotification=false, threshold=1, durationMs=300000
+carrierId=1839, eapFailureCode=16385, displayNotification=false, threshold=3, durationMs=7200000
+mIsSupportMultiInternetDual5G=false
+mSendDhcpHostnameRestriction=0
+Dump of SarManager
+isSarSupported: false
+isSarVoiceCallSupported: false
+isSarSoftApSupported: false
+
+
+Dump of LastCallerInfoManager
+API key=1 API name=ScanningEnabled: tid=708 uid=1000 pid=553 packageName=android toggleState=true
+API key=33 API name=API_WIFI_SCANNER_START_SCAN: tid=708 uid=1000 pid=553 packageName=null toggleState=true
+
+Dump of WifiNative
+mIsLocationModeEnabled: true
+mLastLocationModeEnabledTimeMs: 164113
+Dump of HostapdHal
+AIDL service declared: true
+HIDL service declared: false
+Initialized: false
+
+
+Dump of WifiRoamingConfigStore
+DEVICE_ADMIN_POLICIES
+
+NON_ADMIN_POLICIES
+
+Dump of WifiResourceCache
+WifiResourceCache - resource value Begin ----
+Resource Name: config_wifiWepDeprecated, value: false
+WifiResourceCache - resource value End ----

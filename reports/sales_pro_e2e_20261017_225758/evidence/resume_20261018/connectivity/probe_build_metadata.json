@@ -1,0 +1,11 @@
+{
+  "r8_version": "9.5.26",
+  "r8_sha256": "3502f087388ce95bbf5254555927f09385dc2636873964d0bd53f3eaf4fb49ad",
+  "r8_checksum_source": "https://dl.google.com/dl/android/maven2/com/android/tools/r8/9.5.26/r8-9.5.26.jar.sha256",
+  "probe_source_sha256": "40f46c76db3165ba1742a81042b21f76c814ca1aef76b3067cc93ded1831d6c3",
+  "apk_modified": false,
+  "android_system_trust_modified": false,
+  "http_bodies_or_credentials_collected": false,
+  "hostname_verification": "HTTPS endpoint identification enabled",
+  "extra_ca_scope": "probe process only"
+}

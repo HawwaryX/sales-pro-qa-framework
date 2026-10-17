@@ -1,0 +1,22 @@
+10.0.2.0/24 dev eth0 table 1000000015 proto static scope link
+224.0.0.0/24 dev eth0 table 1000000015 proto static scope link
+default dev dummy0 table 1002 proto static scope link
+default via 10.0.2.2 dev eth0 table 1015 proto static mtu 1500
+10.0.2.0/24 dev eth0 table 1015 proto static scope link
+10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.15
+local 10.0.2.15 dev eth0 table local proto kernel scope host src 10.0.2.15
+broadcast 10.0.2.255 dev eth0 table local proto kernel scope link src 10.0.2.15
+local 127.0.0.0/8 dev lo table local proto kernel scope host src 127.0.0.1
+local 127.0.0.1 dev lo table local proto kernel scope host src 127.0.0.1
+broadcast 127.255.255.255 dev lo table local proto kernel scope link src 127.0.0.1
+fe80::/64 dev dummy0 table 1002 proto kernel metric 256 pref medium
+default dev dummy0 table 1002 proto static metric 1024 pref medium
+fe80::/64 dev eth0 table 1015 proto kernel metric 256 pref medium
+fec0::/64 dev eth0 table 1015 proto kernel metric 256 expires 86217sec pref medium
+default via fe80::2 dev eth0 table 1015 proto ra metric 1024 expires 1617sec hoplimit 64 pref medium
+local ::1 dev lo table local proto kernel metric 0 pref medium
+local fe80::5054:ff:fe12:3456 dev eth0 table local proto kernel metric 0 pref medium
+local fe80::7059:72ff:fe77:f964 dev dummy0 table local proto kernel metric 0 pref medium
+local fec0::5054:ff:fe12:3456 dev eth0 table local proto kernel metric 0 pref medium
+multicast ff00::/8 dev dummy0 table local proto kernel metric 256 pref medium
+multicast ff00::/8 dev eth0 table local proto kernel metric 256 pref medium

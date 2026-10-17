@@ -1,0 +1,15 @@
+{
+  "global_proxy_restored": true,
+  "original_proxy_setting_present": false,
+  "network_intentionally_disabled": false,
+  "system_or_app_trust_changed": false,
+  "app_log_counts_after_proxy_test": {
+    "SocketException": 6,
+    "SSLHandshakeException": 0,
+    "DioException": 0,
+    "CONNECT": 0,
+    "403": 0,
+    "FATAL EXCEPTION": 0
+  },
+  "raw_application_logs_saved": false
+}

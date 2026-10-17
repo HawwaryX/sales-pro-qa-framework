@@ -1,0 +1,14 @@
+{
+  "date_client": "2026-10-18",
+  "policy_observations_current": true,
+  "mode": "restricted",
+  "state": "enforced",
+  "revision": "2",
+  "custom_allowed_hosts": [
+    "files.fm"
+  ],
+  "sales_host_allowed": false,
+  "head_probe_repeated": false,
+  "reason": "لا تغير سياسة عن فحص CONNECT403 السابق؛ لا تكرار HTTP محجوب بلا تشخيص جديد",
+  "runtime": "إعادة تشغيل AVD نفسه مع الوكيل الموروث؛ لا clear-data أو إعادة تثبيت"
+}
