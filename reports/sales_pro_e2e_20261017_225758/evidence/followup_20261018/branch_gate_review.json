@@ -1,0 +1,32 @@
+{
+  "scope": "مراجعة الأدلة وحارس المطابقة؛ ليست محاولة دخول أو اختبار جهاز جديدًا",
+  "required_branch": "المركز الرئيسي",
+  "required_financial_year": "2026",
+  "default_branch_is_acceptable": false,
+  "last_attempt_submitted": false,
+  "last_attempt_authenticated": false,
+  "required_options_selected": {
+    "branch": false,
+    "year": false
+  },
+  "exact_selection_guard_reviewed": true,
+  "guard_source_sha256": "6095ba7c254e46fabd49aea3ab84f531dba855ddd3b4b0e5b41bfc88a67fa3e3",
+  "current_policy_revision": "3",
+  "backend_allowance_active": true,
+  "policy_changed_since_previous_delivery": false,
+  "backend_request_repeated": false,
+  "new_ui_attempt": false,
+  "targeted_test_command": "python -m pytest tests/test_runtime_probe.py -k branch_and_year_selection_requires_exact_option",
+  "targeted_test_result": "5 passed, 12 deselected in 0.02s",
+  "acceptance_before_business_operations": [
+    "تحميل المركز الرئيسي و2026 من القوائم الفعلية واختيارهما دون بديل أو معرّف مصطنع",
+    "إرسال الحساب المحدد والتحقق من الشاشة المصادق عليها وهوية الحساب والفرع النشط",
+    "التحقق من هوية بيئة TEST وانتماء العملاء والمنتجات للفرع قبل أي تغييرات"
+  ],
+  "business_data_missing_or_workflows_defective_inferred": false,
+  "blocking_evidence": [
+    "followup_20261018/android_dns_after_policy_update.json",
+    "followup_20261018/login_once/observations.json"
+  ],
+  "remaining_external_prerequisite": "مسار Android معتمد لحل DNS والوصول الموثوق إلى الخادم؛ لا يلزم تكرار السماح أو بيانات الحساب"
+}
