@@ -1,0 +1,41 @@
+{
+  "project_name": "Sales Pro QA — بيانات اصطناعية",
+  "date": "2026-10-17",
+  "environment": "Synthetic demo only",
+  "tests": [
+    {
+      "test_id": "AUTH-001",
+      "module": "تسجيل الدخول",
+      "status": "PASS",
+      "expected": "رفض الدخول عند استخدام بيانات غير صحيحة",
+      "actual": "تم رفض الدخول في بيانات المحاكاة"
+    },
+    {
+      "test_id": "PERM-001",
+      "module": "الصلاحيات",
+      "status": "NOT_RUN",
+      "expected": "تطابق الصلاحيات مع السياسة المعتمدة",
+      "actual": "لم يتم فحص النظام الحي"
+    }
+  ],
+  "permissions": [
+    {
+      "permission": "عرض الفواتير",
+      "module": "الفواتير",
+      "dot_x_pro": true,
+      "sales_pro": false,
+      "expected": null,
+      "evidence": []
+    },
+    {
+      "permission": "حذف المرتجعات",
+      "module": "المرتجعات",
+      "dot_x_pro": null,
+      "sales_pro": null,
+      "expected": null,
+      "evidence": []
+    }
+  ],
+  "defects": [],
+  "limitations": "بيانات توضيحية اصطناعية فقط؛ لا تمثل نتائج فعلية من Dot X Pro أو Sales Pro."
+}
