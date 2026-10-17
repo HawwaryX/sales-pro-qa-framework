@@ -1,0 +1,7 @@
+{"stage": "connect", "elapsed": 0.0}
+{"stage": "launch", "elapsed": 49.47}
+{"stage": "refresh_with_account", "elapsed": 122.21}
+{"stage": "select_requested_branch_year", "elapsed": 132.35}
+{"stage": "evaluate_submit", "elapsed": 149.29}
+{"stage": "environment_control", "elapsed": 164.97}
+{"stage": "complete", "elapsed": 185.83}

@@ -30,3 +30,15 @@ Linux في cloud، لا وصول Windows VPS مثبت في هذه الجلسة. 
 ## تشخيص Android اللاحق
 
 أُثبت HTTPS فعلي داخل Android عبر وكيل الجلسة وCA المناسبة للمسبار: TLS1.3 وHTTP200. DNS الافتراضي فاشل، ووجهة التطبيق ترد عند الوكيل CONNECT403 قبل TLS مع الأصل. تجربة proxy نظامي مؤقت لم تفتح القوائم، وأعيد الإعداد الأصلي. لا مصادقة أو أعمال إضافية. تشخيص البيئة منفصل:3 PASS و4 FAIL و2 BLOCKED؛الوظائف تبقى23 PASS و4 FAIL و54 BLOCKED و3 NOT RUN. [التفاصيل والأدلة](android_connectivity_ar.md).
+
+## متابعة التنفيذ بعد تطبيق المراجعة 3
+
+المراجعة 3 تسمح بالمضيف؛ CONNECT200 وTLS موثق ثم HTTP404 للجذر من Linux. DNS في Android ما زال يفشل بـUnknownHostException؛ القوائم لم تُحمّل ولا دخول مصادق. نجحت RT-33–35 (تكبير الخط وTab ونص 1024 حرفًا دون تقديم)، وحالة تخطي الترحيب BLOCKED في مستخدم مؤقت حُذف بعد العودة للأصلي. الدفتر: PASS: 26؛ FAIL: 4؛ BLOCKED: 55؛ NOT RUN: 2؛ 87 حالة. لا معاملات أو مزامنة أعمال. لا إعادة للطلب المحجوب أو الفحص الثابت.
+
+[محاولة القوائم](evidence/followup_20261018/login_once/observations.json)؛[فحوص UI](evidence/followup_20261018/ui_additional_ready/followup_observations.json)؛[اختبار التخطي](evidence/followup_20261018/skip_isolated_user/result.json).
+
+## جاهزية فحوص UI الجديدة وحدودها
+
+توقف عاملان مبكران قبل أي تغيير لأن شجرة العرض لم تُظهر نموذج الدخول؛ فرضية التمرير وحدها لم تثبت. في الفحص الأخير رُصد حوار عدم استجابة System UI: صفر عقد للتطبيق، ثم بعد ضغط Wait مرة واحدة ظهرت28 عقدة وحقلان. أُنجزت الفحوص الثلاثة في107.13 ثانية مع استعادة الخط وتنظيف المدخلات. هذا حاجز أداة/نظام، وليس عيبًا جديدًا في Sales Pro. [تسلسل الجاهزية](evidence/followup_20261018/ui_additional_ready/followup_observations.json).
+
+الأوامر النظامية للفحوص المحددة: `settings get system font_scale`، ثم `settings put system font_scale 2.0` وإعادة القيمة الأصلية؛ `input keyevent KEYCODE_TAB` دون Enter. النص الطويل اصطناعي ولم يُقدم. بعد تجربة المستخدم المؤقت تحقق الرجوع للمستخدم0 وحذف المؤقت، وبقاء التطبيق عاملًا والخط1.0 والوكيل النظاميnull، دون اسم حزمة Sales Pro في crash buffer. [الحالة النهائية](evidence/followup_20261018/final_runtime_state.json).

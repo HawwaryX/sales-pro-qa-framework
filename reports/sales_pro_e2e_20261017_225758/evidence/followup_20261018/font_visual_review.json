@@ -1,0 +1,8 @@
+{
+  "font_top_and_bottom_reviewed": true,
+  "visible_essential_controls_readable_and_reachable": true,
+  "status": "PASS",
+  "scope": "النموذج العربي عند font_scale 2.0 في اللقطتين؛ لا يثبت دعم TalkBack أو جميع إعدادات الوصولية",
+  "font_restored": "1.0",
+  "account_values_in_images": false
+}

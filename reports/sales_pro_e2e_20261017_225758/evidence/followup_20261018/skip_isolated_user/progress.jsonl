@@ -1,0 +1,4 @@
+{"stage": "register_existing_apk_for_new_user", "elapsed": 0.0}
+{"stage": "switch_to_temporary_user", "elapsed": 0.65}
+{"stage": "launch_onboarding_without_resetting_original_user", "elapsed": 4.9}
+{"stage": "restore_original_user_and_remove_only_created_user", "elapsed": 46.64}

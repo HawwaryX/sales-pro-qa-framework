@@ -1,0 +1,32 @@
+{
+  "functional_cases": 87,
+  "functional_counts": {
+    "PASS": 26,
+    "BLOCKED": 55,
+    "FAIL": 4,
+    "NOT RUN": 2
+  },
+  "network_counts_cumulative": {
+    "PASS": 4,
+    "FAIL": 4,
+    "BLOCKED": 2
+  },
+  "nested_evidence_references_verified": 242,
+  "new_ui_passed": [
+    "RT-33",
+    "RT-34",
+    "RT-35"
+  ],
+  "authenticated": false,
+  "business_mutations": 0,
+  "font_scale_restored": "1.0",
+  "synthetic_inputs_cleared": true,
+  "temporary_user_removed": true,
+  "original_user_restored": "0",
+  "pytest_python312": 75,
+  "pytest_python313": 75,
+  "dependency_check": "No broken requirements found.",
+  "report_format": "UTF-8 with actual line breaks",
+  "apk_sha256_unchanged": "ae8c3cece95a8f00516045974e96749ef1fb005bfd6e86b9a0b4a1c03c667d11",
+  "git_delivery": "Pending commit/remote confirmation; verify in Git history"
+}

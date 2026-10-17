@@ -1,0 +1,6 @@
+{
+  "max_users": "Maximum supported users: 4",
+  "accessibility_packages": [
+    "package:com.android.systemui.accessibility.accessibilitymenu"
+  ]
+}

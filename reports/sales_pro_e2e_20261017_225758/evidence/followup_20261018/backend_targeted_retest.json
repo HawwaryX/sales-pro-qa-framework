@@ -1,0 +1,18 @@
+{
+  "trigger": "السياسة الفعلية الحالية تتضمن المضيف خلاف الدفعة السابقة؛إعادة اختبار واحدة",
+  "target_hostname": "sales.infinity-tech.sa",
+  "path": "/",
+  "method": "HEAD",
+  "tls_verification_enabled": true,
+  "curl_exit": 0,
+  "elapsed_seconds": 2.45,
+  "status_lines": [
+    "HTTP/1.1 200 OK",
+    "HTTP/2 404 "
+  ],
+  "metrics": [
+    "QA_METRICS 200 404 0"
+  ],
+  "redirect_hosts": [],
+  "error": ""
+}

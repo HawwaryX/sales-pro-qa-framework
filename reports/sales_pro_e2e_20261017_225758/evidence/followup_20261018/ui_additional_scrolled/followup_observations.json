@@ -1,0 +1,27 @@
+{
+  "actions": [
+    "connect_existing_runtime"
+  ],
+  "tests": {
+    "font_scale_2": {
+      "status": "BLOCKED",
+      "reason": "WorkerPreconditionOrEnvironment"
+    },
+    "keyboard_tab_focus": {
+      "status": "BLOCKED",
+      "reason": "WorkerPreconditionOrEnvironment"
+    },
+    "synthetic_long_input": {
+      "status": "BLOCKED",
+      "reason": "WorkerPreconditionOrEnvironment"
+    }
+  },
+  "login_submitted": false,
+  "network_settings_changed": false,
+  "app_data_cleared": false,
+  "font_scale_restored": null,
+  "synthetic_fields_cleared": null,
+  "worker_error_class": "SafePreconditionError",
+  "worker_reason_code": "AppPackageNotVisible",
+  "elapsed_seconds": 23.96
+}

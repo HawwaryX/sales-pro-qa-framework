@@ -1,10 +1,10 @@
 {
   "scope": "دفتر تنفيذ UI والتغطية المخططة؛ مستقل عن pytest",
   "counts": {
-    "PASS": 23,
-    "BLOCKED": 54,
+    "PASS": 26,
+    "BLOCKED": 55,
     "FAIL": 4,
-    "NOT RUN": 3
+    "NOT RUN": 2
   },
   "cases": [
     {
@@ -229,7 +229,7 @@
       "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
       "steps": "تحديث القوائم والحساب المحدد مُعبّأ، مع بقاء شبكة المحاكي والوكيل كما هما",
       "expected": "تحميل الفروع والسنوات من backend الاختبار",
-      "actual": "نُفذ التحديث بالحساب المطابق؛ بقيت رسالة تعذر تحميل الفروع أو السنوات. السياسة الحالية لا تتيح المضيف؛ لا نتيجة API ناجحة بعد تجربة الوكيل النظامي المؤقت بقيت النتيجة نفسها؛ لا دخول مصادق.",
+      "actual": "بعد تطبيق السماح في revision3 أُعيد تحديث القوائم مرة واحدة بالحساب المحدد؛ بقي خطأ التحميل. DNS في Android ما زال يفشل بـUnknownHostException؛ نجاح HEAD من Linux لا يثبت اتصال التطبيق.",
       "status": "BLOCKED",
       "evidence": [
         "online_lookup_unavailable.png",
@@ -242,7 +242,11 @@
         "resume_20261018/login_after_network_diagnosis/lookup_with_account.xml",
         "resume_20261018/login_after_network_diagnosis/requested_options.xml",
         "resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png",
-        "resume_20261018/connectivity/15_restore_and_app_logs.json"
+        "resume_20261018/connectivity/15_restore_and_app_logs.json",
+        "followup_20261018/login_once/observations.json",
+        "followup_20261018/login_once/requested_options.xml",
+        "followup_20261018/login_once/login_result_lower_crop.png",
+        "followup_20261018/android_dns_after_policy_update.json"
       ],
       "defect": null,
       "attempts": [
@@ -269,6 +273,19 @@
             "resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png",
             "resume_20261018/connectivity/15_restore_and_app_logs.json"
           ]
+        },
+        {
+          "client_date": "2026-10-18",
+          "trigger": "تغير السياسة الفعلية إلى revision3",
+          "steps": "تحديث واحد للقوائم بعد إدخال الحساب المحدد؛ عدم تقديم فرع بديل",
+          "actual": "بعد تطبيق السماح في revision3 أُعيد تحديث القوائم مرة واحدة بالحساب المحدد؛ بقي خطأ التحميل. DNS في Android ما زال يفشل بـUnknownHostException؛ نجاح HEAD من Linux لا يثبت اتصال التطبيق.",
+          "status": "BLOCKED",
+          "evidence": [
+            "followup_20261018/login_once/observations.json",
+            "followup_20261018/login_once/requested_options.xml",
+            "followup_20261018/login_once/login_result_lower_crop.png",
+            "followup_20261018/android_dns_after_policy_update.json"
+          ]
         }
       ]
     },
@@ -278,7 +295,7 @@
       "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
       "steps": "فتح قائمة الفروع ومحاولة اختيار المركز الرئيسي حرفيًا",
       "expected": "ظهور الفرع الاختباري المصرح به من بيانات الخادم",
-      "actual": "لم يظهر المركز الرئيسي؛ الخيار الوحيد الفرع الافتراضي. لم يُستبدل الفرع المطلوب بعد تجربة الوكيل النظامي المؤقت بقيت النتيجة نفسها؛ لا دخول مصادق.",
+      "actual": "بعد تغير السياسة لم يظهر المركز الرئيسي؛ ظل الفرع الافتراضي وحده. لا اختيار بديل أو حقن معرّف.",
       "status": "BLOCKED",
       "evidence": [
         "branch_available_options.png",
@@ -290,7 +307,11 @@
         "resume_20261018/login_after_network_diagnosis/lookup_with_account.xml",
         "resume_20261018/login_after_network_diagnosis/requested_options.xml",
         "resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png",
-        "resume_20261018/connectivity/15_restore_and_app_logs.json"
+        "resume_20261018/connectivity/15_restore_and_app_logs.json",
+        "followup_20261018/login_once/observations.json",
+        "followup_20261018/login_once/requested_options.xml",
+        "followup_20261018/login_once/login_result_lower_crop.png",
+        "followup_20261018/android_dns_after_policy_update.json"
       ],
       "defect": null,
       "attempts": [
@@ -317,6 +338,19 @@
             "resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png",
             "resume_20261018/connectivity/15_restore_and_app_logs.json"
           ]
+        },
+        {
+          "client_date": "2026-10-18",
+          "trigger": "تغير السياسة الفعلية إلى revision3",
+          "steps": "تحديث واحد للقوائم بعد إدخال الحساب المحدد؛ عدم تقديم فرع بديل",
+          "actual": "بعد تغير السياسة لم يظهر المركز الرئيسي؛ ظل الفرع الافتراضي وحده. لا اختيار بديل أو حقن معرّف.",
+          "status": "BLOCKED",
+          "evidence": [
+            "followup_20261018/login_once/observations.json",
+            "followup_20261018/login_once/requested_options.xml",
+            "followup_20261018/login_once/login_result_lower_crop.png",
+            "followup_20261018/android_dns_after_policy_update.json"
+          ]
         }
       ]
     },
@@ -326,7 +360,7 @@
       "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
       "steps": "محاولة اختيار السنة المالية2026 من القائمة الفعلية",
       "expected": "ظهور السنوات الفعلية من الخادم",
-      "actual": "السنة2026 غير متاحة؛ الحقل فارغ وغير قابل للاختيار. لا حقن لقيمة أو معرّف بعد تجربة الوكيل النظامي المؤقت بقيت النتيجة نفسها؛ لا دخول مصادق.",
+      "actual": "بعد تغير السياسة ظلت 2026 غير متاحة والحقل فارغًا؛ لا قيمة أو معرّف مصطنع.",
       "status": "BLOCKED",
       "evidence": [
         "year_options_unavailable.png",
@@ -337,7 +371,11 @@
         "resume_20261018/login_after_network_diagnosis/lookup_with_account.xml",
         "resume_20261018/login_after_network_diagnosis/requested_options.xml",
         "resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png",
-        "resume_20261018/connectivity/15_restore_and_app_logs.json"
+        "resume_20261018/connectivity/15_restore_and_app_logs.json",
+        "followup_20261018/login_once/observations.json",
+        "followup_20261018/login_once/requested_options.xml",
+        "followup_20261018/login_once/login_result_lower_crop.png",
+        "followup_20261018/android_dns_after_policy_update.json"
       ],
       "defect": null,
       "attempts": [
@@ -363,6 +401,19 @@
             "resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png",
             "resume_20261018/connectivity/15_restore_and_app_logs.json"
           ]
+        },
+        {
+          "client_date": "2026-10-18",
+          "trigger": "تغير السياسة الفعلية إلى revision3",
+          "steps": "تحديث واحد للقوائم بعد إدخال الحساب المحدد؛ عدم تقديم فرع بديل",
+          "actual": "بعد تغير السياسة ظلت 2026 غير متاحة والحقل فارغًا؛ لا قيمة أو معرّف مصطنع.",
+          "status": "BLOCKED",
+          "evidence": [
+            "followup_20261018/login_once/observations.json",
+            "followup_20261018/login_once/requested_options.xml",
+            "followup_20261018/login_once/login_result_lower_crop.png",
+            "followup_20261018/android_dns_after_policy_update.json"
+          ]
         }
       ]
     },
@@ -372,7 +423,7 @@
       "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
       "steps": "إدخال الحساب حرفيًا ثم محاولة اختيار الفرع المركز الرئيسي والسنة2026؛ التقديم بالقيم المطابقة فقط",
       "expected": "ظهور المنزل المصادق عليه وهوية الحساب",
-      "actual": "سابقًا: قُدم النموذج وأوقفه تحقق الفرع والسنة. في استئناف18أكتوبر: تحقق إدخال الحساب، لكن الفرع والسنة المطلوبين لم يتاحا؛ login_submitted=false. لم يُرسل نموذج بفرع بديل ولم تظهر شاشة مصادق عليها بعد تجربة الوكيل النظامي المؤقت بقيت النتيجة نفسها؛ لا دخول مصادق.",
+      "actual": "بعد تغير السياسة تحقق إدخال الحساب المحدد، لكن القيم المطلوبة لم تتح؛ login_submitted=false وauthenticated=false. تقديم النموذج التاريخي توقف محليًا عند شرط الفرع والسنة؛ لا رفض كلمة مرور مثبت.",
       "status": "BLOCKED",
       "evidence": [
         "exact_login_result.txt",
@@ -384,7 +435,11 @@
         "resume_20261018/login_after_network_diagnosis/lookup_with_account.xml",
         "resume_20261018/login_after_network_diagnosis/requested_options.xml",
         "resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png",
-        "resume_20261018/connectivity/15_restore_and_app_logs.json"
+        "resume_20261018/connectivity/15_restore_and_app_logs.json",
+        "followup_20261018/login_once/observations.json",
+        "followup_20261018/login_once/requested_options.xml",
+        "followup_20261018/login_once/login_result_lower_crop.png",
+        "followup_20261018/android_dns_after_policy_update.json"
       ],
       "defect": null,
       "attempts": [
@@ -410,6 +465,19 @@
             "resume_20261018/login_after_network_diagnosis/requested_options.xml",
             "resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png",
             "resume_20261018/connectivity/15_restore_and_app_logs.json"
+          ]
+        },
+        {
+          "client_date": "2026-10-18",
+          "trigger": "تغير السياسة الفعلية إلى revision3",
+          "steps": "تحديث واحد للقوائم بعد إدخال الحساب المحدد؛ عدم تقديم فرع بديل",
+          "actual": "بعد تغير السياسة تحقق إدخال الحساب المحدد، لكن القيم المطلوبة لم تتح؛ login_submitted=false وauthenticated=false. تقديم النموذج التاريخي توقف محليًا عند شرط الفرع والسنة؛ لا رفض كلمة مرور مثبت.",
+          "status": "BLOCKED",
+          "evidence": [
+            "followup_20261018/login_once/observations.json",
+            "followup_20261018/login_once/requested_options.xml",
+            "followup_20261018/login_once/login_result_lower_crop.png",
+            "followup_20261018/android_dns_after_policy_update.json"
           ]
         }
       ]
@@ -594,6 +662,53 @@
       "evidence": [
         "final_guest_network_rules.txt",
         "network_isolation_restored.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-33",
+      "feature": "تكبير خط نموذج الدخول العربي",
+      "preconditions": "نموذج دخول فعلي بحقلين فارغين؛ محاكي الاختبار نفسه دون مصادقة؛ الشبكة مفعلة",
+      "steps": "حفظ font_scale؛ ضبطه على 2.0؛ التمرير لأعلى وأسفل وقراءة العناصر؛ إعادة القيمة الأصلية",
+      "expected": "حقول وأزرار أساسية مقروءة ويمكن الوصول إليها، مع استعادة الإعداد",
+      "actual": "ضُبط على 2.0 فعليًا؛ رُوجعت اللقطتان وظهرت الحقول والتحديث والدخول والبصمة؛ عاد إلى 1.0. النتيجة لا تعمم على كل إعدادات الوصولية.",
+      "status": "PASS",
+      "evidence": [
+        "followup_20261018/ui_additional_ready/font_top.png",
+        "followup_20261018/ui_additional_ready/font_bottom.png",
+        "followup_20261018/ui_additional_ready/font_top.xml",
+        "followup_20261018/ui_additional_ready/font_bottom.xml",
+        "followup_20261018/ui_additional_ready/outer_guard_restore.json",
+        "followup_20261018/font_visual_review.json"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-34",
+      "feature": "Tab بين حقلي الحساب وكلمة المرور",
+      "preconditions": "نموذج دخول فعلي بحقلين فارغين؛ محاكي الاختبار نفسه دون مصادقة؛ الشبكة مفعلة",
+      "steps": "تركيز اسم المستخدم الفارغ؛ إرسال 4 ضغطات Tab دون Enter أو تقديم",
+      "expected": "ينتقل التركيز أولًا من اسم المستخدم إلى كلمة المرور دون إرسال",
+      "actual": "التركيز [true,false] ثم [false,true]، ثم عناصر غير تحريرية؛ لا Enter أو تقديم. هذا ليس فحص TalkBack أو إثبات دعم كل مفاتيح الواجهة.",
+      "status": "PASS",
+      "evidence": [
+        "followup_20261018/ui_additional_ready/followup_observations.json",
+        "followup_20261018/ui_additional_ready/focus_order.xml"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-35",
+      "feature": "نص اصطناعي طويل مختلط الاتجاه دون تقديم",
+      "preconditions": "نموذج دخول فعلي بحقلين فارغين؛ محاكي الاختبار نفسه دون مصادقة؛ الشبكة مفعلة",
+      "steps": "إدخال 1024 حرفًا اصطناعيًا عربيًا/لاتينيًا في كل حقل؛ قراءة التطابق والإخفاء؛ مسح إدخالاتنا فقط",
+      "expected": "حفظ النص واستجابة الحقول وإخفاء كلمة المرور وتنظيفها، دون طلب مصادقة",
+      "actual": "قُرئ 1024 حرفًا مطابقًا في كل حقل؛ password=true؛ form_submitted=false؛ synthetic_fields_cleared=true. لم تُختبر قواعد الخادم أو تخزين الأسرار، ولا تُعد بيانات مصادقة بديلة.",
+      "status": "PASS",
+      "evidence": [
+        "followup_20261018/ui_additional_ready/followup_observations.json",
+        "followup_20261018/ui_additional_ready/long_input.xml",
+        "followup_20261018/ui_additional_ready/final_empty_fields.xml"
       ],
       "defect": null
     },
@@ -1251,12 +1366,16 @@
     {
       "id": "NR-01",
       "feature": "تخطي الترحيب",
-      "preconditions": "ميزة/حالة جهاز مناسبة",
-      "steps": "لم ينفذ؛ خطة لاحقة عند توفر شرطها",
-      "expected": "التحقق وفق جهاز اختبار مناسب",
-      "actual": "اكتمل الترحيب قبل هذا الفحص؛ لم تمسح بيانات التطبيق لإعادته",
-      "status": "NOT RUN",
-      "evidence": [],
+      "preconditions": "مستخدم Android اختباري مؤقت مستقل؛ الحزمة القائمة مسجلة له دون مسح بيانات المستخدم الأصلي",
+      "steps": "إنشاء مستخدم مؤقت؛ فتح الترحيب؛ الضغط على خيار التخطي المرصود إن ظهر؛ العودة للمستخدم الأصلي وحذف المؤقت فقط",
+      "expected": "تخطي الترحيب إلى نموذج الدخول مع حفظ حالة المستخدم الأصلي وتنظيف المؤقت",
+      "actual": "سُجلت الحزمة القائمة في مستخدم مؤقت، لكن خيار التخطي لم يظهر ضمن الانتظار المحدود؛ لم يُضغط أو يُثبت تخطي الترحيب. تعذر تنظيف أول بمهلة ADB، ثم تحقق الرجوع للمستخدم0 وحذف المستخدم10 فقط. لم تُمسح بيانات المستخدم الأصلي أو يُرسل حساب.",
+      "status": "BLOCKED",
+      "evidence": [
+        "followup_20261018/skip_isolated_user/result.json",
+        "followup_20261018/skip_isolated_user/created_user.json",
+        "followup_20261018/skip_isolated_user/cleanup_recheck.json"
+      ],
       "defect": null
     },
     {
@@ -1265,9 +1384,11 @@
       "preconditions": "ميزة/حالة جهاز مناسبة",
       "steps": "لم ينفذ؛ خطة لاحقة عند توفر شرطها",
       "expected": "التحقق وفق جهاز اختبار مناسب",
-      "actual": "لا خدمة TalkBack مهيأة؛ ملاحظات semantics لا تثبت تجربة قارئ الشاشة",
+      "actual": "لا TalkBack مثبت أو مهيأ؛ accessibilitymenu وحده ليس قارئ TalkBack. لم تُنفذ تجربة قارئ شاشة.",
       "status": "NOT RUN",
-      "evidence": [],
+      "evidence": [
+        "followup_20261018/remaining_runtime_prerequisites.json"
+      ],
       "defect": null
     },
     {
@@ -1302,7 +1423,8 @@
     "backend_proxy_connect_status": 403,
     "backend_origin_reached_in_checks": false,
     "global_proxy_restored": true,
-    "system_or_app_trust_modified": false
+    "system_or_app_trust_modified": false,
+    "historical_scope": "دفعة d806c39؛ انظر followup_summary للحالة الأحدث"
   },
   "connectivity_diagnostics": [
     {
@@ -1327,7 +1449,17 @@
       "expected": "حل الاسم عبر resolver الافتراضي",
       "actual": "UnknownHostException مع GaiException؛لا إجابة DNS ناجحة",
       "evidence": [
-        "resume_20261018/connectivity/06_android_backend_dns.txt"
+        "resume_20261018/connectivity/06_android_backend_dns.txt",
+        "followup_20261018/android_dns_after_policy_update.json"
+      ],
+      "attempts": [
+        {
+          "trigger": "revision3",
+          "status": "FAIL",
+          "evidence": [
+            "followup_20261018/android_dns_after_policy_update.json"
+          ]
+        }
       ]
     },
     {
@@ -1345,7 +1477,7 @@
       "id": "NET-04",
       "feature": "مضيف التطبيق عبر وكيل الجلسة من Android",
       "status": "BLOCKED",
-      "scope": "تشخيص بيئة الشبكة؛ منفصل عن عيوب التطبيق",
+      "scope": "نتيجة Android التاريخية في d806c39؛ لا ادعاء باستمرار 403 بعد تغير السياسة؛ NET-10 يوثق نجاح المسار من المضيف",
       "expected": "سماح CONNECT قبل فحص TLS والأصل",
       "actual": "proxy CONNECT403؛tls_negotiated=false؛ليست HTTP403 من backend",
       "evidence": [
@@ -1393,7 +1525,17 @@
       "expected": "نجاح getaddrinfo",
       "actual": "gaierror errno=-3؛العامل اكتمل ولم تنجح عملية الحل",
       "evidence": [
-        "resume_20261018/connectivity/12_host_backend_dns.txt"
+        "resume_20261018/connectivity/12_host_backend_dns.txt",
+        "followup_20261018/host_dns_after_policy_update.json"
+      ],
+      "attempts": [
+        {
+          "trigger": "revision3",
+          "status": "FAIL",
+          "evidence": [
+            "followup_20261018/host_dns_after_policy_update.json"
+          ]
+        }
       ]
     },
     {
@@ -1406,10 +1548,22 @@
       "evidence": [
         "resume_20261018/connectivity/13_host_allowed_control_https.txt"
       ]
+    },
+    {
+      "id": "NET-10",
+      "feature": "الوصول للمضيف بعد تطبيق revision3 عبر مسار Linux المعتمد",
+      "status": "PASS",
+      "scope": "وصول CONNECT/TLS فقط؛ ليس نجاح API أو مصادقة",
+      "expected": "CONNECT200 وتحقق TLS ثم استجابة HTTP",
+      "actual": "curl exit0؛ CONNECT200؛ ssl_verify_result0؛ HTTP404 للجذر؛ لا redirect. زال منع المضيف في هذا المسار.",
+      "evidence": [
+        "followup_20261018/backend_targeted_retest.json",
+        "followup_20261018/effective_policy.json"
+      ]
     }
   ],
   "connectivity_diagnostic_counts": {
-    "PASS": 3,
+    "PASS": 4,
     "FAIL": 4,
     "BLOCKED": 2
   },
@@ -1420,6 +1574,37 @@
     "result": "لا VPN مهيأ أو منح TCP أو أداة تطبيق/ترحيل للسياسة؛ المضيف غائب عن السياسة الفعلية. الإعداد المقروء يتضمنه؛ يلزم إصلاح ربط النسخة من المنصة. لم يكرر الطلب المحجوب.",
     "new_functional_tests_executed": 0,
     "authenticated": false,
-    "business_mutations_performed": false
+    "business_mutations_performed": false,
+    "historical_scope": "قبل تطبيق revision3؛ المضيف مسموح حاليًا"
+  },
+  "followup_summary": {
+    "policy_revision": 3,
+    "backend_currently_allowed": true,
+    "host_proxy_connect_status": 200,
+    "host_origin_root_http_status": 404,
+    "tls_verified": true,
+    "android_dns": "UnknownHostException",
+    "authenticated_home_verified": false,
+    "exact_account_input_verified": true,
+    "requested_branch_selected": false,
+    "requested_year_selected": false,
+    "login_submitted": false,
+    "business_mutations": 0,
+    "offline_retested": false,
+    "new_ui_tests": [
+      "RT-33",
+      "RT-34",
+      "RT-35"
+    ],
+    "onboarding_skip_status": "BLOCKED",
+    "font_restored": true,
+    "synthetic_fields_cleared": true,
+    "temporary_user_removed": true,
+    "original_user_restored": true,
+    "framework_pytest": {
+      "python312": 75,
+      "python313": 75
+    },
+    "single_external_prerequisite": "مسار Android معتمد يوفر DNS ووصول HTTPS موثوقًا إلى الخادم لتحميل القوائم؛ لا طلب لإعادة السماح أو بيانات الحساب"
   }
 }

@@ -1,0 +1,19 @@
+{
+  "first_ui_worker_stopped_before_mutations": true,
+  "first_worker_error_class": "RuntimeError",
+  "actual_inspection_visible_edittext_count": 0,
+  "actual_inspection_font_scale": "1.0",
+  "correction": "تمرير آمن إلى أعلى بحد محاولتين قبل التحقق من حقلين فارغين؛ السماح بلقطات الجزء السفلي بعد تحقق الفراغ الأولي",
+  "app_defect": false,
+  "no_login_or_backend_request_in_ui_extension": true,
+  "original_apk_reinstalled_or_data_cleared": false,
+  "initial_hypothesis": "الحقول خارج الشاشة؛ لم تثبت الفرضية بالعد صفر وحده",
+  "second_attempt_reason": "AppPackageNotVisible قبل أي تغيير",
+  "separate_adb_observation": "MainActivity في topResumedActivity وAndroid Awake",
+  "cause_confirmed": false,
+  "final_readiness_correction": "إظهارMainActivity ومعالجةحوارSystemUI Wait إن وجد وانتظارشجرةغيرفارغةبحدمعلوم",
+  "final_readiness_observed_cause": "رُصد حوار عدم استجابة System UI؛كان application_node_count=0،وبعد Wait أصبح28 وظهر حقلان",
+  "final_readiness_evidence": "ui_additional_ready/followup_observations.json",
+  "initial_hypothesis_confirmed": false,
+  "final_readiness_correction_verified": true
+}

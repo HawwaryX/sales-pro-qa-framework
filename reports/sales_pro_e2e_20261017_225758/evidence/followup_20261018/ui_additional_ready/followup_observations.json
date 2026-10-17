@@ -1,0 +1,360 @@
+{
+  "actions": [
+    "connect_existing_runtime",
+    "resume_existing_activity_and_bounded_readiness",
+    "font_scale_2_observations",
+    "keyboard_tab_focus_without_submission",
+    "synthetic_1024_character_inputs_without_submission"
+  ],
+  "tests": {
+    "font_scale_2": {
+      "status": "EXECUTED",
+      "configured_scale_2": true,
+      "visual_review_required": true,
+      "top_controls": [
+        {
+          "class": "android.view.View",
+          "label": "اتصال مشفر وآمن 256-bit",
+          "bounds": "[196,43][422,77]",
+          "clickable": "false",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.widget.Button",
+          "label": "الإنجليزية",
+          "bounds": "[16,36][128,84]",
+          "clickable": "true",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.view.View",
+          "label": "سيلز برو",
+          "bounds": "[182,198][298,256]",
+          "clickable": "false",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.view.View",
+          "label": "تسجيل دخول المندوب الميداني",
+          "bounds": "[84,262][396,304]",
+          "clickable": "false",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.view.View",
+          "label": "مرحباً بك مجدداً، سجّل دخولك لمتابعة خط سير زياراتك الميدانية",
+          "bounds": "[16,310][464,384]",
+          "clickable": "false",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.widget.Button",
+          "label": "",
+          "bounds": "[35,516][83,564]",
+          "clickable": "true",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.widget.Button",
+          "label": "الفرع *\nالفرع الافتراضي",
+          "bounds": "[35,587][445,651]",
+          "clickable": "true",
+          "focusable": "true",
+          "focused": "true",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.widget.Button",
+          "label": "السنة المالية *",
+          "bounds": "[35,663][445,727]",
+          "clickable": "false",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.widget.Button",
+          "label": "تحديث الفروع والسنوات",
+          "bounds": "[193,731][445,779]",
+          "clickable": "true",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.view.View",
+          "label": "تذكر تسجيل الدخول",
+          "bounds": "[217,785][445,806]",
+          "clickable": "true",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.widget.CheckBox",
+          "label": "",
+          "bounds": "[423,792][445,806]",
+          "clickable": "true",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.widget.Button",
+          "label": "نسيت كلمة المرور؟",
+          "bounds": "[35,779][217,806]",
+          "clickable": "true",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        }
+      ],
+      "bottom_controls": [
+        {
+          "class": "android.widget.Button",
+          "label": "",
+          "bounds": "[35,89][83,137]",
+          "clickable": "true",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.widget.Button",
+          "label": "الفرع *\nالفرع الافتراضي",
+          "bounds": "[35,160][445,224]",
+          "clickable": "true",
+          "focusable": "true",
+          "focused": "true",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.widget.Button",
+          "label": "السنة المالية *",
+          "bounds": "[35,236][445,300]",
+          "clickable": "false",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.widget.Button",
+          "label": "تحديث الفروع والسنوات",
+          "bounds": "[193,304][445,352]",
+          "clickable": "true",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.view.View",
+          "label": "تذكر تسجيل الدخول",
+          "bounds": "[217,358][445,395]",
+          "clickable": "true",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.widget.CheckBox",
+          "label": "",
+          "bounds": "[423,365][445,387]",
+          "clickable": "true",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.widget.Button",
+          "label": "نسيت كلمة المرور؟",
+          "bounds": "[35,352][217,400]",
+          "clickable": "true",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.view.View",
+          "label": "تعذر تحميل الفروع أو السنوات. تحقق من الاتصال بالخادم.",
+          "bounds": "[35,408][445,488]",
+          "clickable": "false",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.view.View",
+          "label": "تسجيل الدخول",
+          "bounds": "[35,500][445,552]",
+          "clickable": "true",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.view.View",
+          "label": "أو الدخول السريع عبر",
+          "bounds": "[161,575][319,606]",
+          "clickable": "false",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.widget.Button",
+          "label": "الدخول بالبصمة البيومترية",
+          "bounds": "[35,623][445,671]",
+          "clickable": "true",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.view.View",
+          "label": "بيئة المبيعات المعتمدة",
+          "bounds": "[254,715][417,746]",
+          "clickable": "false",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.view.View",
+          "label": "شركة تقنية إنفينيتي المحدودة",
+          "bounds": "[148,746][417,783]",
+          "clickable": "false",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        },
+        {
+          "class": "android.widget.Button",
+          "label": "تغيير",
+          "bounds": "[29,723][98,776]",
+          "clickable": "true",
+          "focusable": "true",
+          "focused": "false",
+          "visible_to_user": "true"
+        }
+      ]
+    },
+    "keyboard_tab_focus": {
+      "status": "EXECUTED",
+      "focus_sequence": [
+        {
+          "step": 0,
+          "field_focused": [
+            true,
+            false
+          ],
+          "focused_noneditable_count": 1
+        },
+        {
+          "step": 1,
+          "field_focused": [
+            false,
+            true
+          ],
+          "focused_noneditable_count": 1
+        },
+        {
+          "step": 2,
+          "field_focused": [
+            false,
+            false
+          ],
+          "focused_noneditable_count": 2
+        },
+        {
+          "step": 3,
+          "field_focused": [
+            false,
+            false
+          ],
+          "focused_noneditable_count": 2
+        },
+        {
+          "step": 4,
+          "field_focused": [
+            false,
+            false
+          ],
+          "focused_noneditable_count": 2
+        }
+      ],
+      "focus_semantics_observable": true,
+      "enter_or_submit_pressed": false
+    },
+    "synthetic_long_input": {
+      "status": "EXECUTED",
+      "requested_characters_per_field": 1024,
+      "observed_lengths": [
+        1024,
+        1024
+      ],
+      "exact_input_preserved": [
+        true,
+        true
+      ],
+      "exact_password_value_unobservable": false,
+      "recognized_expected_length_password_mask": false,
+      "observed_lengths_are_accessibility_text_not_decrypted_values": true,
+      "password_masking_in_semantics": true,
+      "form_submitted": false,
+      "validation_not_asserted_without_submission": true
+    }
+  },
+  "login_submitted": false,
+  "network_settings_changed": false,
+  "app_data_cleared": false,
+  "font_scale_restored": true,
+  "synthetic_fields_cleared": true,
+  "activity_resume_requested": true,
+  "initial_hierarchy_metadata": [
+    {
+      "attempt": 1,
+      "node_count": 47,
+      "packages": [
+        "android",
+        "com.android.launcher3",
+        "com.android.systemui"
+      ],
+      "application_node_count": 0,
+      "application_editable_field_count": 0,
+      "system_ui_anr_wait_acknowledged": true
+    },
+    {
+      "attempt": 2,
+      "node_count": 63,
+      "packages": [
+        "com.android.launcher3",
+        "com.android.systemui",
+        "com.infinity.sales.app"
+      ],
+      "application_node_count": 28,
+      "application_editable_field_count": 2
+    }
+  ],
+  "system_ui_wait_pressed_once": true,
+  "initial_two_empty_fields_verified": true,
+  "window_size": [
+    480,
+    854
+  ],
+  "original_font_scale": "1.0",
+  "font_scale_readback": "2.0",
+  "font_scale_after_restore": "1.0",
+  "elapsed_seconds": 107.13
+}

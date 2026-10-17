@@ -1,0 +1,6 @@
+{
+  "ready": true,
+  "serial": "emulator-5554",
+  "readiness_wait_seconds": 170.88,
+  "checks": 16
+}

@@ -1,0 +1,5 @@
+{"stage": "connect_existing_runtime", "elapsed_seconds": 0.08}
+{"stage": "resume_existing_activity_and_bounded_readiness", "elapsed_seconds": 8.77}
+{"stage": "font_scale_2_observations", "elapsed_seconds": 19.0}
+{"stage": "keyboard_tab_focus_without_submission", "elapsed_seconds": 75.7}
+{"stage": "synthetic_1024_character_inputs_without_submission", "elapsed_seconds": 101.67}

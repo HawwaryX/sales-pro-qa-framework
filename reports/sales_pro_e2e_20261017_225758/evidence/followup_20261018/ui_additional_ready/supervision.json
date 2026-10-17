@@ -1,0 +1,7 @@
+{
+  "state": "COMPLETED",
+  "returncode": 0,
+  "elapsed_seconds": 107.20805745799998,
+  "stdout": "{\"tests\": {\"font_scale_2\": \"EXECUTED\", \"keyboard_tab_focus\": \"EXECUTED\", \"synthetic_long_input\": \"EXECUTED\"}, \"font_scale_restored\": true, \"synthetic_fields_cleared\": true, \"elapsed_seconds\": 107.13}\n",
+  "stderr": ""
+}

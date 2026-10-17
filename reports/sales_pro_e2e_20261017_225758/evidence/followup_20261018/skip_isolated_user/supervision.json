@@ -1,0 +1,7 @@
+{
+  "state": "COMPLETED",
+  "returncode": 0,
+  "elapsed_seconds": 62.65218121599992,
+  "stdout": "{\"test_id\": \"NR-01\", \"status\": \"BLOCKED\", \"user\": 10, \"original_user\": \"0\", \"app_data_of_original_user_cleared\": false, \"login_submitted\": false, \"install_existing\": \"Package com.infinity.sales.app installed for user: 10\", \"error_class\": \"RuntimeError\", \"safe_reason\": \"SkipControlNotVisible\", \"cleanup_error_class\": \"AdbTimeout\", \"elapsed_seconds\": 62.48}\n",
+  "stderr": ""
+}

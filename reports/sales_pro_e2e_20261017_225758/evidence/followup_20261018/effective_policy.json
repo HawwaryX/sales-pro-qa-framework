@@ -1,0 +1,15 @@
+{
+  "observations_current": true,
+  "source_version": "1cf3769a-7224-4a0a-a89c-9551c4aa143f~cecfgver_6ad38fda5c4c8191a2787157d62e7be8",
+  "spec_revision": "3",
+  "observed_spec_revision": "3",
+  "http_policy": "enforced",
+  "mode": "restricted",
+  "custom_hosts": [
+    "files.fm",
+    "sales.infinity-tech.sa"
+  ],
+  "backend_allowed": true,
+  "configuration_modified_this_followup": false,
+  "policy_changed_since_previous_delivery": true
+}

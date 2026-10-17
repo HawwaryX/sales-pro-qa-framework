@@ -1,6 +1,6 @@
 # حالات الاختبار الوظيفي العربية
 
-التراكمي الوظيفي: PASS: 23؛ FAIL: 4؛ BLOCKED: 54؛ NOT RUN: 3؛84 حالة. تشخيص الشبكة منفصل: 3 PASS و4 FAIL بيئية و2 BLOCKED. لا تدمج أخطاء البيئة مع عيوب التطبيق الأربعة. اختبارات pytest75 مستقلة عن النطاقين. الخطوات غير المنفذة موضحة في النتائج.
+التراكمي الوظيفي: PASS: 26؛ FAIL: 4؛ BLOCKED: 55؛ NOT RUN: 2؛ 87 حالة. تشخيص الشبكة مستقل تراكميًا: 4 PASS و4 FAIL بيئية و2 BLOCKED؛ نتائج NET01–09 تتضمن أدلة تاريخية، وNET10 بعد تغير السياسة. اختبارات pytest: 75 لكل نسخة Python منفصلة عن أعمال التطبيق.
 
 ## RT-01 — التثبيت
 
@@ -236,11 +236,9 @@
 
 - المتوقع: تحميل الفروع والسنوات من backend الاختبار
 
-- الفعلي: نُفذ التحديث بالحساب المطابق؛ بقيت رسالة تعذر تحميل الفروع أو السنوات. السياسة الحالية لا تتيح المضيف؛ لا نتيجة API ناجحة بعد تجربة الوكيل النظامي المؤقت بقيت النتيجة نفسها؛ لا دخول مصادق.
+- الفعلي: بعد تطبيق السماح في revision3 أُعيد تحديث القوائم مرة واحدة بالحساب المحدد؛ بقي خطأ التحميل. DNS في Android ما زال يفشل بـUnknownHostException؛ نجاح HEAD من Linux لا يثبت اتصال التطبيق.
 
-- الدليل: [online_lookup_unavailable.png](evidence/online_lookup_unavailable.png)، [final_guest_network_rules.txt](evidence/final_guest_network_rules.txt)، [dns_and_proxy_diagnosis_ar.txt](evidence/dns_and_proxy_diagnosis_ar.txt)، [resume_20261018/login_with_branch_year/lookup_with_account.xml](evidence/resume_20261018/login_with_branch_year/lookup_with_account.xml)، [resume_20261018/login_with_branch_year/observations.json](evidence/resume_20261018/login_with_branch_year/observations.json)، [resume_20261018/environment_version_comparison.json](evidence/resume_20261018/environment_version_comparison.json)، [resume_20261018/login_after_network_diagnosis/observations.json](evidence/resume_20261018/login_after_network_diagnosis/observations.json)، [resume_20261018/login_after_network_diagnosis/lookup_with_account.xml](evidence/resume_20261018/login_after_network_diagnosis/lookup_with_account.xml)، [resume_20261018/login_after_network_diagnosis/requested_options.xml](evidence/resume_20261018/login_after_network_diagnosis/requested_options.xml)، [resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png](evidence/resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png)، [resume_20261018/connectivity/15_restore_and_app_logs.json](evidence/resume_20261018/connectivity/15_restore_and_app_logs.json)
-
-- أُعيد التحقق في18أكتوبر2026؛ ملاحظات المحاولات محفوظة في attempts داخل الدفتر.
+- الدليل: [online_lookup_unavailable.png](evidence/online_lookup_unavailable.png)، [final_guest_network_rules.txt](evidence/final_guest_network_rules.txt)، [dns_and_proxy_diagnosis_ar.txt](evidence/dns_and_proxy_diagnosis_ar.txt)، [lookup_with_account.xml](evidence/resume_20261018/login_with_branch_year/lookup_with_account.xml)، [observations.json](evidence/resume_20261018/login_with_branch_year/observations.json)، [environment_version_comparison.json](evidence/resume_20261018/environment_version_comparison.json)، [observations.json](evidence/resume_20261018/login_after_network_diagnosis/observations.json)، [lookup_with_account.xml](evidence/resume_20261018/login_after_network_diagnosis/lookup_with_account.xml)، [requested_options.xml](evidence/resume_20261018/login_after_network_diagnosis/requested_options.xml)، [login_result_lower_crop.png](evidence/resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png)، [15_restore_and_app_logs.json](evidence/resume_20261018/connectivity/15_restore_and_app_logs.json)، [observations.json](evidence/followup_20261018/login_once/observations.json)، [requested_options.xml](evidence/followup_20261018/login_once/requested_options.xml)، [login_result_lower_crop.png](evidence/followup_20261018/login_once/login_result_lower_crop.png)، [android_dns_after_policy_update.json](evidence/followup_20261018/android_dns_after_policy_update.json)
 
 ## RT-18 — اختيار الفرع الاختباري
 
@@ -252,11 +250,9 @@
 
 - المتوقع: ظهور الفرع الاختباري المصرح به من بيانات الخادم
 
-- الفعلي: لم يظهر المركز الرئيسي؛ الخيار الوحيد الفرع الافتراضي. لم يُستبدل الفرع المطلوب بعد تجربة الوكيل النظامي المؤقت بقيت النتيجة نفسها؛ لا دخول مصادق.
+- الفعلي: بعد تغير السياسة لم يظهر المركز الرئيسي؛ ظل الفرع الافتراضي وحده. لا اختيار بديل أو حقن معرّف.
 
-- الدليل: [branch_available_options.png](evidence/branch_available_options.png)، [branch_available_options.xml](evidence/branch_available_options.xml)، [resume_20261018/login_with_branch_year/branch_options.xml](evidence/resume_20261018/login_with_branch_year/branch_options.xml)، [resume_20261018/login_with_branch_year/requested_options.xml](evidence/resume_20261018/login_with_branch_year/requested_options.xml)، [resume_20261018/login_with_branch_year/observations.json](evidence/resume_20261018/login_with_branch_year/observations.json)، [resume_20261018/login_after_network_diagnosis/observations.json](evidence/resume_20261018/login_after_network_diagnosis/observations.json)، [resume_20261018/login_after_network_diagnosis/lookup_with_account.xml](evidence/resume_20261018/login_after_network_diagnosis/lookup_with_account.xml)، [resume_20261018/login_after_network_diagnosis/requested_options.xml](evidence/resume_20261018/login_after_network_diagnosis/requested_options.xml)، [resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png](evidence/resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png)، [resume_20261018/connectivity/15_restore_and_app_logs.json](evidence/resume_20261018/connectivity/15_restore_and_app_logs.json)
-
-- أُعيد التحقق في18أكتوبر2026؛ ملاحظات المحاولات محفوظة في attempts داخل الدفتر.
+- الدليل: [branch_available_options.png](evidence/branch_available_options.png)، [branch_available_options.xml](evidence/branch_available_options.xml)، [branch_options.xml](evidence/resume_20261018/login_with_branch_year/branch_options.xml)، [requested_options.xml](evidence/resume_20261018/login_with_branch_year/requested_options.xml)، [observations.json](evidence/resume_20261018/login_with_branch_year/observations.json)، [observations.json](evidence/resume_20261018/login_after_network_diagnosis/observations.json)، [lookup_with_account.xml](evidence/resume_20261018/login_after_network_diagnosis/lookup_with_account.xml)، [requested_options.xml](evidence/resume_20261018/login_after_network_diagnosis/requested_options.xml)، [login_result_lower_crop.png](evidence/resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png)، [15_restore_and_app_logs.json](evidence/resume_20261018/connectivity/15_restore_and_app_logs.json)، [observations.json](evidence/followup_20261018/login_once/observations.json)، [requested_options.xml](evidence/followup_20261018/login_once/requested_options.xml)، [login_result_lower_crop.png](evidence/followup_20261018/login_once/login_result_lower_crop.png)، [android_dns_after_policy_update.json](evidence/followup_20261018/android_dns_after_policy_update.json)
 
 ## RT-19 — السنة المالية
 
@@ -268,11 +264,9 @@
 
 - المتوقع: ظهور السنوات الفعلية من الخادم
 
-- الفعلي: السنة2026 غير متاحة؛ الحقل فارغ وغير قابل للاختيار. لا حقن لقيمة أو معرّف بعد تجربة الوكيل النظامي المؤقت بقيت النتيجة نفسها؛ لا دخول مصادق.
+- الفعلي: بعد تغير السياسة ظلت 2026 غير متاحة والحقل فارغًا؛ لا قيمة أو معرّف مصطنع.
 
-- الدليل: [year_options_unavailable.png](evidence/year_options_unavailable.png)، [year_options_unavailable.xml](evidence/year_options_unavailable.xml)، [resume_20261018/login_with_branch_year/requested_options.xml](evidence/resume_20261018/login_with_branch_year/requested_options.xml)، [resume_20261018/login_with_branch_year/login_result_lower_crop.png](evidence/resume_20261018/login_with_branch_year/login_result_lower_crop.png)، [resume_20261018/login_after_network_diagnosis/observations.json](evidence/resume_20261018/login_after_network_diagnosis/observations.json)، [resume_20261018/login_after_network_diagnosis/lookup_with_account.xml](evidence/resume_20261018/login_after_network_diagnosis/lookup_with_account.xml)، [resume_20261018/login_after_network_diagnosis/requested_options.xml](evidence/resume_20261018/login_after_network_diagnosis/requested_options.xml)، [resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png](evidence/resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png)، [resume_20261018/connectivity/15_restore_and_app_logs.json](evidence/resume_20261018/connectivity/15_restore_and_app_logs.json)
-
-- أُعيد التحقق في18أكتوبر2026؛ ملاحظات المحاولات محفوظة في attempts داخل الدفتر.
+- الدليل: [year_options_unavailable.png](evidence/year_options_unavailable.png)، [year_options_unavailable.xml](evidence/year_options_unavailable.xml)، [requested_options.xml](evidence/resume_20261018/login_with_branch_year/requested_options.xml)، [login_result_lower_crop.png](evidence/resume_20261018/login_with_branch_year/login_result_lower_crop.png)، [observations.json](evidence/resume_20261018/login_after_network_diagnosis/observations.json)، [lookup_with_account.xml](evidence/resume_20261018/login_after_network_diagnosis/lookup_with_account.xml)، [requested_options.xml](evidence/resume_20261018/login_after_network_diagnosis/requested_options.xml)، [login_result_lower_crop.png](evidence/resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png)، [15_restore_and_app_logs.json](evidence/resume_20261018/connectivity/15_restore_and_app_logs.json)، [observations.json](evidence/followup_20261018/login_once/observations.json)، [requested_options.xml](evidence/followup_20261018/login_once/requested_options.xml)، [login_result_lower_crop.png](evidence/followup_20261018/login_once/login_result_lower_crop.png)، [android_dns_after_policy_update.json](evidence/followup_20261018/android_dns_after_policy_update.json)
 
 ## RT-20 — الدخول بالحساب المحدد
 
@@ -284,15 +278,13 @@
 
 - المتوقع: ظهور المنزل المصادق عليه وهوية الحساب
 
-- الفعلي: سابقًا: قُدم النموذج وأوقفه تحقق الفرع والسنة. في استئناف18أكتوبر: تحقق إدخال الحساب، لكن الفرع والسنة المطلوبين لم يتاحا؛ login_submitted=false. لم يُرسل نموذج بفرع بديل ولم تظهر شاشة مصادق عليها بعد تجربة الوكيل النظامي المؤقت بقيت النتيجة نفسها؛ لا دخول مصادق.
+- الفعلي: بعد تغير السياسة تحقق إدخال الحساب المحدد، لكن القيم المطلوبة لم تتح؛ login_submitted=false وauthenticated=false. تقديم النموذج التاريخي توقف محليًا عند شرط الفرع والسنة؛ لا رفض كلمة مرور مثبت.
 
-- الدليل: [exact_login_result.txt](evidence/exact_login_result.txt)، [exact_login_sanitized.xml](evidence/exact_login_sanitized.xml)، [resume_20261018/login_with_branch_year/observations.json](evidence/resume_20261018/login_with_branch_year/observations.json)، [resume_20261018/login_with_branch_year/after_form_action.xml](evidence/resume_20261018/login_with_branch_year/after_form_action.xml)، [resume_20261018/login_with_branch_year/login_result_lower_crop.png](evidence/resume_20261018/login_with_branch_year/login_result_lower_crop.png)، [resume_20261018/login_after_network_diagnosis/observations.json](evidence/resume_20261018/login_after_network_diagnosis/observations.json)، [resume_20261018/login_after_network_diagnosis/lookup_with_account.xml](evidence/resume_20261018/login_after_network_diagnosis/lookup_with_account.xml)، [resume_20261018/login_after_network_diagnosis/requested_options.xml](evidence/resume_20261018/login_after_network_diagnosis/requested_options.xml)، [resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png](evidence/resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png)، [resume_20261018/connectivity/15_restore_and_app_logs.json](evidence/resume_20261018/connectivity/15_restore_and_app_logs.json)
-
-- أُعيد التحقق في18أكتوبر2026؛ ملاحظات المحاولات محفوظة في attempts داخل الدفتر.
+- الدليل: [exact_login_result.txt](evidence/exact_login_result.txt)، [exact_login_sanitized.xml](evidence/exact_login_sanitized.xml)، [observations.json](evidence/resume_20261018/login_with_branch_year/observations.json)، [after_form_action.xml](evidence/resume_20261018/login_with_branch_year/after_form_action.xml)، [login_result_lower_crop.png](evidence/resume_20261018/login_with_branch_year/login_result_lower_crop.png)، [observations.json](evidence/resume_20261018/login_after_network_diagnosis/observations.json)، [lookup_with_account.xml](evidence/resume_20261018/login_after_network_diagnosis/lookup_with_account.xml)، [requested_options.xml](evidence/resume_20261018/login_after_network_diagnosis/requested_options.xml)، [login_result_lower_crop.png](evidence/resume_20261018/login_after_network_diagnosis/login_result_lower_crop.png)، [15_restore_and_app_logs.json](evidence/resume_20261018/connectivity/15_restore_and_app_logs.json)، [observations.json](evidence/followup_20261018/login_once/observations.json)، [requested_options.xml](evidence/followup_20261018/login_once/requested_options.xml)، [login_result_lower_crop.png](evidence/followup_20261018/login_once/login_result_lower_crop.png)، [android_dns_after_policy_update.json](evidence/followup_20261018/android_dns_after_policy_update.json)
 
 ## RT-21 — استعادة كلمة المرور
 
-- الحالة: **FAIL**؛ العيب APP-01
+- الحالة: **FAIL**
 
 - الشروط: التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها
 
@@ -306,7 +298,7 @@
 
 ## RT-22 — الدخول البيومتري
 
-- الحالة: **FAIL**؛ العيب APP-02
+- الحالة: **FAIL**
 
 - الشروط: التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها
 
@@ -320,7 +312,7 @@
 
 ## RT-23 — تطابق نسخة التطبيق
 
-- الحالة: **FAIL**؛ العيب APP-03
+- الحالة: **FAIL**
 
 - الشروط: التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها
 
@@ -334,7 +326,7 @@
 
 ## RT-24 — توطين رسالة الخطأ
 
-- الحالة: **FAIL**؛ العيب APP-04
+- الحالة: **FAIL**
 
 - الشروط: التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها
 
@@ -372,9 +364,7 @@
 
 - الفعلي: أُعيد الضغط فعلًا؛ لم يُرصد حوار أو عنوان API في UI. السلوك ما زال يحتاج تحققًا بعد إتاحة backend
 
-- الدليل: [environment_change_observed.png](evidence/environment_change_observed.png)، [environment_change_observed.xml](evidence/environment_change_observed.xml)، [environment_tap_repeat.png](evidence/environment_tap_repeat.png)، [resume_20261018/login_with_branch_year/environment_control.xml](evidence/resume_20261018/login_with_branch_year/environment_control.xml)، [resume_20261018/login_with_branch_year/observations.json](evidence/resume_20261018/login_with_branch_year/observations.json)
-
-- أُعيد التحقق في18أكتوبر2026؛ ملاحظات المحاولات محفوظة في attempts داخل الدفتر.
+- الدليل: [environment_change_observed.png](evidence/environment_change_observed.png)، [environment_change_observed.xml](evidence/environment_change_observed.xml)، [environment_tap_repeat.png](evidence/environment_tap_repeat.png)، [environment_control.xml](evidence/resume_20261018/login_with_branch_year/environment_control.xml)، [observations.json](evidence/resume_20261018/login_with_branch_year/observations.json)
 
 ## RT-27 — زر الدعم
 
@@ -459,6 +449,48 @@
 - الفعلي: عادت سلاسل Android الأصلية دون قواعد العزل الخاصة بنا؛ وصول backend ما زال محجوبًا
 
 - الدليل: [final_guest_network_rules.txt](evidence/final_guest_network_rules.txt)، [network_isolation_restored.txt](evidence/network_isolation_restored.txt)
+
+## RT-33 — تكبير خط نموذج الدخول العربي
+
+- الحالة: **PASS**
+
+- الشروط: نموذج دخول فعلي بحقلين فارغين؛ محاكي الاختبار نفسه دون مصادقة؛ الشبكة مفعلة
+
+- الخطوات: حفظ font_scale؛ ضبطه على 2.0؛ التمرير لأعلى وأسفل وقراءة العناصر؛ إعادة القيمة الأصلية
+
+- المتوقع: حقول وأزرار أساسية مقروءة ويمكن الوصول إليها، مع استعادة الإعداد
+
+- الفعلي: ضُبط على 2.0 فعليًا؛ رُوجعت اللقطتان وظهرت الحقول والتحديث والدخول والبصمة؛ عاد إلى 1.0. النتيجة لا تعمم على كل إعدادات الوصولية.
+
+- الدليل: [font_top.png](evidence/followup_20261018/ui_additional_ready/font_top.png)، [font_bottom.png](evidence/followup_20261018/ui_additional_ready/font_bottom.png)، [font_top.xml](evidence/followup_20261018/ui_additional_ready/font_top.xml)، [font_bottom.xml](evidence/followup_20261018/ui_additional_ready/font_bottom.xml)، [outer_guard_restore.json](evidence/followup_20261018/ui_additional_ready/outer_guard_restore.json)، [font_visual_review.json](evidence/followup_20261018/font_visual_review.json)
+
+## RT-34 — Tab بين حقلي الحساب وكلمة المرور
+
+- الحالة: **PASS**
+
+- الشروط: نموذج دخول فعلي بحقلين فارغين؛ محاكي الاختبار نفسه دون مصادقة؛ الشبكة مفعلة
+
+- الخطوات: تركيز اسم المستخدم الفارغ؛ إرسال 4 ضغطات Tab دون Enter أو تقديم
+
+- المتوقع: ينتقل التركيز أولًا من اسم المستخدم إلى كلمة المرور دون إرسال
+
+- الفعلي: التركيز [true,false] ثم [false,true]، ثم عناصر غير تحريرية؛ لا Enter أو تقديم. هذا ليس فحص TalkBack أو إثبات دعم كل مفاتيح الواجهة.
+
+- الدليل: [followup_observations.json](evidence/followup_20261018/ui_additional_ready/followup_observations.json)، [focus_order.xml](evidence/followup_20261018/ui_additional_ready/focus_order.xml)
+
+## RT-35 — نص اصطناعي طويل مختلط الاتجاه دون تقديم
+
+- الحالة: **PASS**
+
+- الشروط: نموذج دخول فعلي بحقلين فارغين؛ محاكي الاختبار نفسه دون مصادقة؛ الشبكة مفعلة
+
+- الخطوات: إدخال 1024 حرفًا اصطناعيًا عربيًا/لاتينيًا في كل حقل؛ قراءة التطابق والإخفاء؛ مسح إدخالاتنا فقط
+
+- المتوقع: حفظ النص واستجابة الحقول وإخفاء كلمة المرور وتنظيفها، دون طلب مصادقة
+
+- الفعلي: قُرئ 1024 حرفًا مطابقًا في كل حقل؛ password=true؛ form_submitted=false؛ synthetic_fields_cleared=true. لم تُختبر قواعد الخادم أو تخزين الأسرار، ولا تُعد بيانات مصادقة بديلة.
+
+- الدليل: [followup_observations.json](evidence/followup_20261018/ui_additional_ready/followup_observations.json)، [long_input.xml](evidence/followup_20261018/ui_additional_ready/long_input.xml)، [final_empty_fields.xml](evidence/followup_20261018/ui_additional_ready/final_empty_fields.xml)
 
 ## BUS-HOME — المنزل والمؤشرات
 
@@ -570,9 +602,7 @@
 
 - الفعلي: الشاشة الحالية نموذج دخول، وauthenticated=false؛ لم توجد جلسة مصادق عليها مرصودة أو زر خروج يمكن تنفيذه. لم ينفذ logout أو إبطال جلسة backend
 
-- الدليل: [exact_login_result.txt](evidence/exact_login_result.txt)، [resume_20261018/current_session_lower_screen.png](evidence/resume_20261018/current_session_lower_screen.png)، [resume_20261018/login_with_branch_year/observations.json](evidence/resume_20261018/login_with_branch_year/observations.json)
-
-- أُعيد التحقق في18أكتوبر2026؛ ملاحظات المحاولات محفوظة في attempts داخل الدفتر.
+- الدليل: [exact_login_result.txt](evidence/exact_login_result.txt)، [current_session_lower_screen.png](evidence/resume_20261018/current_session_lower_screen.png)، [observations.json](evidence/resume_20261018/login_with_branch_year/observations.json)
 
 ## BUS-CUS-CREATE — العملاء — إنشاء
 
@@ -1150,17 +1180,17 @@
 
 ## NR-01 — تخطي الترحيب
 
-- الحالة: **NOT RUN**
+- الحالة: **BLOCKED**
 
-- الشروط: ميزة/حالة جهاز مناسبة
+- الشروط: مستخدم Android اختباري مؤقت مستقل؛ الحزمة القائمة مسجلة له دون مسح بيانات المستخدم الأصلي
 
-- الخطوات: لم ينفذ؛ خطة لاحقة عند توفر شرطها
+- الخطوات: إنشاء مستخدم مؤقت؛ فتح الترحيب؛ الضغط على خيار التخطي المرصود إن ظهر؛ العودة للمستخدم الأصلي وحذف المؤقت فقط
 
-- المتوقع: التحقق وفق جهاز اختبار مناسب
+- المتوقع: تخطي الترحيب إلى نموذج الدخول مع حفظ حالة المستخدم الأصلي وتنظيف المؤقت
 
-- الفعلي: اكتمل الترحيب قبل هذا الفحص؛ لم تمسح بيانات التطبيق لإعادته
+- الفعلي: سُجلت الحزمة القائمة في مستخدم مؤقت، لكن خيار التخطي لم يظهر ضمن الانتظار المحدود؛ لم يُضغط أو يُثبت تخطي الترحيب. تعذر تنظيف أول بمهلة ADB، ثم تحقق الرجوع للمستخدم0 وحذف المستخدم10 فقط. لم تُمسح بيانات المستخدم الأصلي أو يُرسل حساب.
 
-- الدليل: لا تنفيذ أو دليل فعلي لهذه الحالة
+- الدليل: [result.json](evidence/followup_20261018/skip_isolated_user/result.json)، [created_user.json](evidence/followup_20261018/skip_isolated_user/created_user.json)، [cleanup_recheck.json](evidence/followup_20261018/skip_isolated_user/cleanup_recheck.json)
 
 ## NR-02 — قارئ TalkBack فعلي
 
@@ -1172,9 +1202,9 @@
 
 - المتوقع: التحقق وفق جهاز اختبار مناسب
 
-- الفعلي: لا خدمة TalkBack مهيأة؛ ملاحظات semantics لا تثبت تجربة قارئ الشاشة
+- الفعلي: لا TalkBack مثبت أو مهيأ؛ accessibilitymenu وحده ليس قارئ TalkBack. لم تُنفذ تجربة قارئ شاشة.
 
-- الدليل: لا تنفيذ أو دليل فعلي لهذه الحالة
+- الدليل: [remaining_runtime_prerequisites.json](evidence/followup_20261018/remaining_runtime_prerequisites.json)
 
 ## NR-03 — بيومتري بمستشعر حقيقي
 
@@ -1188,4 +1218,4 @@
 
 - الفعلي: زر التطبيق يعرض قريبًا؛ لم تجر مصادقة بمستشعر فعلي
 
-- الدليل: لا تنفيذ أو دليل فعلي لهذه الحالة
+- الدليل: لا دليل تنفيذ؛ انظر القيد أعلاه

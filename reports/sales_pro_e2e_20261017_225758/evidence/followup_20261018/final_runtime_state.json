@@ -1,0 +1,14 @@
+{
+  "original_user": "0",
+  "font_scale": "1.0",
+  "global_http_proxy": "null",
+  "sales_pid_present": true,
+  "sales_package_in_crash_buffer": false,
+  "raw_log_saved": false,
+  "original_user_data_cleared": false,
+  "launch_status_lines": [
+    "Starting: Intent { cmp=com.infinity.sales.app/.MainActivity }",
+    "Warning: Activity not started, intent has been delivered to currently running top-most instance."
+  ],
+  "app_network_authentication_passed": false
+}

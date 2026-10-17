@@ -1,0 +1,16 @@
+{
+  "pid": 1459,
+  "exception_counts": {
+    "SocketException": 6,
+    "UnknownHostException": 0,
+    "HandshakeException": 0,
+    "SSLHandshakeException": 0,
+    "DioException": 0,
+    "FATAL EXCEPTION": 0,
+    "CONNECT 403": 0
+  },
+  "backend_url_candidates": [],
+  "sales_package_present_in_crash_buffer": false,
+  "raw_log_saved": false,
+  "authentication_failure_inferred": false
+}

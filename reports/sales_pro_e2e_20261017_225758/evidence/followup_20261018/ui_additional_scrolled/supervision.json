@@ -1,0 +1,7 @@
+{
+  "state": "FAILED",
+  "returncode": 1,
+  "elapsed_seconds": 24.040264606999926,
+  "stdout": "{\"tests\": {\"font_scale_2\": \"BLOCKED\", \"keyboard_tab_focus\": \"BLOCKED\", \"synthetic_long_input\": \"BLOCKED\"}, \"font_scale_restored\": null, \"synthetic_fields_cleared\": null, \"elapsed_seconds\": 23.96}\n",
+  "stderr": ""
+}

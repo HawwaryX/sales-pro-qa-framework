@@ -1,0 +1,10 @@
+{
+  "current_user_before": "0",
+  "users_before": "Users:\n\tUserInfo{0:Owner:4c13} running\n\tUserInfo{10:SalesQA_Skip_20261018:2540}",
+  "current_user_after": "0",
+  "stop_result": "",
+  "remove_result": "Success: removed user",
+  "users_after": "Users:\n\tUserInfo{0:Owner:4c13} running",
+  "original_user_restored": true,
+  "temporary_user_removed": true
+}

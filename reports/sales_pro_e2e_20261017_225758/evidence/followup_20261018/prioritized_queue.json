@@ -1,0 +1,41 @@
+[
+  {
+    "id": "FOLLOWUP-NET",
+    "priority": 1,
+    "action": "استعمال المسار الموروث بعد تغير السياسة؛ HEAD واحد مع تحقق TLS",
+    "state": "EXECUTED",
+    "evidence": [
+      "backend_targeted_retest.json",
+      "effective_policy.json"
+    ]
+  },
+  {
+    "id": "RT-17..20",
+    "priority": 2,
+    "action": "تحديث القوائم مرة واحدة من UI بعد اكتمال boot؛ تقديم الحساب المحدد فقط مع القيم المطلوبة متى توافرت",
+    "state": "BLOCKED_AFTER_ONE_LOOKUP"
+  },
+  {
+    "id": "RT-33",
+    "priority": 3,
+    "action": "تكبير الخط مؤقتًا إلى2.0 وفحص الوصول للحقول والأزرار ثم استعادة الإعداد",
+    "state": "PASS"
+  },
+  {
+    "id": "RT-34",
+    "priority": 4,
+    "action": "ترتيب التركيز عبر Tab دون إرسال حساب",
+    "state": "PASS"
+  },
+  {
+    "id": "RT-35",
+    "priority": 5,
+    "action": "نص طويل مختلط اصطناعي في الحقول دون تقديمه ثم مسحه",
+    "state": "PASS"
+  },
+  {
+    "id": "NR-01",
+    "state": "BLOCKED",
+    "action": "تخطي الترحيب بمستخدم مؤقت مع حفظ الأصلي وتنظيف المؤقت"
+  }
+]
