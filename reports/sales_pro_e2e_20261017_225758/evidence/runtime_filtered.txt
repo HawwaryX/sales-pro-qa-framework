@@ -1,0 +1,1 @@
+10-17 20:10:35.347   584  2650 D ActivityManager: created ANR temporary file:/data/anr/temp_anr_2847745215031352158.txt

@@ -1,0 +1,11 @@
+-P OUTPUT ACCEPT
+-A OUTPUT -j oem_out
+-A OUTPUT -j fw_OUTPUT
+-A OUTPUT -j st_OUTPUT
+-A OUTPUT -j bw_OUTPUT
+-P OUTPUT ACCEPT
+-A OUTPUT -j oem_out
+-A OUTPUT -j fw_OUTPUT
+-A OUTPUT -j st_OUTPUT
+-A OUTPUT -j bw_OUTPUT
+package:/data/app/~~ICPMnqHQaKw_rt3nI0BGyw==/com.infinity.sales.app-FvrZAZBHsiVDRYoMGY_vbQ==/base.apk

@@ -1,0 +1,35 @@
+[
+  {
+    "failed_host_lookup": true,
+    "network_unreachable": false,
+    "connection_refused": false,
+    "hostname": [
+      "fonts.gstatic.com"
+    ],
+    "os_error_code": [
+      "7"
+    ]
+  },
+  {
+    "failed_host_lookup": true,
+    "network_unreachable": false,
+    "connection_refused": false,
+    "hostname": [
+      "fonts.gstatic.com"
+    ],
+    "os_error_code": [
+      "7"
+    ]
+  },
+  {
+    "failed_host_lookup": true,
+    "network_unreachable": false,
+    "connection_refused": false,
+    "hostname": [
+      "fonts.gstatic.com"
+    ],
+    "os_error_code": [
+      "7"
+    ]
+  }
+]

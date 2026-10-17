@@ -1,0 +1,2 @@
+-rwxrwxrwx 1 shell shell 68663473 2026-10-17 20:04 /data/local/tmp/sales-pro-qa.apk
+Success

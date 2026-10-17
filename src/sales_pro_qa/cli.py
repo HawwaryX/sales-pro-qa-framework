@@ -24,10 +24,10 @@ def main() -> None:
             metadata = inspect_apk(args.apk, aapt=args.aapt, apkanalyzer=args.apkanalyzer, apksigner=args.apksigner,
                                    sdk_root=args.android_sdk, timeout=args.timeout)
             report = render_apk_report(metadata)
+            output.parent.mkdir(parents=True, exist_ok=True)
+            output.write_text(report, encoding="utf-8")
         except (ValueError, OSError) as exc:
             parser.error(str(exc))
-        output.parent.mkdir(parents=True, exist_ok=True)
-        output.write_text(report, encoding="utf-8")
         print(f"Report written: {args.output}")
         if metadata.get("signature", {}).get("status") in {"FAIL", "ERROR"}:
             raise SystemExit(1)

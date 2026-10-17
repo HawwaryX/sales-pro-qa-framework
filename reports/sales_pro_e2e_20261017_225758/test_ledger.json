@@ -1,0 +1,1123 @@
+{
+  "scope": "دفتر تنفيذ UI والتغطية المخططة؛ مستقل عن pytest",
+  "counts": {
+    "PASS": 23,
+    "BLOCKED": 54,
+    "FAIL": 4,
+    "NOT RUN": 3
+  },
+  "cases": [
+    {
+      "id": "RT-01",
+      "feature": "التثبيت",
+      "preconditions": "صورة AOSP API35 اكتمل إقلاعها",
+      "steps": "انتظار boot_completed ثم تنفيذ pm install على نسخة APK",
+      "expected": "Success وظهور الحزمة",
+      "actual": "Success؛ pm path أعاد APK المثبت",
+      "status": "PASS",
+      "evidence": [
+        "install_ready.txt",
+        "proxy_corrected_guest_state.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-02",
+      "feature": "الإطلاق والرسم",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "إطلاق MainActivity ثم فحص الشاشة وPID وسجل crash",
+      "expected": "تظهر واجهة التطبيق ولا يُرصد انهيار فوري",
+      "actual": "ظهرت واجهة الترحيب ثم الدخول؛ لا انهيار Sales Pro مرصود في النافذة",
+      "status": "PASS",
+      "evidence": [
+        "intro_ar.png",
+        "final_app_state.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-03",
+      "feature": "الترحيب العربي",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "قراءة صفحة الترحيب الأولى",
+      "expected": "نص عربي مقروء وأزرار تنقل",
+      "actual": "ظهرت الصفحة العربية وأزرارها",
+      "status": "PASS",
+      "evidence": [
+        "intro_ar.png",
+        "intro_ui.xml"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-04",
+      "feature": "لغة الترحيب",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "تبديل اللغة إلى الإنجليزية",
+      "expected": "تتغير نصوص الترحيب",
+      "actual": "ظهرت شاشة الترحيب الإنجليزية",
+      "status": "PASS",
+      "evidence": [
+        "intro_language_toggle.png"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-05",
+      "feature": "صفحات الترحيب",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "الضغط على Next للوصول إلى الصفحة 2",
+      "expected": "تظهر الصفحة التالية",
+      "actual": "Plan and track visits",
+      "status": "PASS",
+      "evidence": [
+        "intro_en_page_2.png"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-06",
+      "feature": "صفحات الترحيب",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "الضغط على Next للوصول إلى الصفحة 3",
+      "expected": "تظهر الصفحة التالية",
+      "actual": "Sell and collect with ease",
+      "status": "PASS",
+      "evidence": [
+        "intro_en_page_3.png"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-07",
+      "feature": "صفحات الترحيب",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "الضغط على Next للوصول إلى الصفحة 4",
+      "expected": "تظهر الصفحة التالية",
+      "actual": "Ready when you are",
+      "status": "PASS",
+      "evidence": [
+        "intro_en_page_4.png"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-08",
+      "feature": "الرجوع في الترحيب",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "الضغط على Previous في الصفحة الرابعة",
+      "expected": "تعود الصفحة الثالثة",
+      "actual": "ظهرت الصفحة الثالثة مجددًا",
+      "status": "PASS",
+      "evidence": [
+        "intro_previous_to_page3.png"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-09",
+      "feature": "استعادة العربية في الترحيب",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "العودة للرابعة ثم تبديل اللغة",
+      "expected": "تظهر الصفحة الرابعة بالعربية",
+      "actual": "ظهرت الصفحة العربية الرابعة",
+      "status": "PASS",
+      "evidence": [
+        "intro_page4_ar.png"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-10",
+      "feature": "بدء الاستخدام",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "الضغط على بدء الاستخدام",
+      "expected": "عرض نموذج الدخول",
+      "actual": "ظهر نموذج الحساب والفرع والسنة",
+      "status": "PASS",
+      "evidence": [
+        "login_initial.png"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-11",
+      "feature": "منع نموذج فارغ",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "تقديم النموذج فارغًا",
+      "expected": "منع التقدم مع توضيح المتطلب الناقص",
+      "actual": "ظهرت اختر الفرع والسنة المالية؛ لا يثبت ذلك فحص حقلي الحساب",
+      "status": "PASS",
+      "evidence": [
+        "login_empty_validation.png"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-12",
+      "feature": "إخفاء كلمة المرور",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "إدخال قيمة اصطناعية دون تقديم حساب بديل",
+      "expected": "يُحجب الحقل",
+      "actual": "ظهرت نقاط الإخفاء وpassword=true",
+      "status": "PASS",
+      "evidence": [
+        "login_synthetic_masked.png",
+        "masked_before.xml"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-13",
+      "feature": "زر إظهار كلمة المرور",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "تبديل الرؤية ثم إعادتها لقيمة اصطناعية فقط",
+      "expected": "تتغير خاصية الإخفاء ثم تعود",
+      "actual": "false/true ثم false/false ثم false/true لحقلي النموذج",
+      "status": "PASS",
+      "evidence": [
+        "password_visibility_result.txt",
+        "masked_before.xml",
+        "masked_after.xml"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-14",
+      "feature": "زر Back ولوحة المفاتيح",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "الكتابة الاصطناعية ثم Back أثناء ظهور لوحة المفاتيح",
+      "expected": "إغلاق اللوحة مع بقاء شاشة الدخول",
+      "actual": "بقي النموذج ومحتواه الاصطناعي",
+      "status": "PASS",
+      "evidence": [
+        "login_after_keyboard_back.png"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-15",
+      "feature": "تذكر الدخول",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "إلغاء تحديد المربع",
+      "expected": "تتغير حالة المربع محليًا",
+      "actual": "أصبح غير محدد؛ حفظ جلسة بعد المصادقة غير مختبر",
+      "status": "PASS",
+      "evidence": [
+        "remember_login_unchecked.png",
+        "login_lower_controls.xml"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-16",
+      "feature": "خطأ انقطاع الشبكة",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "طلب تحديث القوائم أثناء العزل المؤقت",
+      "expected": "رسالة خطأ مفهومة دون انهيار",
+      "actual": "تعذر تحميل الفروع أو السنوات. تحقق من الاتصال بالخادم.",
+      "status": "PASS",
+      "evidence": [
+        "lookup_refresh_offline.png",
+        "network_isolation.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-17",
+      "feature": "تحميل القوائم بعد إعادة الشبكة",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "إزالة قواعد العزل التي أضفناها وإعادة تشغيل المحاكي بالوكيل الموروث ثم تحديث",
+      "expected": "تحميل الفروع والسنوات من backend الاختبار",
+      "actual": "بقي فشل التحميل؛ DNS يفشل والسياسة لا تتيح المضيف",
+      "status": "BLOCKED",
+      "evidence": [
+        "online_lookup_unavailable.png",
+        "final_guest_network_rules.txt",
+        "dns_and_proxy_diagnosis_ar.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-18",
+      "feature": "اختيار الفرع الاختباري",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "فتح قائمة الفروع",
+      "expected": "ظهور الفرع الاختباري المصرح به من بيانات الخادم",
+      "actual": "الخيار الوحيد الفرع الافتراضي؛ لم يُخترع فرع أو معرّف",
+      "status": "BLOCKED",
+      "evidence": [
+        "branch_available_options.png",
+        "branch_available_options.xml"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-19",
+      "feature": "السنة المالية",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "محاولة فتح قائمة السنة بعد فشل القوائم",
+      "expected": "ظهور السنوات الفعلية من الخادم",
+      "actual": "القائمة فارغة وغير قابلة للاختيار في هذه الحالة",
+      "status": "BLOCKED",
+      "evidence": [
+        "year_options_unavailable.png",
+        "year_options_unavailable.xml"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-20",
+      "feature": "الدخول بالحساب المحدد",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "إدخال الحساب النهائي حرفيًا عبر UI ثم تقديم تسجيل الدخول مرة واحدة",
+      "expected": "ظهور المنزل المصادق عليه وهوية الحساب",
+      "actual": "تحقق محلي: اختر الفرع والسنة المالية؛ لم يظهر منزل مصادق عليه. لم يُثبت طلب مصادقة أو رفض كلمة المرور",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt",
+        "exact_login_sanitized.xml"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-21",
+      "feature": "استعادة كلمة المرور",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "الضغط على نسيت كلمة المرور وإعادة المحاولة",
+      "expected": "فتح مسار استعادة أو تعليمات عملية",
+      "actual": "استعادة كلمة المرور قريبًا؛ لا مسار استعادة متاح",
+      "status": "FAIL",
+      "evidence": [
+        "forgot_password.png",
+        "forgot_password_repeat.png"
+      ],
+      "defect": "APP-01"
+    },
+    {
+      "id": "RT-22",
+      "feature": "الدخول البيومتري",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "الضغط على زر البصمة في نموذج الدخول",
+      "expected": "بدء إعداد/فحص بيومتري أو إرشاد لحساب محفوظ",
+      "actual": "الدخول بالبصمة قريبًا؛ لم يُستدع اختبار مستشعر أو تحقق هوية فعلي",
+      "status": "FAIL",
+      "evidence": [
+        "biometric_without_saved_account.png",
+        "biometric_without_saved_account.xml"
+      ],
+      "defect": "APP-02"
+    },
+    {
+      "id": "RT-23",
+      "feature": "تطابق نسخة التطبيق",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "قراءة تذييل الشاشة ومقارنته ببيانات APK المتحققة",
+      "expected": "نسخة UI متسقة مع manifest أو مميزة بوضوح",
+      "actual": "UI:2.4.0 Enterprise Build؛ manifest:0.1.0 code1",
+      "status": "FAIL",
+      "evidence": [
+        "login_lower_controls.png",
+        "login_lower_controls.xml"
+      ],
+      "defect": "APP-03"
+    },
+    {
+      "id": "RT-24",
+      "feature": "توطين رسالة الخطأ",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "إبقاء خطأ القوائم ثم تبديل الدخول للإنجليزية",
+      "expected": "تتسق رسالة الحالة مع لغة الواجهة",
+      "actual": "Labels إنجليزية لكن خطأ القوائم بقي عربيًا",
+      "status": "FAIL",
+      "evidence": [
+        "login_language_english.png",
+        "login_language_english.xml"
+      ],
+      "defect": "APP-04"
+    },
+    {
+      "id": "RT-25",
+      "feature": "استعادة اللغة العربية",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "الضغط على Arabic",
+      "expected": "تعود الواجهة للعربية",
+      "actual": "عادت النصوص للعربية",
+      "status": "PASS",
+      "evidence": [
+        "login_language_arabic_restored.png"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-26",
+      "feature": "زر تغيير البيئة",
+      "preconditions": "خادم القوائم غير متاح؛ السلوك يحتاج إعادة تحقق بعد إزالة عائق الاتصال",
+      "steps": "التمرير إلى بطاقة الشركة والضغط على تغيير",
+      "expected": "تظهر نتيجة قابلة للملاحظة أو اختيار البيئة",
+      "actual": "لم يُرصد حوار أو تغيير؛ لا يُثبت ذلك أي عنوان API أو تهيئة ناجحة",
+      "status": "BLOCKED",
+      "evidence": [
+        "environment_change_observed.png",
+        "environment_change_observed.xml",
+        "environment_tap_repeat.png"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-27",
+      "feature": "زر الدعم",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "الضغط على تواصل مع الدعم",
+      "expected": "استجابة مرئية للزر",
+      "actual": "ظهرت رسالة تكرر نص التواصل؛ وسيلة اتصال عملية غير متحققة",
+      "status": "PASS",
+      "evidence": [
+        "support.png",
+        "support.xml"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-28",
+      "feature": "الخلفية والعودة",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "Home ثم إعادة فتح التطبيق",
+      "expected": "العودة لنموذج الدخول دون فقدان مرحلة الترحيب",
+      "actual": "ظهر النموذج دون إعادة صفحات الترحيب",
+      "status": "PASS",
+      "evidence": [
+        "background_foreground_return.png",
+        "background_foreground_return.xml"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-29",
+      "feature": "تدوير الشاشة",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "تدوير إلى landscape ثم portrait",
+      "expected": "استمرار رسم النموذج دون انهيار",
+      "actual": "ظهر النموذج في الاتجاهين؛ لم تُختبر كل عناصر التمرير في landscape",
+      "status": "PASS",
+      "evidence": [
+        "login_landscape.png",
+        "login_portrait_restored.png"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-30",
+      "feature": "Back من جذر الدخول وإعادة الفتح",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "Back دون لوحة مفاتيح ثم إعادة تشغيل Activity وانتظار الحقول",
+      "expected": "الخروج الطبيعي ثم إعادة رسم الدخول دون مسح البيانات",
+      "actual": "ظهر Launcher ثم عادت حقول الدخول؛ العربية ومرحلة الترحيب محفوظتان",
+      "status": "PASS",
+      "evidence": [
+        "login_reopened_rendered.png",
+        "login_reopened_rendered.xml",
+        "navigation_state_ar.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-31",
+      "feature": "التقاط عنوان أثناء تحديث القوائم",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "رصد أسماء DNS فقط أثناء تحديث الفروع والسنوات",
+      "expected": "تحديد المضيف الذي يحاول التطبيق الوصول إليه",
+      "actual": "رُصد sales.infinity-tech.sa؛ لم تُرصد استجابة DNS أو HTTP من الخادم",
+      "status": "PASS",
+      "evidence": [
+        "runtime_dns_observed.jsonl",
+        "dns_and_proxy_diagnosis_ar.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "RT-32",
+      "feature": "العودة من العزل",
+      "preconditions": "التطبيق مثبت في محاكي الاختبار، دون جلسة مصادق عليها",
+      "steps": "فحص قواعد OUTPUT النهائية",
+      "expected": "إزالة قواعد REJECT التي أضفناها فقط",
+      "actual": "عادت سلاسل Android الأصلية دون قواعد العزل الخاصة بنا؛ وصول backend ما زال محجوبًا",
+      "status": "PASS",
+      "evidence": [
+        "final_guest_network_rules.txt",
+        "network_isolation_restored.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-HOME",
+      "feature": "المنزل والمؤشرات",
+      "preconditions": "خادم TEST مطابق ومتاح وقوائم فرع/سنة صحيحة وجلسة مصادق عليها",
+      "steps": "فتح المنزل والتحقق من هوية الحساب وأرقام الملخص",
+      "expected": "بيانات ونتيجة صحيحة محفوظة في backend الاختبار",
+      "actual": "لم ينفذ؛ تعذر اجتياز شرط الفرع والسنة والمصادقة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-NOTIF",
+      "feature": "الإشعارات",
+      "preconditions": "خادم TEST مطابق ومتاح وقوائم فرع/سنة صحيحة وجلسة مصادق عليها",
+      "steps": "فتح القائمة وقراءة إشعار اختباري والتحقق من العدد",
+      "expected": "بيانات ونتيجة صحيحة محفوظة في backend الاختبار",
+      "actual": "لم ينفذ؛ تعذر اجتياز شرط الفرع والسنة والمصادقة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-GOALS",
+      "feature": "الأهداف والأداء",
+      "preconditions": "خادم TEST مطابق ومتاح وقوائم فرع/سنة صحيحة وجلسة مصادق عليها",
+      "steps": "فتح أهداف المبيعات ومقارنتها ببيانات اختبار معروفة",
+      "expected": "بيانات ونتيجة صحيحة محفوظة في backend الاختبار",
+      "actual": "لم ينفذ؛ تعذر اجتياز شرط الفرع والسنة والمصادقة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-PRODUCT",
+      "feature": "المنتجات والأسعار",
+      "preconditions": "خادم TEST مطابق ومتاح وقوائم فرع/سنة صحيحة وجلسة مصادق عليها",
+      "steps": "البحث عن منتج والتحقق من السعر والمخزون",
+      "expected": "بيانات ونتيجة صحيحة محفوظة في backend الاختبار",
+      "actual": "لم ينفذ؛ تعذر اجتياز شرط الفرع والسنة والمصادقة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-MASTER",
+      "feature": "تحديث البيانات الأساسية",
+      "preconditions": "خادم TEST مطابق ومتاح وقوائم فرع/سنة صحيحة وجلسة مصادق عليها",
+      "steps": "طلب تحديث البيانات ومراجعة نتائج التحميل",
+      "expected": "بيانات ونتيجة صحيحة محفوظة في backend الاختبار",
+      "actual": "لم ينفذ؛ تعذر اجتياز شرط الفرع والسنة والمصادقة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-STATEMENT",
+      "feature": "كشف الحساب",
+      "preconditions": "خادم TEST مطابق ومتاح وقوائم فرع/سنة صحيحة وجلسة مصادق عليها",
+      "steps": "فتح كشف حساب عميل اختباري ومقارنة الإجمالي بالمرجع",
+      "expected": "بيانات ونتيجة صحيحة محفوظة في backend الاختبار",
+      "actual": "لم ينفذ؛ تعذر اجتياز شرط الفرع والسنة والمصادقة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-LANG",
+      "feature": "لغة القوائم بعد الدخول",
+      "preconditions": "خادم TEST مطابق ومتاح وقوائم فرع/سنة صحيحة وجلسة مصادق عليها",
+      "steps": "تبديل لغة القوائم ثم إعادة فتحها",
+      "expected": "بيانات ونتيجة صحيحة محفوظة في backend الاختبار",
+      "actual": "لم ينفذ؛ تعذر اجتياز شرط الفرع والسنة والمصادقة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-LOGOUT",
+      "feature": "الخروج وانتهاء الجلسة",
+      "preconditions": "خادم TEST مطابق ومتاح وقوائم فرع/سنة صحيحة وجلسة مصادق عليها",
+      "steps": "تسجيل الخروج والتحقق من منع شاشة محمية بعده",
+      "expected": "بيانات ونتيجة صحيحة محفوظة في backend الاختبار",
+      "actual": "لم ينفذ؛ تعذر اجتياز شرط الفرع والسنة والمصادقة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-CUS-CREATE",
+      "feature": "العملاء — إنشاء",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "إنشاء سجل QA فريد ببيانات اصطناعية ثم حفظه",
+      "expected": "حفظ سجل واحد والحسابات والحقول صحيحة",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-CUS-VIEW",
+      "feature": "العملاء — عرض واستمرار",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "إغلاق السجل وفتحه والبحث عنه مجددًا",
+      "expected": "تطابق القيم المحفوظة ومعرّف السجل دون فقد",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-CUS-EDIT",
+      "feature": "العملاء — تعديل",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "تعديل سجل أنشأه الاختبار فقط ثم إعادة فتحه",
+      "expected": "استمرار التعديل وفق صلاحيات ونوع المستند المدعوم",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-CUS-DELETE",
+      "feature": "العملاء — حذف",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "حذف سجل الاختبار فقط إن كانت العملية مدعومة وآمنة ثم البحث عنه",
+      "expected": "يتسق الحذف/الإلغاء مع قواعد النظام دون حذف سجلات أخرى",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-CUS-VALIDATE",
+      "feature": "العملاء — تحقق مدخلات",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "تجربة حقول مطلوبة وقيم غير صالحة على نموذج اختبار",
+      "expected": "منع الحفظ غير الصحيح ورسائل محددة دون تغيير بيانات فعلية",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-QUO-CREATE",
+      "feature": "عروض الأسعار — إنشاء",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "إنشاء سجل QA فريد ببيانات اصطناعية ثم حفظه",
+      "expected": "حفظ سجل واحد والحسابات والحقول صحيحة",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-QUO-VIEW",
+      "feature": "عروض الأسعار — عرض واستمرار",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "إغلاق السجل وفتحه والبحث عنه مجددًا",
+      "expected": "تطابق القيم المحفوظة ومعرّف السجل دون فقد",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-QUO-EDIT",
+      "feature": "عروض الأسعار — تعديل",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "تعديل سجل أنشأه الاختبار فقط ثم إعادة فتحه",
+      "expected": "استمرار التعديل وفق صلاحيات ونوع المستند المدعوم",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-QUO-DELETE",
+      "feature": "عروض الأسعار — حذف",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "حذف سجل الاختبار فقط إن كانت العملية مدعومة وآمنة ثم البحث عنه",
+      "expected": "يتسق الحذف/الإلغاء مع قواعد النظام دون حذف سجلات أخرى",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-QUO-VALIDATE",
+      "feature": "عروض الأسعار — تحقق مدخلات",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "تجربة حقول مطلوبة وقيم غير صالحة على نموذج اختبار",
+      "expected": "منع الحفظ غير الصحيح ورسائل محددة دون تغيير بيانات فعلية",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-ORD-CREATE",
+      "feature": "طلبات العملاء — إنشاء",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "إنشاء سجل QA فريد ببيانات اصطناعية ثم حفظه",
+      "expected": "حفظ سجل واحد والحسابات والحقول صحيحة",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-ORD-VIEW",
+      "feature": "طلبات العملاء — عرض واستمرار",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "إغلاق السجل وفتحه والبحث عنه مجددًا",
+      "expected": "تطابق القيم المحفوظة ومعرّف السجل دون فقد",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-ORD-EDIT",
+      "feature": "طلبات العملاء — تعديل",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "تعديل سجل أنشأه الاختبار فقط ثم إعادة فتحه",
+      "expected": "استمرار التعديل وفق صلاحيات ونوع المستند المدعوم",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-ORD-DELETE",
+      "feature": "طلبات العملاء — حذف",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "حذف سجل الاختبار فقط إن كانت العملية مدعومة وآمنة ثم البحث عنه",
+      "expected": "يتسق الحذف/الإلغاء مع قواعد النظام دون حذف سجلات أخرى",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-ORD-VALIDATE",
+      "feature": "طلبات العملاء — تحقق مدخلات",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "تجربة حقول مطلوبة وقيم غير صالحة على نموذج اختبار",
+      "expected": "منع الحفظ غير الصحيح ورسائل محددة دون تغيير بيانات فعلية",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-INV-CREATE",
+      "feature": "الفواتير — إنشاء",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "إنشاء سجل QA فريد ببيانات اصطناعية ثم حفظه",
+      "expected": "حفظ سجل واحد والحسابات والحقول صحيحة",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-INV-VIEW",
+      "feature": "الفواتير — عرض واستمرار",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "إغلاق السجل وفتحه والبحث عنه مجددًا",
+      "expected": "تطابق القيم المحفوظة ومعرّف السجل دون فقد",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-INV-EDIT",
+      "feature": "الفواتير — تعديل",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "تعديل سجل أنشأه الاختبار فقط ثم إعادة فتحه",
+      "expected": "استمرار التعديل وفق صلاحيات ونوع المستند المدعوم",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-INV-DELETE",
+      "feature": "الفواتير — حذف",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "حذف سجل الاختبار فقط إن كانت العملية مدعومة وآمنة ثم البحث عنه",
+      "expected": "يتسق الحذف/الإلغاء مع قواعد النظام دون حذف سجلات أخرى",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-INV-VALIDATE",
+      "feature": "الفواتير — تحقق مدخلات",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "تجربة حقول مطلوبة وقيم غير صالحة على نموذج اختبار",
+      "expected": "منع الحفظ غير الصحيح ورسائل محددة دون تغيير بيانات فعلية",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-REC-CREATE",
+      "feature": "سندات التحصيل — إنشاء",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "إنشاء سجل QA فريد ببيانات اصطناعية ثم حفظه",
+      "expected": "حفظ سجل واحد والحسابات والحقول صحيحة",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-REC-VIEW",
+      "feature": "سندات التحصيل — عرض واستمرار",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "إغلاق السجل وفتحه والبحث عنه مجددًا",
+      "expected": "تطابق القيم المحفوظة ومعرّف السجل دون فقد",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-REC-EDIT",
+      "feature": "سندات التحصيل — تعديل",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "تعديل سجل أنشأه الاختبار فقط ثم إعادة فتحه",
+      "expected": "استمرار التعديل وفق صلاحيات ونوع المستند المدعوم",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-REC-DELETE",
+      "feature": "سندات التحصيل — حذف",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "حذف سجل الاختبار فقط إن كانت العملية مدعومة وآمنة ثم البحث عنه",
+      "expected": "يتسق الحذف/الإلغاء مع قواعد النظام دون حذف سجلات أخرى",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-REC-VALIDATE",
+      "feature": "سندات التحصيل — تحقق مدخلات",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "تجربة حقول مطلوبة وقيم غير صالحة على نموذج اختبار",
+      "expected": "منع الحفظ غير الصحيح ورسائل محددة دون تغيير بيانات فعلية",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-RET-CREATE",
+      "feature": "مرتجعات المبيعات — إنشاء",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "إنشاء سجل QA فريد ببيانات اصطناعية ثم حفظه",
+      "expected": "حفظ سجل واحد والحسابات والحقول صحيحة",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-RET-VIEW",
+      "feature": "مرتجعات المبيعات — عرض واستمرار",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "إغلاق السجل وفتحه والبحث عنه مجددًا",
+      "expected": "تطابق القيم المحفوظة ومعرّف السجل دون فقد",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-RET-EDIT",
+      "feature": "مرتجعات المبيعات — تعديل",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "تعديل سجل أنشأه الاختبار فقط ثم إعادة فتحه",
+      "expected": "استمرار التعديل وفق صلاحيات ونوع المستند المدعوم",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-RET-DELETE",
+      "feature": "مرتجعات المبيعات — حذف",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "حذف سجل الاختبار فقط إن كانت العملية مدعومة وآمنة ثم البحث عنه",
+      "expected": "يتسق الحذف/الإلغاء مع قواعد النظام دون حذف سجلات أخرى",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-RET-VALIDATE",
+      "feature": "مرتجعات المبيعات — تحقق مدخلات",
+      "preconditions": "جلسة TEST موثقة وسجل مميز QA عند الحاجة؛ أي حذف يقتصر على ما أنشأه الاختبار",
+      "steps": "تجربة حقول مطلوبة وقيم غير صالحة على نموذج اختبار",
+      "expected": "منع الحفظ غير الصحيح ورسائل محددة دون تغيير بيانات فعلية",
+      "actual": "لم يفتح النموذج أو ينفذ الطلب؛ المصادقة وTEST غير متحققين",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-VIS-START",
+      "feature": "بدء زيارة وموقع GPS",
+      "preconditions": "جلسة مصادق عليها وTEST مطابق ومتصل؛ تبدأ اختبارات offline بعد online ناجح",
+      "steps": "بدء زيارة عميل QA وطلب الموقع عند الحاجة",
+      "expected": "سلوك صحيح قابل للتحقق من التطبيق والخادم الاختباري",
+      "actual": "لم ينفذ؛ لا وصول مصادق عليه لهذه الوظيفة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-VIS-CONT",
+      "feature": "استمرار الزيارة",
+      "preconditions": "جلسة مصادق عليها وTEST مطابق ومتصل؛ تبدأ اختبارات offline بعد online ناجح",
+      "steps": "إغلاق وإعادة فتح زيارة QA نشطة",
+      "expected": "سلوك صحيح قابل للتحقق من التطبيق والخادم الاختباري",
+      "actual": "لم ينفذ؛ لا وصول مصادق عليه لهذه الوظيفة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-VIS-END",
+      "feature": "إكمال الزيارة",
+      "preconditions": "جلسة مصادق عليها وTEST مطابق ومتصل؛ تبدأ اختبارات offline بعد online ناجح",
+      "steps": "إكمال الزيارة والتحقق من السجل",
+      "expected": "سلوك صحيح قابل للتحقق من التطبيق والخادم الاختباري",
+      "actual": "لم ينفذ؛ لا وصول مصادق عليه لهذه الوظيفة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-VIS-CANCEL",
+      "feature": "إلغاء الزيارة",
+      "preconditions": "جلسة مصادق عليها وTEST مطابق ومتصل؛ تبدأ اختبارات offline بعد online ناجح",
+      "steps": "إلغاء زيارة QA أخرى والتحقق من التاريخ",
+      "expected": "سلوك صحيح قابل للتحقق من التطبيق والخادم الاختباري",
+      "actual": "لم ينفذ؛ لا وصول مصادق عليه لهذه الوظيفة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-CAM",
+      "feature": "التقاط الصور",
+      "preconditions": "جلسة مصادق عليها وTEST مطابق ومتصل؛ تبدأ اختبارات offline بعد online ناجح",
+      "steps": "فتح كاميرا من وظيفة Sales Pro وحفظ صورة اصطناعية",
+      "expected": "سلوك صحيح قابل للتحقق من التطبيق والخادم الاختباري",
+      "actual": "لم ينفذ؛ لا وصول مصادق عليه لهذه الوظيفة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-LOC",
+      "feature": "منح ورفض الموقع",
+      "preconditions": "جلسة مصادق عليها وTEST مطابق ومتصل؛ تبدأ اختبارات offline بعد online ناجح",
+      "steps": "تجربة رفض ومنح إذن الموقع من وظيفة الزيارة",
+      "expected": "سلوك صحيح قابل للتحقق من التطبيق والخادم الاختباري",
+      "actual": "لم ينفذ؛ لا وصول مصادق عليه لهذه الوظيفة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-PRINT",
+      "feature": "الطباعة والمشاركة",
+      "preconditions": "جلسة مصادق عليها وTEST مطابق ومتصل؛ تبدأ اختبارات offline بعد online ناجح",
+      "steps": "معاينة وطباعة/مشاركة مستند اختباري دون عنوان حقيقي",
+      "expected": "سلوك صحيح قابل للتحقق من التطبيق والخادم الاختباري",
+      "actual": "لم ينفذ؛ لا وصول مصادق عليه لهذه الوظيفة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-OFF-WRITE",
+      "feature": "حفظ أعمال دون اتصال",
+      "preconditions": "جلسة مصادق عليها وTEST مطابق ومتصل؛ تبدأ اختبارات offline بعد online ناجح",
+      "steps": "بعد اختبار online ناجح افصل الشبكة واحفظ سجل QA واحدًا",
+      "expected": "سلوك صحيح قابل للتحقق من التطبيق والخادم الاختباري",
+      "actual": "لم ينفذ؛ لا وصول مصادق عليه لهذه الوظيفة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-SYNC-RECOVER",
+      "feature": "استعادة المزامنة",
+      "preconditions": "جلسة مصادق عليها وTEST مطابق ومتصل؛ تبدأ اختبارات offline بعد online ناجح",
+      "steps": "أعد الشبكة وتحقق من استمرار سجل offline في الخادم",
+      "expected": "سلوك صحيح قابل للتحقق من التطبيق والخادم الاختباري",
+      "actual": "لم ينفذ؛ لا وصول مصادق عليه لهذه الوظيفة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-SYNC-DUP",
+      "feature": "منع تكرار المزامنة",
+      "preconditions": "جلسة مصادق عليها وTEST مطابق ومتصل؛ تبدأ اختبارات offline بعد online ناجح",
+      "steps": "كرر محاولة المزامنة للسجل نفسه وتحقق من نسخة واحدة",
+      "expected": "سلوك صحيح قابل للتحقق من التطبيق والخادم الاختباري",
+      "actual": "لم ينفذ؛ لا وصول مصادق عليه لهذه الوظيفة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "BUS-CALC",
+      "feature": "حسابات المستندات",
+      "preconditions": "جلسة مصادق عليها وTEST مطابق ومتصل؛ تبدأ اختبارات offline بعد online ناجح",
+      "steps": "تحقق من خصم وضريبة وكسور وإجمالي مستند اصطناعي",
+      "expected": "سلوك صحيح قابل للتحقق من التطبيق والخادم الاختباري",
+      "actual": "لم ينفذ؛ لا وصول مصادق عليه لهذه الوظيفة",
+      "status": "BLOCKED",
+      "evidence": [
+        "exact_login_result.txt"
+      ],
+      "defect": null
+    },
+    {
+      "id": "NR-01",
+      "feature": "تخطي الترحيب",
+      "preconditions": "ميزة/حالة جهاز مناسبة",
+      "steps": "لم ينفذ؛ خطة لاحقة عند توفر شرطها",
+      "expected": "التحقق وفق جهاز اختبار مناسب",
+      "actual": "اكتمل الترحيب قبل هذا الفحص؛ لم تمسح بيانات التطبيق لإعادته",
+      "status": "NOT RUN",
+      "evidence": [],
+      "defect": null
+    },
+    {
+      "id": "NR-02",
+      "feature": "قارئ TalkBack فعلي",
+      "preconditions": "ميزة/حالة جهاز مناسبة",
+      "steps": "لم ينفذ؛ خطة لاحقة عند توفر شرطها",
+      "expected": "التحقق وفق جهاز اختبار مناسب",
+      "actual": "لا خدمة TalkBack مهيأة؛ ملاحظات semantics لا تثبت تجربة قارئ الشاشة",
+      "status": "NOT RUN",
+      "evidence": [],
+      "defect": null
+    },
+    {
+      "id": "NR-03",
+      "feature": "بيومتري بمستشعر حقيقي",
+      "preconditions": "ميزة/حالة جهاز مناسبة",
+      "steps": "لم ينفذ؛ خطة لاحقة عند توفر شرطها",
+      "expected": "التحقق وفق جهاز اختبار مناسب",
+      "actual": "زر التطبيق يعرض قريبًا؛ لم تجر مصادقة بمستشعر فعلي",
+      "status": "NOT RUN",
+      "evidence": [],
+      "defect": null
+    }
+  ]
+}

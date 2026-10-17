@@ -1,0 +1,1 @@
+  mCurrentFocus=Window{1325369 u0 Application Not Responding: com.android.systemui}

@@ -1,0 +1,4 @@
+E: paths (line=2)
+  E: cache-path (line=3)
+    A: name="share" (Raw: "share")
+    A: path="/share/" (Raw: "/share/")

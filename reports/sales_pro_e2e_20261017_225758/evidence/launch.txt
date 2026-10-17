@@ -1,0 +1,4 @@
+
+Starting: Intent { cmp=com.infinity.sales.app/.MainActivity }
+Error type 3
+Error: Activity class {com.infinity.sales.app/com.infinity.sales.app.MainActivity} does not exist.

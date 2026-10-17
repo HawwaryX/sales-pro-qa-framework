@@ -1,0 +1,6 @@
+Starting: Intent { cmp=com.infinity.sales.app/.MainActivity }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: com.infinity.sales.app/.MainActivity
+WaitTime: 4995
+Complete

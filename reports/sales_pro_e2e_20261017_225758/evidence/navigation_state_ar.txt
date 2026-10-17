@@ -1,0 +1,3 @@
+بعد Back من جذر نموذج الدخول دون لوحة مفاتيح: com.android.launcher3 / .uioverrides.QuickstepLauncher.
+بعد إعادة فتح MainActivity وانتظار حقول EditText: ظهرت شاشة الدخول العربية دون إعادة الترحيب أو مسح البيانات.
+فحص landscape أظهر نموذج الدخول؛ ثم استعيد portrait. لم يُجر قياس أداء أو كل مسارات التمرير.

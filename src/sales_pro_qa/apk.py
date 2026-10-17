@@ -68,6 +68,8 @@ def find_android_tool(name: str, explicit: str | None = None,
 
 def parse_manifest(text: str) -> dict:
     """Parse apkanalyzer manifest print XML, without inferring omitted SDKs."""
+    if re.search(r"<!\s*(?:DOCTYPE|ENTITY)\b", text, re.IGNORECASE):
+        raise ValueError("Manifest XML must not contain DTD or entity declarations")
     try:
         root = ET.fromstring(text)
     except ET.ParseError as exc:

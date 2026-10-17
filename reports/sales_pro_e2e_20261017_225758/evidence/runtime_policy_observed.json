@@ -1,0 +1,11 @@
+{
+  "observations_current": true,
+  "network_state": "enforced",
+  "mode": "restricted",
+  "custom_allowed_hosts": [
+    "files.fm"
+  ],
+  "api_candidate_allowed": false,
+  "spec_revision": "2",
+  "observed_spec_revision": "2"
+}

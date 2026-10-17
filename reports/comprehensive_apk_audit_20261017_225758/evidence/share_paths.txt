@@ -1,0 +1,5 @@
+N: android=http://schemas.android.com/apk/res/android
+  E: paths (line=2)
+    E: cache-path (line=4)
+      A: name="cache" (Raw: "cache")
+      A: path="share_plus/" (Raw: "share_plus/")

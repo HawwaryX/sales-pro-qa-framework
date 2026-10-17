@@ -1,0 +1,8 @@
+سياسة runtime: restricted/enforced، observations_current=true، لا تشمل sales.infinity-tech.sa.
+المسودة المحفوظة تشمل المضيف، لكن observed runtime revision=2 ما زال يستخدم الإصدار السابق؛ المسودة لا تطبق ذاتها.
+محاولة HEAD السابقة فقط: CONNECT 403؛ origin HTTP 000؛ curl exit56. لم تُكرر بعد نفس الرفض.
+حل DNS العادي في المضيف فشل بالرمز EAI_AGAIN (-3) للمضيف ولـfonts.gstatic.com؛ hostname الوكيل نفسه متاح.
+رُصد طلب DNS إلى sales.infinity-tech.sa أثناء طلب تحديث الفروع والسنوات؛ لا استجابة DNS مرصودة في نافذة الالتقاط.
+لا حركة CONNECT من التطبيق إلى هذا المضيف ثبتت في نافذة المراقبة، ولا استجابة HTTP أو JSON API متاحة.
+الاستنتاج: هذا المضيف مرتبط بمحاولة التطبيق للتحميل؛ لا يثبت ذلك هوية TEST أو مسار API الكامل أو كونه frontend فقط. لا صلة مثبتة بين الرفض وبيانات الحساب.
+لم تُستعمل خرائط DNS مصطنعة أو DoH أو تجاوز للوكيل أو TLS.

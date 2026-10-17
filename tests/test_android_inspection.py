@@ -183,3 +183,27 @@ def test_standalone_cli_generates_arabic_report(apk, tmp_path, monkeypatch):
 def test_render_without_tool_evidence_does_not_claim_manifest_success():
     report = render_apk_report({'permissions': []})
     assert 'نتيجة قراءة manifest: NOT_RUN' in report
+
+
+@pytest.mark.parametrize('declaration', [
+    '<!DOCTYPE manifest [<!ENTITY package "org.example.synthetic">]>',
+    '<!DOCTYPE manifest SYSTEM "file:///nonexistent/synthetic.dtd">',
+])
+def test_manifest_rejects_dtd_and_entity_declarations(declaration):
+    with pytest.raises(ValueError, match='DTD|entity'):
+        parse_manifest(declaration + '<manifest package="org.example.synthetic"/>')
+
+
+@pytest.mark.parametrize('entry', ['sales_pro_qa.cli', 'sales_pro_qa.apk_cli'])
+def test_cli_output_write_error_is_readable(tmp_path, monkeypatch, entry):
+    import importlib
+    cli = importlib.import_module(entry)
+    blocked = tmp_path / 'blocked'
+    blocked.write_text('existing user file')
+    monkeypatch.setattr('sys.argv', ['qa', '--apk', 'synthetic.apk', '--output', str(blocked/'report.md')])
+    data = {'permissions': [], 'signature': {'status': 'NOT_RUN'}}
+    with patch(entry + '.inspect_apk', return_value=data):
+        with pytest.raises(SystemExit) as error:
+            cli.main()
+    assert error.value.code == 2
+    assert blocked.read_text() == 'existing user file'

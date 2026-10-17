@@ -1,0 +1,5 @@
+Android boot_completed=1
+Sales Pro pid=1476
+topResumedActivity=ActivityRecord{8411b1 u0 com.infinity.sales.app/.MainActivity t12}
+سجل crash يحتوي على اسم حزمة Sales Pro: False
+سجل crash يتضمن أعطال Bluetooth نظامية: True
