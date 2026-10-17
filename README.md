@@ -40,3 +40,11 @@ python -m sales_pro_qa.cli --config config/sample_config.json --input examples/s
 
 ## CI
 يشغّل GitHub Actions الاختبارات تلقائيًا عند فتح Pull Request أو الدفع إلى `main`.
+
+## فحص Android APK
+فحص ثابت اختياري لبيانات APK وصلاحيات manifest باستخدام Android SDK `aapt`:
+راجع [دليل الفحص وحدوده](docs/apk-inspection.md). لا يتضمن تثبيت التطبيق أو تشغيله.
+
+يتوفر CLI مستقل: `sales-pro-apk --apk PATH --output REPORT.md`، مع دعم
+`apkanalyzer` و`apksigner` وتفاصيل شهادات التوقيع وتحذير Debug.
+راجع [تعليمات Windows بالعربية](docs/android-static-inspection-windows.md).

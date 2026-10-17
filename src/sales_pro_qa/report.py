@@ -65,7 +65,7 @@ def render_arabic_report(audit: dict) -> str:
     lines += ["", "## حدود التحقق", "", audit.get(
         "limitations", "يعكس هذا التقرير البيانات المُدخلة فقط؛ يلزم التحقق من الأدلة قبل اعتبار أي نتيجة عيبًا مؤكدًا."
     ), ""]
-    return "\\n".join(lines)
+    return "\n".join(lines)
 
 def write_report(audit: dict, output: str | Path) -> None:
     Path(output).parent.mkdir(parents=True, exist_ok=True)
