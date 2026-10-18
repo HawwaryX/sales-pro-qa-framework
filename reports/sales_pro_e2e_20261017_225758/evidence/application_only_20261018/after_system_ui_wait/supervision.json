@@ -1,0 +1,7 @@
+{
+  "state": "COMPLETED",
+  "returncode": 0,
+  "elapsed_seconds": 116.54016557600005,
+  "stdout": "{\"test_id\": \"RT-38\", \"status\": \"BLOCKED\", \"reason_code\": null, \"restoration\": {\"keyboard_hidden\": true, \"show_ime_with_hard_keyboard_restored\": true, \"user_rotation_restored\": true, \"accelerometer_rotation_restored\": true, \"final_display\": [480, 854, 0], \"display_dimensions_match_original\": true, \"visible_fields_remain_empty\": true}, \"elapsed_seconds\": 116.36}\n",
+  "stderr": ""
+}

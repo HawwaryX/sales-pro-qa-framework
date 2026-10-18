@@ -1,0 +1,3 @@
+{"stage": "android_readiness", "elapsed_seconds": 0.0}
+{"stage": "freeze_landscape_without_input", "elapsed_seconds": 15.22}
+{"stage": "resume_password_keyboard_for_remaining_login_check", "elapsed_seconds": 21.88}

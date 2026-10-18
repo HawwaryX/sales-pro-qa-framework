@@ -1,0 +1,74 @@
+{
+  "test_id": "RT-38",
+  "status": "BLOCKED",
+  "scope": "landscape_empty_login_with_ime",
+  "credentials_entered": false,
+  "form_submitted": false,
+  "password_visibility_toggled": false,
+  "refresh_requested": false,
+  "network_settings_changed": false,
+  "app_data_cleared": false,
+  "observations": [
+    {
+      "name": "password_keyboard_for_login",
+      "keyboard": {
+        "input_method_shown": false,
+        "input_method_show_flag": true,
+        "ime_package_nodes": 0,
+        "ime_window_inset_frames": [],
+        "ime_visible_rectangles": [],
+        "ime_top": null,
+        "display_width": 854,
+        "display_height": 480,
+        "display_rotation": 1
+      },
+      "uncovered_app_rectangle": [
+        0,
+        24,
+        806,
+        480
+      ],
+      "empty_username_field_reachable": true,
+      "empty_password_field_reachable": true,
+      "password_child_control_reachable_without_activation": true,
+      "password_child_accessible_label_present": false,
+      "login_control_reachable_without_activation": true,
+      "visible_empty_field_count": 2,
+      "branch_year_error_visible": true
+    }
+  ],
+  "restoration": {
+    "keyboard_hidden": true,
+    "user_rotation_restored": true,
+    "accelerometer_rotation_restored": true,
+    "final_display": [
+      480,
+      854,
+      0
+    ],
+    "display_dimensions_match_original": true,
+    "visible_fields_remain_empty": true
+  },
+  "elapsed_seconds": 40.64,
+  "android_readiness": {
+    "boot_completed": true,
+    "user_id": 0,
+    "user_state": "RUNNING_UNLOCKED",
+    "activity_resolved": true
+  },
+  "initial_two_empty_fields_verified": true,
+  "original_rotation_settings": {
+    "accelerometer_rotation": "0",
+    "user_rotation": "0"
+  },
+  "original_display": [
+    480,
+    854,
+    0
+  ],
+  "landscape_verified": true,
+  "worker_error_class": "SafeStop",
+  "error_phase": "resume_password_keyboard_for_remaining_login_check",
+  "safe_reason_code": "KeyboardVisibilityNotProven",
+  "system_ui_wait_used_once": false
+}

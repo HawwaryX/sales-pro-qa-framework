@@ -1,0 +1,5 @@
+{"stage": "android_readiness", "elapsed_seconds": 0.0}
+{"stage": "freeze_landscape_without_input", "elapsed_seconds": 17.33}
+{"stage": "resume_password_keyboard_for_remaining_login_check", "elapsed_seconds": 24.16}
+{"stage": "remaining_login_control_scroll_without_activation", "elapsed_seconds": 33.51}
+{"stage": "complete", "elapsed_seconds": 49.38}

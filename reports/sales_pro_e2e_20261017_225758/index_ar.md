@@ -57,3 +57,8 @@
 - [إيقاف العملية والتشغيل والنوم والإيقاظ](evidence/autonomous_20261018/lifecycle_ready/observations.json).
 - [الإطار على3.12](evidence/autonomous_20261018/pytest_python312.txt) و[3.13](evidence/autonomous_20261018/pytest_python313.txt) و[التبعيات](evidence/autonomous_20261018/dependency_check.txt).
 - [جاهزية الإقلاع](evidence/autonomous_20261018/runtime_identity_diagnosis.json) و[تحقق الانتقال الطبيعي](evidence/autonomous_20261018/user_unlock_readiness.json).
+
+
+## متابعة اختبار التطبيق فقط — 18 أكتوبر 2026
+
+نجحت RT-38: تركيز الحقلين فارغين في landscape مع لوحة مفاتيح ظاهرة، ثم الوصول بالتمرير إلى زر الدخول كاملًا فوقها دون الضغط. عاد الوضع الرأسي وأُخفيت اللوحة واستُعيدت الإعدادات. التراكمي الحالي: **PASS: 29؛ FAIL: 4؛ BLOCKED: 55؛ NOT RUN: 2**؛ 90 حالة. لا عيب تطبيق جديد مثبت. [المراجعة والأدلة](evidence/application_only_20261018/application_review.json).

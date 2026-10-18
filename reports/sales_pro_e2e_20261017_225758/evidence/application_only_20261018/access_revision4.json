@@ -1,0 +1,23 @@
+{
+  "process_exit": 0,
+  "dns": {
+    "status": "DNS_FAILURE",
+    "errno": -3
+  },
+  "managed_proxy_https": {
+    "curl_exit": 0,
+    "connect_http_tls_redirects": "200 404 0 0",
+    "method": "HEAD",
+    "path": "/",
+    "api_endpoint_claimed": false
+  },
+  "reason_for_single_retest": "تغير مراجعة البيئة من3 إلى4 وعنوان resolver؛ لا إعادة متتابعة لطلب فاشل غير متغير",
+  "current_revision": "4",
+  "backend_host": "sales.infinity-tech.sa",
+  "backend_allowed": true,
+  "vpn_configured": false,
+  "tcp_grants_available": false,
+  "platform_network_action_available": false,
+  "repeat_attempts_scheduled": false,
+  "login_attempted": false
+}

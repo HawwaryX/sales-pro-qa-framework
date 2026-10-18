@@ -1,0 +1,4 @@
+{"stage": "android_readiness", "elapsed_seconds": 0.0}
+{"stage": "freeze_landscape_without_input", "elapsed_seconds": 26.83}
+{"stage": "focus_empty_username_and_show_keyboard", "elapsed_seconds": 32.56}
+{"stage": "bounded_scroll_and_empty_password_focus", "elapsed_seconds": 76.52}

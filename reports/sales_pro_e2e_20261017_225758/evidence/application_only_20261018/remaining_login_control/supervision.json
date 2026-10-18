@@ -1,0 +1,7 @@
+{
+  "state": "COMPLETED",
+  "returncode": 0,
+  "elapsed_seconds": 40.80984538300004,
+  "stdout": "{\"test_id\": \"RT-38\", \"status\": \"BLOCKED\", \"reason_code\": \"KeyboardVisibilityNotProven\", \"restoration\": {\"keyboard_hidden\": true, \"user_rotation_restored\": true, \"accelerometer_rotation_restored\": true, \"final_display\": [480, 854, 0], \"display_dimensions_match_original\": true, \"visible_fields_remain_empty\": true}, \"elapsed_seconds\": 40.64}\n",
+  "stderr": ""
+}

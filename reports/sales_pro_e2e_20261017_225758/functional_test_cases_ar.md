@@ -1,6 +1,6 @@
 # حالات الاختبار الوظيفي العربية
 
-التراكمي الوظيفي: PASS: 28؛ FAIL: 4؛ BLOCKED: 55؛ NOT RUN: 2؛ 89 حالة. سجلات القواعد المحاسبية منفصلة:8 NEEDS BUSINESS RULE CONFIRMATION وتنفيذها BLOCKED؛ لا تضاف كإخفاقات أو نجاحات تطبيق. pytest93 لكل نسخة Python مستقل عن أعمال التطبيق.
+التراكمي الوظيفي: PASS: 29؛ FAIL: 4؛ BLOCKED: 55؛ NOT RUN: 2؛ 90 حالة. سجلات القواعد المحاسبية منفصلة:8 NEEDS BUSINESS RULE CONFIRMATION وتنفيذها BLOCKED؛ لا تضاف كإخفاقات أو نجاحات تطبيق. pytest93 لكل نسخة Python مستقل عن أعمال التطبيق.
 
 ## RT-01 — التثبيت
 
@@ -519,6 +519,20 @@
 - الفعلي: رُصد Awake ثم Asleep ثم Awake؛ عاد نموذج عربي فارغ بنفس PID دون FATAL مرصود. لم تظهر شاشة قفل ولم يلزم سحب لفتحها؛ لا اختبار PIN أو قفل مؤمن أو بقاء جلسة مصادق عليها.
 
 - الدليل: [observations.json](evidence/autonomous_20261018/lifecycle_ready/observations.json)، [after_wake.xml](evidence/autonomous_20261018/lifecycle_ready/after_wake.xml)، [after_wake_lower_crop.png](evidence/autonomous_20261018/lifecycle_ready/after_wake_lower_crop.png)
+
+## RT-38 — نموذج الدخول أفقيًا مع لوحة المفاتيح والوصول إلى عناصره
+
+- الحالة: **PASS**
+
+- الشروط: نموذج دخول فعلي بحقلين فارغين؛ المحاكي نفسه دون جلسة مصادق عليها أو تغيير الشبكة
+
+- الخطوات: تسجيل إعدادات الدوران؛ landscape؛ تركيز الحقلين الفارغين؛ إثبات ظهور IME؛ التمرير للوصول إلى زر الدخول دون الضغط؛ إعادة الإعدادات وإخفاء اللوحة
+
+- المتوقع: إمكان التركيز على الحقلين والوصول إلى زر الدخول فوق لوحة المفاتيح، دون إرسال أو فقد إعدادات الشاشة
+
+- الفعلي: ثبت تركيز كل حقل وظهور IME فعليًا. بعد تمريرين ظهر زر الدخول كاملًا عند y208–260 فوق اللوحة التي تبدأ y263؛ لم يُضغط. عادت portrait وأُخفيت اللوحة وبقيت الحقول فارغة. جمع صورة الحقل الثاني تعثر؛ استُخدم XML فعلي لاستكمال الزر. لا مصادقة أو أعمال.
+
+- الدليل: [application_review.json](evidence/application_only_20261018/application_review.json)؛ [landscape_username_ime_app_above_ime.png](evidence/application_only_20261018/after_system_ui_wait/landscape_username_ime_app_above_ime.png)؛ [landscape_username_ime.xml](evidence/application_only_20261018/after_system_ui_wait/landscape_username_ime.xml)؛ [landscape_password_ime.xml](evidence/application_only_20261018/after_system_ui_wait/landscape_password_ime.xml)؛ [remaining_login_scroll_2.xml](evidence/application_only_20261018/remaining_login_ime_settled/remaining_login_scroll_2.xml)؛ [observations.json](evidence/application_only_20261018/remaining_login_ime_settled/observations.json)؛ [supervision.json](evidence/application_only_20261018/remaining_login_ime_settled/supervision.json)
 
 ## BUS-HOME — المنزل والمؤشرات
 

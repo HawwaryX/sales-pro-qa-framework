@@ -1,0 +1,261 @@
+{
+  "test_id": "RT-38",
+  "status": "BLOCKED",
+  "scope": "landscape_empty_login_with_ime",
+  "credentials_entered": false,
+  "form_submitted": false,
+  "password_visibility_toggled": false,
+  "refresh_requested": false,
+  "network_settings_changed": false,
+  "app_data_cleared": false,
+  "observations": [
+    {
+      "name": "landscape_username_ime",
+      "keyboard": {
+        "input_method_shown": true,
+        "input_method_show_flag": true,
+        "ime_package_nodes": 46,
+        "ime_window_inset_frames": [],
+        "ime_visible_rectangles": [
+          [
+            0,
+            227,
+            806,
+            480
+          ],
+          [
+            0,
+            227,
+            806,
+            480
+          ],
+          [
+            0,
+            227,
+            806,
+            480
+          ],
+          [
+            0,
+            227,
+            806,
+            480
+          ],
+          [
+            0,
+            227,
+            806,
+            480
+          ],
+          [
+            0,
+            227,
+            806,
+            480
+          ],
+          [
+            0,
+            227,
+            806,
+            480
+          ],
+          [
+            0,
+            227,
+            806,
+            480
+          ]
+        ],
+        "ime_top": 227,
+        "display_width": 854,
+        "display_height": 480,
+        "display_rotation": 1
+      },
+      "uncovered_app_rectangle": [
+        0,
+        24,
+        806,
+        227
+      ],
+      "empty_username_field_reachable": true,
+      "empty_password_field_reachable": true,
+      "password_child_control_reachable_without_activation": true,
+      "password_child_accessible_label_present": false,
+      "login_control_reachable_without_activation": false,
+      "visible_empty_field_count": 2,
+      "branch_year_error_visible": false
+    },
+    {
+      "name": "landscape_password_ime",
+      "keyboard": {
+        "input_method_shown": true,
+        "input_method_show_flag": true,
+        "ime_package_nodes": 42,
+        "ime_window_inset_frames": [],
+        "ime_visible_rectangles": [
+          [
+            0,
+            263,
+            806,
+            480
+          ],
+          [
+            0,
+            263,
+            806,
+            480
+          ],
+          [
+            0,
+            263,
+            806,
+            480
+          ],
+          [
+            0,
+            263,
+            806,
+            480
+          ],
+          [
+            0,
+            263,
+            806,
+            480
+          ],
+          [
+            0,
+            263,
+            806,
+            480
+          ],
+          [
+            0,
+            263,
+            806,
+            480
+          ],
+          [
+            0,
+            263,
+            806,
+            480
+          ]
+        ],
+        "ime_top": 263,
+        "display_width": 854,
+        "display_height": 480,
+        "display_rotation": 1
+      },
+      "uncovered_app_rectangle": [
+        0,
+        24,
+        806,
+        263
+      ],
+      "empty_username_field_reachable": true,
+      "empty_password_field_reachable": true,
+      "password_child_control_reachable_without_activation": true,
+      "password_child_accessible_label_present": false,
+      "login_control_reachable_without_activation": false,
+      "visible_empty_field_count": 2,
+      "branch_year_error_visible": false
+    }
+  ],
+  "restoration": {
+    "keyboard_hidden": true,
+    "show_ime_with_hard_keyboard_restored": true,
+    "user_rotation_restored": true,
+    "accelerometer_rotation_restored": true,
+    "final_display": [
+      480,
+      854,
+      0
+    ],
+    "display_dimensions_match_original": true,
+    "visible_fields_remain_empty": true
+  },
+  "elapsed_seconds": 116.36,
+  "android_readiness": {
+    "boot_completed": true,
+    "user_id": 0,
+    "user_state": "RUNNING_UNLOCKED",
+    "activity_resolved": true
+  },
+  "initial_two_empty_fields_verified": true,
+  "original_rotation_settings": {
+    "accelerometer_rotation": "0",
+    "user_rotation": "0"
+  },
+  "original_display": [
+    480,
+    854,
+    0
+  ],
+  "landscape_verified": true,
+  "original_show_ime_with_hard_keyboard": "1",
+  "temporary_show_ime_with_hard_keyboard_enabled": true,
+  "initial_ime_visibility_observation": {
+    "input_method_shown": true,
+    "input_method_show_flag": true,
+    "ime_package_nodes": 46,
+    "ime_window_inset_frames": [],
+    "ime_visible_rectangles": [
+      [
+        0,
+        227,
+        806,
+        480
+      ],
+      [
+        0,
+        227,
+        806,
+        480
+      ],
+      [
+        0,
+        227,
+        806,
+        480
+      ],
+      [
+        0,
+        227,
+        806,
+        480
+      ],
+      [
+        0,
+        227,
+        806,
+        480
+      ],
+      [
+        0,
+        227,
+        806,
+        480
+      ],
+      [
+        0,
+        227,
+        806,
+        480
+      ],
+      [
+        0,
+        227,
+        806,
+        480
+      ]
+    ],
+    "ime_top": 227,
+    "display_width": 854,
+    "display_height": 480,
+    "display_rotation": 1
+  },
+  "worker_error_class": "AdbTimeout",
+  "error_phase": "bounded_scroll_and_empty_password_focus",
+  "system_ui_wait_used_once": false
+}

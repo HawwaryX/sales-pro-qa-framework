@@ -1,7 +1,7 @@
 {
   "scope": "دفتر تنفيذ UI والتغطية المخططة؛ مستقل عن pytest",
   "counts": {
-    "PASS": 28,
+    "PASS": 29,
     "BLOCKED": 55,
     "FAIL": 4,
     "NOT RUN": 2
@@ -740,6 +740,25 @@
         "autonomous_20261018/lifecycle_ready/observations.json",
         "autonomous_20261018/lifecycle_ready/after_wake.xml",
         "autonomous_20261018/lifecycle_ready/after_wake_lower_crop.png"
+      ]
+    },
+    {
+      "id": "RT-38",
+      "feature": "نموذج الدخول أفقيًا مع لوحة المفاتيح والوصول إلى عناصره",
+      "preconditions": "نموذج دخول فعلي بحقلين فارغين؛ المحاكي نفسه دون جلسة مصادق عليها أو تغيير الشبكة",
+      "steps": "تسجيل إعدادات الدوران؛ landscape؛ تركيز الحقلين الفارغين؛ إثبات ظهور IME؛ التمرير للوصول إلى زر الدخول دون الضغط؛ إعادة الإعدادات وإخفاء اللوحة",
+      "expected": "إمكان التركيز على الحقلين والوصول إلى زر الدخول فوق لوحة المفاتيح، دون إرسال أو فقد إعدادات الشاشة",
+      "actual": "ثبت تركيز كل حقل وظهور IME فعليًا. بعد تمريرين ظهر زر الدخول كاملًا عند y208–260 فوق اللوحة التي تبدأ y263؛ لم يُضغط. عادت portrait وأُخفيت اللوحة وبقيت الحقول فارغة. جمع صورة الحقل الثاني تعثر؛ استُخدم XML فعلي لاستكمال الزر. لا مصادقة أو أعمال.",
+      "status": "PASS",
+      "defect": null,
+      "evidence": [
+        "application_only_20261018/application_review.json",
+        "application_only_20261018/after_system_ui_wait/landscape_username_ime_app_above_ime.png",
+        "application_only_20261018/after_system_ui_wait/landscape_username_ime.xml",
+        "application_only_20261018/after_system_ui_wait/landscape_password_ime.xml",
+        "application_only_20261018/remaining_login_ime_settled/remaining_login_scroll_2.xml",
+        "application_only_20261018/remaining_login_ime_settled/observations.json",
+        "application_only_20261018/remaining_login_ime_settled/supervision.json"
       ]
     },
     {
@@ -1966,5 +1985,38 @@
     "latest_queue": "evidence/autonomous_20261018/queue.json",
     "background_continuation_registered": false,
     "continuation_limit": "لا أداة متاحة لجدولة متابعة بعد انتهاء الجلسة؛ لا حلقات تلقائية لتكرار الطلبات المحجوبة"
+  },
+  "application_only_summary": {
+    "date_client": "2026-10-18",
+    "new_test": "RT-38",
+    "new_test_status": "PASS",
+    "current_counts": {
+      "PASS": 29,
+      "BLOCKED": 55,
+      "FAIL": 4,
+      "NOT RUN": 2
+    },
+    "scope": "اختبار تطبيق فقط؛ لم يتغير مصدر الإطار أو APK ولم تُعد pytest أو الفحوص الثابتة",
+    "authenticated": false,
+    "correct_test_database_verified": false,
+    "business_operations_executed": 0,
+    "login_submitted": false,
+    "branch_year_loading_error_observed": true,
+    "network_review": {
+      "effective_revision": "4",
+      "backend_allowed": true,
+      "host_dns_result": "DNS_FAILURE errno=-3",
+      "proxy_connect": 200,
+      "root_head_http": 404,
+      "tls_verify_result": 0,
+      "redirects": 0,
+      "android_dns_retest_this_turn": false,
+      "approved_new_route_available": false,
+      "no_repeated_unchanged_network_retry": true
+    },
+    "external_dependency": "مسار Android DNS/HTTPS معتمد أو جهاز اختبار متصل؛ السماح بالمضيف قائم ولا يلزم تكراره",
+    "independent_checks_remaining": [],
+    "remaining_business_workflows": "الدخول بالفرع والسنة المطلوبين، ثم العملاء والزيارات والمنتجات والمستندات والتحصيل والمرتجعات والمحاسبة والمزامنة؛ محجوبة قبل المصادقة وهوية TEST",
+    "evidence": "evidence/application_only_20261018/application_review.json"
   }
 }

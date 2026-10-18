@@ -1,0 +1,29 @@
+{
+  "test_id": "RT-38",
+  "status": "PASS",
+  "scope": "الوصول إلى الحقول وزر الدخول في landscape مع IME؛ لا تقديم أو مصادقة",
+  "username_focus_verified_from_xml": true,
+  "password_focus_verified_from_xml": true,
+  "keyboard_geometry_and_show_flag_verified": true,
+  "login_button_bounds": [
+    35,
+    208,
+    771,
+    260
+  ],
+  "ime_top": 263,
+  "login_button_fully_above_keyboard": true,
+  "button_enabled": true,
+  "button_activated": false,
+  "credentials_entered": false,
+  "original_rotation_and_ime_settings_restored": true,
+  "portrait_restored": true,
+  "keyboard_hidden_at_end": true,
+  "branch_year_loading_error_observed": true,
+  "authenticated_home_verified": false,
+  "test_database_verified": false,
+  "business_operations_executed": 0,
+  "new_confirmed_application_defects": 0,
+  "limits": "دليل الزر XML وحدود نافذة IME الفعلية؛ لقطة فعلية لأول حقل فقط؛ لا اختبار TalkBack أو تقديم النموذج. انتهت مهلة التقاط صورة الحقل الثاني؛ لم تُخترع صورة بديلة.",
+  "automation_recovery": "أُقر حوار System UI بانتظار مرة واحدة؛ عملت الأتمتة بعدها. استُكمل فحص الزر وحده دون صور بعد AdbTimeout، وانتظار محدود حتى ظهور هندسة IME. لا سبب جذري أعمق مثبت."
+}

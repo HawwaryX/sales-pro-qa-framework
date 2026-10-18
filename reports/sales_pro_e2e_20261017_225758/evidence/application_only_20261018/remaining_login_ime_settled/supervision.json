@@ -1,0 +1,7 @@
+{
+  "state": "COMPLETED",
+  "returncode": 0,
+  "elapsed_seconds": 62.68669154300005,
+  "stdout": "{\"test_id\": \"RT-38\", \"status\": \"EXECUTED\", \"reason_code\": null, \"restoration\": {\"keyboard_hidden\": true, \"user_rotation_restored\": true, \"accelerometer_rotation_restored\": true, \"final_display\": [480, 854, 0], \"display_dimensions_match_original\": true, \"visible_fields_remain_empty\": true}, \"elapsed_seconds\": 62.48}\n",
+  "stderr": ""
+}

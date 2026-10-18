@@ -1,0 +1,23 @@
+{
+  "test_id": "RT-38",
+  "status": "BLOCKED",
+  "scope": "landscape_empty_login_with_ime",
+  "credentials_entered": false,
+  "form_submitted": false,
+  "password_visibility_toggled": false,
+  "refresh_requested": false,
+  "network_settings_changed": false,
+  "app_data_cleared": false,
+  "observations": [],
+  "restoration": {},
+  "elapsed_seconds": 63.91,
+  "android_readiness": {
+    "boot_completed": true,
+    "user_id": 0,
+    "user_state": "RUNNING_UNLOCKED",
+    "activity_resolved": true
+  },
+  "worker_error_class": "LaunchUiAutomationError",
+  "error_phase": "android_readiness",
+  "system_ui_wait_used_once": false
+}

@@ -1,0 +1,6 @@
+{
+  "wait_tapped": true,
+  "app_data_cleared": false,
+  "unlock_attempted": false,
+  "system_ui_anr_confirmed": true
+}
