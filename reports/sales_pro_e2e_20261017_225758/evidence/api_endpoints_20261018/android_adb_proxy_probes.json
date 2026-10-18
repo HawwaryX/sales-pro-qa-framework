@@ -1,0 +1,14 @@
+{
+  "scope": "Explicit native Android diagnostic via same approved proxy over ADB; not app login",
+  "system_trust_modified": false,
+  "app_modified": false,
+  "global_proxy_modified_by_this_probe": false,
+  "native_dns_repeated": false,
+  "adb_reverse_configured": true,
+  "branches_android_default_trust": {
+    "tool_error_class": "AdbTimeout"
+  },
+  "temporary_device_files_removed": true,
+  "adb_reverse_removed": true,
+  "relay_stopped": true
+}

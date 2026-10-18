@@ -1,0 +1,25 @@
+{
+  "member": "lib/arm64-v8a/libapp.so",
+  "verified_literals": [
+    {
+      "value": "https://sales.infinity-tech.sa",
+      "offset": 850080
+    },
+    {
+      "value": "/api/v1/auth/branches",
+      "offset": 965298
+    },
+    {
+      "value": "/api/v1/auth/years",
+      "offset": 415869
+    },
+    {
+      "value": "/api/v1/auth/company",
+      "offset": 663406
+    }
+  ],
+  "full_url_composition_observed": false,
+  "runtime_http_method_observed": false,
+  "probe_method": "GET",
+  "probes_use_only_observed_origin_and_literal_routes": true
+}

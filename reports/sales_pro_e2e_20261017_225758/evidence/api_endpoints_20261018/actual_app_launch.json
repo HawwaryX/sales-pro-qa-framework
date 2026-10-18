@@ -1,0 +1,13 @@
+{
+  "credentials_entered": false,
+  "login_submitted": false,
+  "activity_error_type_3": true,
+  "explicit_status_ok": false,
+  "launch_denied_or_error": true,
+  "launch_diagnostic": [
+    "Error type 3",
+    "Error: Activity class {com.infinity.sales.app/com.infinity.sales.app.MainActivity} does not exist."
+  ],
+  "app_process_present": false,
+  "boot_completed": false
+}

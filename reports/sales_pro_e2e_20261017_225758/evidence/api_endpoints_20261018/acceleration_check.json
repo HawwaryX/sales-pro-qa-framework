@@ -1,0 +1,7 @@
+{
+  "kvm_device_exists": false,
+  "kvm_device_accessible": false,
+  "emulator_accel_check_exit_code": 3,
+  "message": "KVM requires a CPU that supports vmx or svm",
+  "hardware_acceleration_verified": false
+}

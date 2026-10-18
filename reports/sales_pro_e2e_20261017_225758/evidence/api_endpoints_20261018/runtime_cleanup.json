@@ -1,0 +1,7 @@
+{
+  "reason": "End bounded failed readiness attempts; no authenticated application session or business operations",
+  "pid": 3625,
+  "hard_kill_used": false,
+  "app_data_cleared": false,
+  "owned_emulator_stopped_gracefully": true
+}

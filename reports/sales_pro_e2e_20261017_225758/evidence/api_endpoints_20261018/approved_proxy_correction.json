@@ -1,0 +1,6 @@
+{
+  "scope": "Emulator only; current inherited approved proxy, no Linux/system trust changes",
+  "network_fix_claimed": false,
+  "error_class": "AdbTimeout",
+  "restoration_attempted": true
+}

@@ -1,0 +1,9 @@
+{
+  "base_source": "tools/android-network/NetworkProbe.java",
+  "temporary_variant": "HEAD changed to GET only; TLS hostname/SNI/verification and timeouts unchanged",
+  "source_sha256": "5abca2f827bf51c1a0b356b39952d2f474f71ece33abac71d39176b100636c09",
+  "jar_sha256": "3d0de2e7c331db8b85b72c70e4cb858ed15a3f478ce084c023473dd098fe692e",
+  "jar_committed": false,
+  "trust_bypass": false,
+  "ca_installation": false
+}

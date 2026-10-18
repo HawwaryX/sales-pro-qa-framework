@@ -33,7 +33,19 @@
         "intro_ar.png",
         "final_app_state.txt"
       ],
-      "defect": null
+      "defect": null,
+      "attempts": [
+        {
+          "trigger": "Current cloud runtime API connectivity investigation, 2026-10-18",
+          "status": "BLOCKED",
+          "actual": "am start returned Error type3 while Android was not ready; no app PID. Does not prove APK package defect or absence. Earlier successful startup remains historical coverage.",
+          "evidence": [
+            "api_endpoints_20261018/actual_app_launch.json",
+            "api_endpoints_20261018/single_core_readiness.json",
+            "api_endpoints_20261018/user_readiness_after_boot.json"
+          ]
+        }
+      ]
     },
     {
       "id": "RT-03",
@@ -1518,6 +1530,14 @@
           "evidence": [
             "followup_20261018/android_dns_after_policy_update.json"
           ]
+        },
+        {
+          "trigger": "New current runtime/resolver; Android startup incomplete",
+          "status": "FAIL",
+          "scope": "DNS diagnostic under no active Android network, not an app authentication result",
+          "evidence": [
+            "api_endpoints_20261018/android_api_probes.json"
+          ]
         }
       ]
     },
@@ -1619,12 +1639,52 @@
         "followup_20261018/backend_targeted_retest.json",
         "followup_20261018/effective_policy.json"
       ]
+    },
+    {
+      "id": "NET-11",
+      "feature": "GET لمسارات API الفعلية الموجودة في APK عبر وكيل Linux المعتمد",
+      "status": "PASS",
+      "scope": "إتاحة API للمسبار فقط؛ ليس تحميل قوائم في التطبيق أو مصادقة أو إثبات TEST",
+      "expected": "CONNECT200 وTLS موثوق ورد JSON من مسارات lookup",
+      "actual": "branches وyears: GET200 JSON مع ظهور نص الفرع المطلوب والسنة المطلوبة في الردين؛ company: GET200 وsuccess=true دون تصريح TEST. لا أجسام رد أو حسابات محفوظة. تركيب URL من أصل ومسار APK، لا طلب تطبيق مرصود.",
+      "evidence": [
+        "api_endpoints_20261018/apk_routes.json",
+        "api_endpoints_20261018/host_api_probes.json",
+        "api_endpoints_20261018/company_environment_probe.json"
+      ]
+    },
+    {
+      "id": "NET-12",
+      "feature": "جاهزية Android وشبكته ومسار TCP إلى الوكيل الحالي",
+      "status": "BLOCKED",
+      "scope": "عائق بيئة قبل TLS؛ ليس عيب تطبيق أو رفض كلمة مرور",
+      "expected": "مستخدم جاهز وشبكة فعالة ثم وصول TCP/CONNECT",
+      "actual": "تعثر boot؛ eth0 بلا IPv4 وactive default network=none. DNS: UnknownHostException/GaiException؛ الوكيل الحالي: ConnectException/ErrnoException عند PROXY_TCP دون CONNECT أو TLS. إعادة تشغيل واحدة بنواة واحدة لم تحقق جاهزية مستخدم مستقرة. صار boot=1 لاحقًا وحالة مؤكدة RUNNING_LOCKED ثم فشل استكمال قياس الجاهزية.",
+      "evidence": [
+        "api_endpoints_20261018/android_api_probes.json",
+        "api_endpoints_20261018/single_core_readiness.json",
+        "api_endpoints_20261018/user_readiness_after_boot.json",
+        "api_endpoints_20261018/actual_app_launch.json",
+        "api_endpoints_20261018/acceleration_check.json"
+      ]
+    },
+    {
+      "id": "NET-13",
+      "feature": "محاولة مسار ADB محلي إلى الوكيل المعتمد نفسه",
+      "status": "BLOCKED",
+      "scope": "تحويل مؤقت مقيد بمضيف التطبيق؛ لا تجاوز TLS أو سياسة الوكيل",
+      "expected": "إرسال CONNECT فعلي من المسبار ثم قياس TLS/HTTP",
+      "actual": "تهيأ reverse محلي، لكن Java انتهت بـAdbTimeout؛ عداد الوسيط يثبت بدء الاستماع فقط دون اتصال وارد. لا نجاح اتصال مثبت. أزيل التحويل وتوقف الوسيط وحذفت الملفات المؤقتة.",
+      "evidence": [
+        "api_endpoints_20261018/android_adb_proxy_probes.json",
+        "api_endpoints_20261018/adb_proxy_relay_summary.json"
+      ]
     }
   ],
   "connectivity_diagnostic_counts": {
-    "PASS": 4,
+    "PASS": 5,
     "FAIL": 4,
-    "BLOCKED": 2
+    "BLOCKED": 4
   },
   "approved_route_review": {
     "evidence": [
@@ -2018,5 +2078,46 @@
     "independent_checks_remaining": [],
     "remaining_business_workflows": "الدخول بالفرع والسنة المطلوبين، ثم العملاء والزيارات والمنتجات والمستندات والتحصيل والمرتجعات والمحاسبة والمزامنة؛ محجوبة قبل المصادقة وهوية TEST",
     "evidence": "evidence/application_only_20261018/application_review.json"
+  },
+  "api_connectivity_latest": {
+    "client_date": "2026-10-18",
+    "policy_revision": 4,
+    "backend_allowed": true,
+    "linux_api_get_status": {
+      "branches": 200,
+      "years": 200,
+      "company": 200
+    },
+    "linux_proxy_connect": 200,
+    "linux_tls_verified": true,
+    "application_http_method_or_full_request_observed": false,
+    "test_database_verified": false,
+    "new_ui_passes": 0,
+    "new_confirmed_application_defects": 0,
+    "application_counts_unchanged": {
+      "PASS": 29,
+      "BLOCKED": 55,
+      "FAIL": 4,
+      "NOT RUN": 2
+    },
+    "latest_app_launch_status": "BLOCKED",
+    "authenticated": false,
+    "credentials_entered": false,
+    "login_submitted": false,
+    "business_mutations": 0,
+    "android_dns": "UnknownHostException/GaiException",
+    "android_approved_proxy_tcp": "ConnectException/ErrnoException before CONNECT/TLS",
+    "android_tls_and_origin_http": "NOT RUN: TCP failed",
+    "stale_proxy_setting_confirmed": true,
+    "proxy_repair_status": "UNVERIFIED: host write completed; remaining write/readback timed out",
+    "adb_proxy_route_status": "BLOCKED: configured but no incoming relay connection; Java AdbTimeout",
+    "runtime_recovery": "One graceful restart from2 to1CPU; no stable unlocked user readiness verified",
+    "remaining_external_requirement": "Usable authorized unlocked Android runtime with approved networking; KVM unavailable here. Verify TEST identity before mutations.",
+    "evidence_root": "evidence/api_endpoints_20261018/",
+    "framework_source_changed": false,
+    "pytest_or_broad_static_rerun": false,
+    "android_network_at_native_probe": "No active default network; eth0 down in measurement",
+    "android_boot_completed_at_native_probe": false,
+    "android_network_retested_after_boot_completed": false
   }
 }

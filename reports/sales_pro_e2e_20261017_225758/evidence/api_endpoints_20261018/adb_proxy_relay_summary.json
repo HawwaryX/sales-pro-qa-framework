@@ -1,0 +1,12 @@
+{
+  "listener": "127.0.0.1:18080",
+  "allowed_connect_target": "sales.infinity-tech.sa:443",
+  "upstream": "inherited_managed_HTTPS_PROXY",
+  "tls_terminated": false,
+  "payload_logged": false,
+  "direct_destination_egress": false,
+  "elapsed_seconds": 37.57,
+  "counts": {
+    "listener_started": 1
+  }
+}

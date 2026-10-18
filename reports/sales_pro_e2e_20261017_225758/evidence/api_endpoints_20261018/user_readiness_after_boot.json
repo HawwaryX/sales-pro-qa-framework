@@ -1,0 +1,9 @@
+{
+  "ready": false,
+  "observation": {
+    "boot_completed": true,
+    "user_id": null,
+    "user_state": "UNKNOWN",
+    "activity_resolved": false
+  }
+}

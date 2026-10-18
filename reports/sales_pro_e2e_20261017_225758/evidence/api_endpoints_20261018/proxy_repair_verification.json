@@ -1,0 +1,26 @@
+{
+  "scope": "Repair confirmed stale emulator proxy only; not internet/app success",
+  "backup": {
+    "http_proxy": "null",
+    "global_http_proxy_host": "172.31.2.93",
+    "global_http_proxy_port": "8080",
+    "private_dns_mode": "null",
+    "private_dns_specifier": "null"
+  },
+  "approved_proxy_ip": "172.31.11.61",
+  "approved_proxy_port": "8080",
+  "commands_completed": [
+    "global_http_proxy_host"
+  ],
+  "verified": {
+    "global_http_proxy_host": {
+      "error_class": "AdbTimeout"
+    },
+    "http_proxy": {
+      "error_class": "AdbTimeout"
+    }
+  },
+  "network_fix_claimed": false,
+  "write_error_class": "AdbTimeout",
+  "proxy_settings_corrected": false
+}

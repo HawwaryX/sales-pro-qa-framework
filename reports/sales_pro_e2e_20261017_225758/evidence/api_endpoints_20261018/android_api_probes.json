@@ -1,0 +1,46 @@
+{
+  "scope": "Native Android diagnostics; not Sales Pro login or application trust validation",
+  "app_or_system_trust_modified": false,
+  "response_bodies_retained": false,
+  "boot_completed_at_probe_start": false,
+  "user_state_at_probe_start": "BOOTING",
+  "interfaces": "1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000\n    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00\n    inet 127.0.0.1/8 scope host lo\n       valid_lft forever preferred_lft forever\n    inet6 ::1/128 scope host \n       valid_lft forever preferred_lft forever\n2: dummy0: <BROADCAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default qlen 1000\n    link/ether ce:43:66:b4:9e:69 brd ff:ff:ff:ff:ff:ff\n    inet6 fe80::cc43:66ff:feb4:9e69/64 scope link \n       valid_lft forever preferred_lft forever\n3: ifb0: <BROADCAST,NOARP> mtu 1500 qdisc noop state DOWN group default qlen 32\n    link/ether 02:ea:7e:7d:0b:58 brd ff:ff:ff:ff:ff:ff\n4: ifb1: <BROADCAST,NOARP> mtu 1500 qdisc noop state DOWN group default qlen 32\n    link/ether 9a:8a:31:7c:c6:d2 brd ff:ff:ff:ff:ff:ff\n5: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000\n    link/ipip 0.0.0.0 brd 0.0.0.0\n6: gre0@NONE: <NOARP> mtu 1476 qdisc noop state DOWN group default qlen 1000\n    link/gre 0.0.0.0 brd 0.0.0.0\n7: gretap0@NONE: <BROADCAST,MULTICAST> mtu 1462 qdisc noop state DOWN group default qlen 1000\n    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff\n8: erspan0@NONE: <BROADCAST,MULTICAST> mtu 1450 qdisc noop state DOWN group default qlen 1000\n    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff\n9: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000\n    link/ipip 0.0.0.0 brd 0.0.0.0\n10: ip6_vti0@NONE: <NOARP> mtu 1364 qdisc noop state DOWN group default qlen 1000\n    link/tunnel6 :: brd ::\n11: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000\n    link/sit 0.0.0.0 brd 0.0.0.0\n12: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN group default qlen 1000\n    link/tunnel6 :: brd ::\n13: ip6gre0@NONE: <NOARP> mtu 1448 qdisc noop state DOWN group default qlen 1000\n    link/gre6 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00 brd 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00\n14: hwsim0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000\n    link/ieee802.11/radiotap 12:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff\n15: eth0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000\n    link/ether 52:54:00:12:34:56 brd ff:ff:ff:ff:ff:ff\n16: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000\n    link/ether 02:15:b2:00:00:00 brd ff:ff:ff:ff:ff:ff",
+  "routes": "default dev dummy0 table 1002 proto static scope link \nlocal 127.0.0.0/8 dev lo table local proto kernel scope host src 127.0.0.1 \nlocal 127.0.0.1 dev lo table local proto kernel scope host src 127.0.0.1 \nbroadcast 127.255.255.255 dev lo table local proto kernel scope link src 127.0.0.1 \nfe80::/64 dev dummy0 table 1002 proto kernel metric 256 pref medium\ndefault dev dummy0 table 1002 proto static metric 1024 pref medium\nlocal ::1 dev lo table local proto kernel metric 0 pref medium\nlocal fe80::cc43:66ff:feb4:9e69 dev dummy0 table local proto kernel metric 0 pref medium\nmulticast ff00::/8 dev dummy0 table local proto kernel metric 256 pref medium",
+  "connectivity": {
+    "connected_state_marker": false,
+    "active_default_network": "none"
+  },
+  "proxy_settings": {
+    "http_proxy": "null",
+    "global_http_proxy_host": "172.31.2.93",
+    "global_http_proxy_port": "8080",
+    "private_dns_mode": "null",
+    "private_dns_specifier": "null"
+  },
+  "approved_proxy": {
+    "hostname": "proxy",
+    "resolved_ip": "172.31.11.61",
+    "port": 8080,
+    "source": "inherited managed HTTPS_PROXY; proxy IP, not invented backend IP"
+  },
+  "probe_jar_sha256": "3d0de2e7c331db8b85b72c70e4cb858ed15a3f478ce084c023473dd098fe692e",
+  "android_dns": {
+    "hostname": "sales.infinity-tech.sa",
+    "error_class": "UnknownHostException",
+    "category": "DNS_RESOLUTION_FAILURE",
+    "cause_classes": "UnknownHostException,GaiException",
+    "last_stage": "DNS"
+  },
+  "branches_android_default_trust": {
+    "hostname": "sales.infinity-tech.sa",
+    "trust": "android_default",
+    "explicit_managed_proxy": true,
+    "error_class": "ConnectException",
+    "category": "NETWORK_OR_TOOL_FAILURE",
+    "cause_classes": "ConnectException,ErrnoException",
+    "last_stage": "PROXY_TCP"
+  },
+  "native_dns_direct_api_http_attempted": false,
+  "native_dns_direct_api_skip_reason": "Do not repeat DNS failure as another identical HTTPS attempt",
+  "temporary_device_files_removed": true
+}

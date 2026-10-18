@@ -1,0 +1,9 @@
+{
+  "pid": 3625,
+  "started_monotonic": 1100.178751518,
+  "initial_exit": null,
+  "recovery_attempt": "One non-destructive restart, CPU cores2 to1 under TCG; root cause not proven",
+  "old_emulator_stopped_gracefully": true,
+  "app_data_cleared": false,
+  "apk_modified": false
+}

@@ -1,0 +1,52 @@
+{
+  "linux_dns": {
+    "status": "DNS_FAILURE",
+    "errno": -3
+  },
+  "branches": {
+    "url": "https://sales.infinity-tech.sa/api/v1/auth/branches",
+    "url_is_apk_constant_composition_not_runtime_capture": true,
+    "method": "GET",
+    "curl_exit": 0,
+    "proxy_connect_status": 200,
+    "origin_http_status": 200,
+    "tls_verify_result": 0,
+    "content_type": "application/json; charset=utf-8",
+    "redirects": 0,
+    "body_bytes": 310,
+    "body_sha256": "7d82c7001253d299bdc42d29e310a70a35e3c66eaef2e3ebafd75314c36499b1",
+    "body_retained": false,
+    "body_format": "JSON",
+    "json_shape": "dict",
+    "recognized_top_level_fields": [
+      "data",
+      "errors",
+      "success"
+    ],
+    "required_branch_name_present_in_response": true,
+    "required_year_present_in_response": false
+  },
+  "years": {
+    "url": "https://sales.infinity-tech.sa/api/v1/auth/years",
+    "url_is_apk_constant_composition_not_runtime_capture": true,
+    "method": "GET",
+    "curl_exit": 0,
+    "proxy_connect_status": 200,
+    "origin_http_status": 200,
+    "tls_verify_result": 0,
+    "content_type": "application/json; charset=utf-8",
+    "redirects": 0,
+    "body_bytes": 481,
+    "body_sha256": "80902048abcb7f61f00c42687a631dccfe281aac7b96b19eb229fb880428159b",
+    "body_retained": false,
+    "body_format": "JSON",
+    "json_shape": "dict",
+    "recognized_top_level_fields": [
+      "data",
+      "errors",
+      "success"
+    ],
+    "required_branch_name_present_in_response": false,
+    "required_year_present_in_response": true
+  }
+}

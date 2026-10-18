@@ -1,0 +1,20 @@
+{
+  "bootanim": "stopped",
+  "boot_progress_events": [
+    "boot_progress_start( 1194): 499732",
+    "boot_progress_preload_start( 1194): 506990",
+    "boot_progress_preload_end( 1194): 519667",
+    "boot_progress_system_run( 1269): 522224"
+  ],
+  "system_boot_markers": [
+    "V/SystemServerTiming( 1269): StartIStatsService took to complete: 66ms",
+    "D/SystemServerTiming( 1269): MemtrackProxyService",
+    "V/SystemServerTiming( 1269): MemtrackProxyService took to complete: 22ms",
+    "D/SystemServerTiming( 1269): StartAccessCheckingService",
+    "V/SystemServerTiming( 1269): StartAccessCheckingService took to complete: 87ms",
+    "D/SystemServerTiming( 1269): StartActivityManager",
+    "I/SystemServiceManager( 1269): Starting com.android.server.am.ActivityManagerService$Lifecycle",
+    "I/ActivityManager( 1269): Memory class: 192"
+  ],
+  "boot_completed": false
+}

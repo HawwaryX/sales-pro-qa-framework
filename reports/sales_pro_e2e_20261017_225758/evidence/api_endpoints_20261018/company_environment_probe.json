@@ -1,0 +1,13 @@
+{
+  "url": "https://sales.infinity-tech.sa/api/v1/auth/company",
+  "source": "Literal APK company route + observed origin; application composition unverified",
+  "method": "GET",
+  "curl_exit": 0,
+  "proxy_connect": 200,
+  "http_status": 200,
+  "tls_verify_result": 0,
+  "body_retained": false,
+  "explicit_environment_declarations": [],
+  "json_success": true,
+  "test_database_verified": false
+}
